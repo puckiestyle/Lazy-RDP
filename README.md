@@ -1,8 +1,9 @@
 # Lazy-RDP
 
 ## Demo Video:
-
+<p align="center">
 [![Lazy-RDP Demo](https://i.ytimg.com/vi/Kpl8l6YQq48/hqdefault.jpg)](https://youtu.be/Kpl8l6YQq48)
+</p>
 - Скрипт для автоматического сканирования списка адресов на наличие открытых RDP-портов, с последующим выбором метода и запуском перебора пары логин/пароль. <br/>
 
 - Скрипт  настраивался для систем Kali linux 2.0, Kali linux 2016.2 и Kali linux 2017.1, 2017.2. <br/>
