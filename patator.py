@@ -16,7 +16,7 @@ __email__   = 'patator@hsc.fr'
 __url__     = 'http://www.hsc.fr/ressources/outils/patator/'
 __git__     = 'https://github.com/lanjelot/patator'
 __twitter__ = 'http://twitter.com/lanjelot'
-__version__ = '0.7-beta'
+__version__ = '0.7'
 __license__ = 'GPLv2'
 __banner__  = 'Patator v%s (%s)' % (__version__, __git__)
 
@@ -31,41 +31,43 @@ INTRODUCTION
 Patator is a multi-purpose brute-forcer, with a modular design and a flexible usage.
 
 Currently it supports the following modules:
-  + ftp_login     : Brute-force FTP
-  + ssh_login     : Brute-force SSH
-  + telnet_login  : Brute-force Telnet
-  + smtp_login    : Brute-force SMTP
-  + smtp_vrfy     : Enumerate valid users using SMTP VRFY
-  + smtp_rcpt     : Enumerate valid users using SMTP RCPT TO
-  + finger_lookup : Enumerate valid users using Finger
-  + http_fuzz     : Brute-force HTTP
-  + pop_login     : Brute-force POP3
-  + pop_passd     : Brute-force poppassd (http://netwinsite.com/poppassd/)
-  + imap_login    : Brute-force IMAP4
-  + ldap_login    : Brute-force LDAP
-  + smb_login     : Brute-force SMB
-  + smb_lookupsid : Brute-force SMB SID-lookup
-  + rlogin_login  : Brute-force rlogin
-  + vmauthd_login : Brute-force VMware Authentication Daemon
-  + mssql_login   : Brute-force MSSQL
-  + oracle_login  : Brute-force Oracle
-  + mysql_login   : Brute-force MySQL
-  + mysql_query   : Brute-force MySQL queries
-  * rdp_login     : Brute-force RDP (NLA)
-  + pgsql_login   : Brute-force PostgreSQL
-  + vnc_login     : Brute-force VNC
+  + ftp_login      : Brute-force FTP
+  + ssh_login      : Brute-force SSH
+  + telnet_login   : Brute-force Telnet
+  + smtp_login     : Brute-force SMTP
+  + smtp_vrfy      : Enumerate valid users using SMTP VRFY
+  + smtp_rcpt      : Enumerate valid users using SMTP RCPT TO
+  + finger_lookup  : Enumerate valid users using Finger
+  + http_fuzz      : Brute-force HTTP
+  + ajp_fuzz       : Brute-force AJP
+  + pop_login      : Brute-force POP3
+  + pop_passd      : Brute-force poppassd (http://netwinsite.com/poppassd/)
+  + imap_login     : Brute-force IMAP4
+  + ldap_login     : Brute-force LDAP
+  + smb_login      : Brute-force SMB
+  + smb_lookupsid  : Brute-force SMB SID-lookup
+  + rlogin_login   : Brute-force rlogin
+  + vmauthd_login  : Brute-force VMware Authentication Daemon
+  + mssql_login    : Brute-force MSSQL
+  + oracle_login   : Brute-force Oracle
+  + mysql_login    : Brute-force MySQL
+  + mysql_query    : Brute-force MySQL queries
+  * rdp_login      : Brute-force RDP (NLA)
+  + pgsql_login    : Brute-force PostgreSQL
+  + vnc_login      : Brute-force VNC
 
-  + dns_forward   : Forward DNS lookup
-  + dns_reverse   : Reverse DNS lookup
-  + snmp_login    : Brute-force SNMP v1/2/3
-  + ike_enum      : Enumerate IKE transforms
+  + dns_forward    : Forward DNS lookup
+  + dns_reverse    : Reverse DNS lookup
+  + snmp_login     : Brute-force SNMP v1/2/3
+  + ike_enum       : Enumerate IKE transforms
 
-  + unzip_pass    : Brute-force the password of encrypted ZIP files
-  + keystore_pass : Brute-force the password of Java keystore files
-  + umbraco_crack : Crack Umbraco HMAC-SHA1 password hashes
+  + unzip_pass     : Brute-force the password of encrypted ZIP files
+  + keystore_pass  : Brute-force the password of Java keystore files
+  + sqlcipher_pass : Brute-force the password of SQLCipher-encrypted databases
+  + umbraco_crack  : Crack Umbraco HMAC-SHA1 password hashes
 
-  + tcp_fuzz      : Fuzz TCP services
-  + dummy_test    : Testing module
+  + tcp_fuzz       : Fuzz TCP services
+  + dummy_test     : Testing module
 
 Future modules to be implemented:
   - rdp_login w/no NLA
@@ -125,21 +127,27 @@ INSTALL
 --------------------------------------------------------------------------------------------------
 paramiko         | SSH            | http://www.lag.net/paramiko/                       | 1.7.7.1 |
 --------------------------------------------------------------------------------------------------
-pycurl           | HTTP           | http://pycurl.sourceforge.net/                     |  7.19.0 |
+pycurl           | HTTP           | http://pycurl.sourceforge.net/                     |  7.43.0 |
+--------------------------------------------------------------------------------------------------
+libcurl          | HTTP           | https://curl.haxx.se/                              |  7.21.0 |
+--------------------------------------------------------------------------------------------------
+ajpy             | AJP            | https://github.com/hypn0s/AJPy/                    |   0.0.1 |
 --------------------------------------------------------------------------------------------------
 openldap         | LDAP           | http://www.openldap.org/                           |  2.4.24 |
 --------------------------------------------------------------------------------------------------
-impacket         | SMB            | https://github.com/CoreSecurity/impacket           |  0.9.12 |
+impacket         | SMB, MSSQL     | https://github.com/CoreSecurity/impacket           |  0.9.12 |
+--------------------------------------------------------------------------------------------------
+pyOpenSSL        | impacket       | https://pyopenssl.org/                             |  17.5.0 |
 --------------------------------------------------------------------------------------------------
 cx_Oracle        | Oracle         | http://cx-oracle.sourceforge.net/                  |   5.1.1 |
 --------------------------------------------------------------------------------------------------
-mysql-python     | MySQL          | http://sourceforge.net/projects/mysql-python/      |   1.2.3 |
+mysqlclient      | MySQL          | https://github.com/PyMySQL/mysqlclient-python      |  1.3.12 |
 --------------------------------------------------------------------------------------------------
 xfreerdp         | RDP (NLA)      | https://github.com/FreeRDP/FreeRDP/                |   1.2.0 |
 --------------------------------------------------------------------------------------------------
 psycopg          | PostgreSQL     | http://initd.org/psycopg/                          |   2.4.5 |
 --------------------------------------------------------------------------------------------------
-pycrypto         | VNC            | http://www.dlitz.net/software/pycrypto/            |     2.3 |
+pycrypto         | VNC, impacket  | http://www.dlitz.net/software/pycrypto/            |   2.6.1 |
 --------------------------------------------------------------------------------------------------
 dnspython        | DNS            | http://www.dnspython.org/                          |  1.10.0 |
 --------------------------------------------------------------------------------------------------
@@ -147,13 +155,15 @@ IPy              | NET keyword    | https://github.com/haypo/python-ipy         
 --------------------------------------------------------------------------------------------------
 pysnmp           | SNMP           | http://pysnmp.sourceforge.net/                     |   4.2.1 |
 --------------------------------------------------------------------------------------------------
-pyasn1           | SNMP           | http://sourceforge.net/projects/pyasn1/            |   0.1.2 |
+pyasn1           | SNMP, impacket | http://sourceforge.net/projects/pyasn1/            |   0.1.2 |
 --------------------------------------------------------------------------------------------------
 ike-scan         | IKE            | http://www.nta-monitor.com/tools-resources/        |     1.9 |
 --------------------------------------------------------------------------------------------------
 unzip            | ZIP passwords  | http://www.info-zip.org/                           |     6.0 |
 --------------------------------------------------------------------------------------------------
 Java             | keystore files | http://www.oracle.com/technetwork/java/javase/     |       6 |
+--------------------------------------------------------------------------------------------------
+pysqlcipher      | SQLCipher      | https://github.com/leapcode/pysqlcipher/           |  2.6.10 |
 --------------------------------------------------------------------------------------------------
 python           |                | http://www.python.org/                             |     2.7 |
 --------------------------------------------------------------------------------------------------
@@ -569,12 +579,21 @@ NB1. SNMPv3 requires passphrases to be at least 8 characters long.
 
 * Brute-force the ZIP file password (cracking older pkzip encryption used to be not supported in JtR).
 ----------
-unzip_pass zipfile=path/to/file.zip password=FILE0 0=passwords.txt -x ignore:code!=0
+unzip_pass zipfile=file.zip password=FILE0 0=passwords.txt -x ignore:code!=0
 
 }}}
 
 CHANGELOG
 ---------
+
+* v0.7 2017/12/14
+  - added Python3 support
+  - added Windows support
+  - new --timeout and --allow-ignore-failures options
+  - switched to multiprocesses instead of threads (for --timeout to work on Windows)
+  - new modules: ike_enum, rdp_login, ajp_fuzz, sqlcipher_pass
+  - more info added to XML output
+  - fixed many bugs
 
 * v0.6 2014/08/25
   - added CSV and XML output formats
@@ -628,18 +647,12 @@ TODO
 
 # logging {{{
 class Logger:
-  def __init__(self, pipe):
-    self.pipe = pipe
+  def __init__(self, queue):
+    self.queue = queue
     self.name = multiprocessing.current_process().name
 
-# neat but wont work on windows
-#  def __getattr__(self, action):
-#    def send(*args):
-#      self.pipe.send((self.name, action, args))
-#    return send
-
   def send(self, action, *args):
-    self.pipe.send((self.name, action, args))
+    self.queue.put((self.name, action, args))
 
   def quit(self):
     self.send('quit')
@@ -674,16 +687,21 @@ class TXTFormatter(logging.Formatter):
 
   def format(self, record):
     if not record.msg or record.msg == 'headers':
-      self._fmt = self.resultfmt
+      fmt = self.resultfmt
 
       if not all(True if 0x20 <= ord(c) < 0x7f else False for c in record.candidate):
         record.candidate = repr(record.candidate)
 
     else:
       if record.levelno == logging.DEBUG:
-        self._fmt = '%(asctime)s %(name)-7s %(levelname)7s [%(pname)s] %(message)s'
+        fmt = '%(asctime)s %(name)-7s %(levelname)7s [%(pname)s] %(message)s'
       else:
-        self._fmt = '%(asctime)s %(name)-7s %(levelname)7s - %(message)s'
+        fmt = '%(asctime)s %(name)-7s %(levelname)7s - %(message)s'
+
+    if PY3:
+      self._style._fmt = fmt
+    else:
+      self._fmt = fmt
 
     return logging.Formatter.format(self, record)
 
@@ -712,8 +730,8 @@ class XMLFormatter(logging.Formatter):
 
   def format(self, record):
 
-    for k, v in record.__dict__.iteritems():
-      if isinstance(v, basestring):
+    for k, v in record.__dict__.items():
+      if isinstance(v, str):
         record.__dict__[k] = xmlescape(v)
 
     return super(XMLFormatter, self).format(record)
@@ -726,7 +744,7 @@ class MsgFilter(logging.Filter):
     else:
       return 1
 
-def process_logs(pipe, indicatorsfmt, argv, log_dir):
+def process_logs(queue, indicatorsfmt, argv, log_dir):
 
   ignore_ctrlc()
 
@@ -771,7 +789,7 @@ def process_logs(pipe, indicatorsfmt, argv, log_dir):
         while i < len(argv):
           arg = argv[i]
           if arg[0] == '-':
-            if arg in ('-d', '--debug'):
+            if arg in ('-d', '--debug', '--allow-ignore-failures'):
               f.write('  <option type="global" name=%s/>\n' % xmlquoteattr(arg))
             else:
               if not arg.startswith('--') and len(arg) > 2:
@@ -790,9 +808,11 @@ def process_logs(pipe, indicatorsfmt, argv, log_dir):
         f.write('<results>\n')
 
     else: # remove "</results>...</root>"
-      with open(results_xml, 'r+') as f:
-        f.seek(f.read().find('</results>'))
-        f.truncate(f.tell())
+      with open(results_xml, 'r+b') as f:
+        offset = f.read().find(b'</results>')
+        if offset != -1:
+          f.seek(offset)
+          f.truncate(f.tell())
 
     handler_log = logging.FileHandler(runtime_log)
     handler_csv = logging.FileHandler(results_csv)
@@ -811,7 +831,7 @@ def process_logs(pipe, indicatorsfmt, argv, log_dir):
 
   while True:
 
-    pname, action, args = pipe.recv()
+    pname, action, args = queue.get()
 
     if action == 'quit':
       if log_dir:
@@ -876,6 +896,7 @@ from collections import defaultdict
 import multiprocessing
 import signal
 import ctypes
+import glob
 from xml.sax.saxutils import escape as xmlescape, quoteattr as xmlquoteattr
 try:
   # python3+
@@ -891,6 +912,23 @@ except ImportError:
   from cStringIO import StringIO
   from sys import maxint
 
+PY3 = sys.version_info >= (3,)
+if PY3: # http://python3porting.com/problems.html
+  def b(x):
+    return x.encode('ISO-8859-1')
+  def B(x):
+    return x.decode()
+else:
+  def b(x):
+    return x
+  def B(x):
+    return x
+
+try:
+   input = raw_input
+except NameError:
+   pass
+
 notfound = []
 try:
   from IPy import IP
@@ -899,36 +937,46 @@ except ImportError:
   has_ipy = False
   notfound.append('IPy')
 
-import multiprocessing.forking
-class _Popen(multiprocessing.forking.Popen):
+try:
+  # Python 3.4+
+  if sys.platform.startswith('win'):
+    import multiprocessing.popen_spawn_win32 as forking
+  else:
+    import multiprocessing.popen_fork as forking
+except ImportError:
+  import multiprocessing.forking as forking
+
+if sys.platform.startswith('win'):
+  # First define a modified version of Popen.
+  class _Popen(forking.Popen):
     def __init__(self, *args, **kw):
+      if hasattr(sys, 'frozen'):
+        # We have to set original _MEIPASS2 value from sys._MEIPASS
+        # to get --onefile mode working.
+        os.putenv('_MEIPASS2', sys._MEIPASS)
+      try:
+        super(_Popen, self).__init__(*args, **kw)
+      finally:
         if hasattr(sys, 'frozen'):
-            # We have to set original _MEIPASS2 value from sys._MEIPASS
-            # to get --onefile mode working.
-            os.putenv('_MEIPASS2', sys._MEIPASS)
-        try:
-            super(_Popen, self).__init__(*args, **kw)
-        finally:
-            if hasattr(sys, 'frozen'):
-                # On some platforms (e.g. AIX) 'os.unsetenv()' is not
-                # available. In those cases we cannot delete the variable
-                # but only set it to the empty string. The bootloader
-                # can handle this case.
-                if hasattr(os, 'unsetenv'):
-                    os.unsetenv('_MEIPASS2')
-                else:
-                    os.putenv('_MEIPASS2', '')
+          # On some platforms (e.g. AIX) 'os.unsetenv()' is not
+          # available. In those cases we cannot delete the variable
+          # but only set it to the empty string. The bootloader
+          # can handle this case.
+          if hasattr(os, 'unsetenv'):
+            os.unsetenv('_MEIPASS2')
+          else:
+            os.putenv('_MEIPASS2', '')
 
-class Process(multiprocessing.Process):
-    _Popen = _Popen
+  # Second override 'Popen' class with our modified version.
+  forking.Popen = _Popen
 
-# So BaseManager.start() uses this new Process class
-multiprocessing.Process = Process
 from multiprocessing.managers import SyncManager
-
 # imports }}}
 
 # utils {{{
+def expand_path(s):
+    return os.path.expandvars(os.path.expanduser(s))
+
 def strfutctime():
   return strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
@@ -967,7 +1015,7 @@ def create_dir(top_path):
   if os.path.isdir(top_path):
     files = os.listdir(top_path)
     if files:
-      if raw_input("Directory '%s' is not empty, do you want to wipe it ? [Y/n]: " % top_path) != 'n':
+      if input("Directory '%s' is not empty, do you want to wipe it ? [Y/n]: " % top_path) != 'n':
         for root, dirs, files in os.walk(top_path):
           if dirs:
             print("Directory '%s' contains sub-directories, safely aborting..." % root)
@@ -1044,13 +1092,13 @@ class RangeIter:
 
   def __init__(self, typ, rng, random=None):
     if typ not in ['hex', 'int', 'float', 'letters', 'lower', 'lowercase', 'upper', 'uppercase']:
-      raise ValueError("Incorrect range type '%s'" % typ)
+      raise ValueError('Incorrect range type %r' % typ)
 
     if typ in ('hex', 'int', 'float'):
 
       m = re.match('(-?[^-]+)-(-?[^-]+)$', rng) # 5-50 or -5-50 or 5--50 or -5--50
       if not m:
-        raise ValueError("Unsupported range '%s'" % rng)
+        raise ValueError('Unsupported range %r' % rng)
 
       mn = m.group(1)
       mx = m.group(2)
@@ -1390,14 +1438,14 @@ Please read the README inside for more examples and usage information.
     self.ns.start_time = 0
     self.ns.total_size = 1
 
-    pipe = multiprocessing.Pipe(duplex=False)
+    log_queue = multiprocessing.Queue()
 
-    logsvc = Process(name='LogSvc', target=process_logs, args=(pipe[0], module.Response.indicatorsfmt, argv, build_logdir(opts.log_dir, opts.auto_log)))
+    logsvc = multiprocessing.Process(name='LogSvc', target=process_logs, args=(log_queue, module.Response.indicatorsfmt, argv, build_logdir(opts.log_dir, opts.auto_log)))
     logsvc.daemon = True
     logsvc.start()
 
     global logger
-    logger = Logger(pipe[1])
+    logger = Logger(log_queue)
 
     if opts.debug:
       logger.setLevel(logging.DEBUG)
@@ -1415,8 +1463,10 @@ Please read the README inside for more examples and usage information.
 
         else:
           if v.startswith('@'):
-            p = os.path.expanduser(v[1:])
-            v = open(p).read()
+            p = expand_path(v[1:])
+            with open(p) as f:
+              v = f.read()
+
           kargs.append((k, v))
 
     iter_vals = [v for k, v in sorted(wlists.items())]
@@ -1499,7 +1549,7 @@ Please read the README inside for more examples and usage information.
         name, opts = action, None
 
       if name not in self.available_actions:
-        raise ValueError('Unsupported action: %s' % name)
+        raise ValueError('Unsupported action %r' % name)
 
       if name not in ns_actions:
         ns_actions[name] = []
@@ -1610,23 +1660,23 @@ Please read the README inside for more examples and usage information.
     # consumers
     for num in range(self.num_threads):
       report_queue = multiprocessing.Queue(maxsize=1000)
-      t = Process(name='Consumer-%d' % num, target=self.consume, args=(task_queues[num], report_queue, logger.pipe))
+      t = multiprocessing.Process(name='Consumer-%d' % num, target=self.consume, args=(task_queues[num], report_queue, logger.queue))
       t.daemon = True
       t.start()
       self.thread_report.append(report_queue)
       self.thread_progress.append(Progress())
 
     # producer
-    t = Process(name='Producer', target=self.produce, args=(task_queues, logger.pipe))
+    t = multiprocessing.Process(name='Producer', target=self.produce, args=(task_queues, logger.queue))
     t.daemon = True
     t.start()
 
-  def produce(self, task_queues, pipe):
+  def produce(self, task_queues, log_queue):
 
     ignore_ctrlc()
 
     global logger
-    logger = Logger(pipe)
+    logger = Logger(log_queue)
 
     iterables = []
     total_size = 1
@@ -1641,17 +1691,16 @@ Please read the README inside for more examples and usage information.
         size = 0
         files = []
 
-        for fname in v.split(','):
-          fpath = os.path.expanduser(fname)
+        for name in v.split(','):
+          for fpath in sorted(glob.iglob(expand_path(name))):
+            if not os.path.isfile(fpath):
+              return abort("No such file '%s'" % fpath)
 
-          if not os.path.isfile(fpath):
-            return abort("No such file '%s'" % fpath)
+            with open(fpath) as f:
+              for _ in f:
+                size += 1
 
-          with open(fpath) as f:
-            for _ in f:
-              size += 1
-
-          files.append(FileIter(fpath))
+            files.append(FileIter(fpath))
 
         iterable = chain(*files)
 
@@ -1694,7 +1743,7 @@ Please read the README inside for more examples and usage information.
         iterable, size = chain(it), int(size)
 
       else:
-        return abort("Incorrect keyword '%s'" % t)
+        return abort('Incorrect keyword %r' % t)
 
       total_size *= size
       iterables.append(iterable)
@@ -1760,13 +1809,13 @@ Please read the README inside for more examples and usage information.
 
     logger.debug('producer exits')
 
-  def consume(self, task_queue, report_queue, pipe):
+  def consume(self, task_queue, report_queue, log_queue):
 
     ignore_ctrlc()
     handle_alarm()
 
     global logger
-    logger = Logger(pipe)
+    logger = Logger(log_queue)
 
     module = self.module()
 
@@ -1845,7 +1894,10 @@ Please read the README inside for more examples and usage information.
             enable_alarm(self.timeout)
             resp = module.execute(**payload)
 
+            disable_alarm()
           except:
+            disable_alarm()
+
             mesg = '%s %s' % sys.exc_info()[:2]
             logger.debug('caught: %s' % mesg)
 
@@ -1858,9 +1910,6 @@ Please read the README inside for more examples and usage information.
 
             sleep(try_count * .1)
             continue
-
-          finally:
-            disable_alarm()
 
         else:
           actions = {'fail': None}
@@ -2122,7 +2171,6 @@ class Timing:
 
 # TCP_Cache {{{
 class TCP_Connection:
-
   def __init__(self, fp, banner=None):
     self.fp = fp
     self.banner = banner
@@ -2189,16 +2237,16 @@ class TCP_Cache:
 # FTP {{{
 from ftplib import FTP, Error as FTP_Error
 try:
-  from ftplib import FTP_TLS # New in python 2.7
+  from ftplib import FTP_TLS # only available since python 2.7
 except ImportError:
-  notfound.append('ftp-tls')
+  notfound.append('python')
 
 class FTP_login(TCP_Cache):
   '''Brute-force FTP'''
 
   usage_hints = (
-    """%prog host=10.0.0.1 user=FILE0 password=FILE1 0=logins.txt 1=passwords.txt"""
-    """ -x ignore:mesg='Login incorrect.' -x ignore,reset,retry:code=500""",
+    '''%prog host=10.0.0.1 user=FILE0 password=FILE1 0=logins.txt 1=passwords.txt'''
+    ''' -x ignore:mesg='Login incorrect.' -x ignore,reset,retry:code=500''',
     )
 
   available_options = (
@@ -2229,23 +2277,25 @@ class FTP_login(TCP_Cache):
 
   def execute(self, host, port='21', tls='0', user=None, password=None, timeout='10', persistent='1'):
 
-    with Timing() as timing:
-      fp, resp = self.bind(host, port, tls, timeout=timeout)
-
     try:
+      with Timing() as timing:
+        fp, resp = self.bind(host, port, tls, timeout=timeout)
+
       if user is not None or password is not None:
         with Timing() as timing:
+
           if user is not None:
             resp = fp.sendcmd('USER ' + user)
+
           if password is not None:
             resp = fp.sendcmd('PASS ' + password)
 
-      logger.debug('No error: %s' % resp)
+      logger.debug('No error: %r' % resp)
       self.reset()
 
     except FTP_Error as e:
+      logger.debug('FTP_Error: %s' % e)
       resp = str(e)
-      logger.debug('FTP_Error: %s' % resp)
 
     if persistent == '0':
       self.reset()
@@ -2256,7 +2306,6 @@ class FTP_login(TCP_Cache):
 # }}}
 
 # SSH {{{
-
 try:
   from logging import NullHandler # only available since python 2.7
 except ImportError:
@@ -2306,10 +2355,10 @@ class SSH_login(TCP_Cache):
 
   def execute(self, host, port='22', user=None, password=None, auth_type='password', keyfile=None, persistent='1'):
 
-    with Timing() as timing:
-      fp, banner = self.bind(host, port, user)
-
     try:
+      with Timing() as timing:
+        fp, banner = self.bind(host, port, user)
+
       if user is not None:
 
         if keyfile is not None:
@@ -2331,7 +2380,7 @@ class SSH_login(TCP_Cache):
               fp.auth_password(user, password, fallback=True)
 
             else:
-              raise ValueError("Incorrect auth_type '%s'" % auth_type)
+              raise ValueError('Incorrect auth_type %r' % auth_type)
 
       logger.debug('No error')
       code, mesg = '0', banner
@@ -2351,6 +2400,7 @@ class SSH_login(TCP_Cache):
 
 # Telnet {{{
 from telnetlib import Telnet
+
 class Telnet_login(TCP_Cache):
   '''Brute-force Telnet'''
 
@@ -2381,30 +2431,35 @@ class Telnet_login(TCP_Cache):
     with Timing() as timing:
       fp, _ = self.bind(host, port, timeout=timeout)
 
-    trace = ''
+    trace = b''
+    prompt_re = b(prompt_re)
     timeout = int(timeout)
 
     if self.prompt_count == 0:
       _, _, raw = fp.expect([prompt_re], timeout=timeout)
-      logger.debug('raw banner: %s' % repr(raw))
+      logger.debug('raw banner: %r' % raw)
       trace += raw
       self.prompt_count += 1
 
     if inputs is not None:
       with Timing() as timing:
+
         for val in inputs.split(r'\n'):
           logger.debug('input: %s' % val)
-          cmd = val + '\n' #'\r\x00'
+          cmd = b(val + '\n') #'\r\x00'
           fp.write(cmd)
           trace += cmd
 
           _, _, raw = fp.expect([prompt_re], timeout=timeout)
-          logger.debug('raw %d: %s' % (self.prompt_count, repr(raw)))
+          logger.debug('raw %d: %r' % (self.prompt_count, raw))
           trace += raw
           self.prompt_count += 1
 
     if persistent == '0':
       self.reset()
+
+    raw = B(raw)
+    trace = B(trace)
 
     mesg = repr(raw)[1:-1] # strip enclosing single quotes
     return self.Response(0, mesg, timing, trace)
@@ -2412,7 +2467,8 @@ class Telnet_login(TCP_Cache):
 # }}}
 
 # SMTP {{{
-from smtplib import SMTP, SMTP_SSL, SMTPAuthenticationError, SMTPHeloError, SMTPException
+from smtplib import SMTP, SMTP_SSL, SMTPException, SMTPResponseException
+
 class SMTP_Base(TCP_Cache):
 
   available_options = TCP_Cache.available_options
@@ -2474,7 +2530,7 @@ class SMTP_vrfy(SMTP_Base):
       self.reset()
 
     code, mesg = resp
-    return self.Response(code, mesg, timing)
+    return self.Response(code, B(mesg), timing)
 
 
 class SMTP_rcpt(SMTP_Base):
@@ -2508,7 +2564,7 @@ class SMTP_rcpt(SMTP_Base):
       self.reset()
 
     code, mesg = resp
-    return self.Response(code, mesg, timing)
+    return self.Response(code, B(mesg), timing)
 
 
 class SMTP_login(SMTP_Base):
@@ -2537,14 +2593,19 @@ class SMTP_login(SMTP_Base):
       logger.debug('No error: %s' % str(resp))
       self.reset()
 
-    except (SMTPHeloError,SMTPAuthenticationError,SMTPException) as resp:
-      logger.debug('SMTPError: %s' % str(resp))
+    except SMTPResponseException as e:
+      logger.debug('SMTPResponseException: %s' % e)
+      resp = e.args
+
+    except SMTPException as e:
+      logger.debug('SMTPException: %s' % e)
+      resp = '1', b(str(e))
 
     if persistent == '0':
       self.reset()
 
     code, mesg = resp
-    return self.Response(code, mesg, timing)
+    return self.Response(code, B(mesg), timing)
 
 # }}}
 
@@ -2587,10 +2648,10 @@ class Finger_lookup:
       s.connect((host, int(port)))
 
     if user:
-      s.send(user)
-    s.send('\r\n')
+      s.send(b(user))
+    s.send(b'\r\n')
 
-    data = ''
+    data = b''
     with Timing() as timing:
       while True:
         raw = s.recv(1024)
@@ -2600,9 +2661,9 @@ class Finger_lookup:
 
     s.close()
 
-    logger.debug('recv: %s' % repr(data))
+    logger.debug('recv: %r' % data)
 
-    data = data.strip()
+    data = B(data).strip()
     mesg = repr(data)
 
     resp = self.Response(0, mesg, timing, data)
@@ -2660,14 +2721,13 @@ class LDAP_login:
 try:
   from impacket.smbconnection import SMBConnection, SessionError
   from impacket import nt_errors
-  from impacket.dcerpc.v5 import transport,  lsat, lsad
+  from impacket.dcerpc.v5 import transport, lsat, lsad
   from impacket.dcerpc.v5.dtypes import MAXIMUM_ALLOWED
   from impacket.dcerpc.v5.samr import SID_NAME_USE
 except ImportError:
   notfound.append('impacket')
 
 class SMB_Connection(TCP_Connection):
-
   def close(self):
     self.fp.getSMBServer().get_socket().close()
 
@@ -2735,7 +2795,6 @@ class SMB_login(TCP_Cache):
     return self.Response(code, mesg, timing)
 
 class DCE_Connection(TCP_Connection):
-
   def __init__(self, fp, smbt):
     self.smbt = smbt
     TCP_Connection.__init__(self, fp)
@@ -2808,6 +2867,7 @@ class SMB_lookupsid(TCP_Cache):
 
 # POP {{{
 from poplib import POP3, POP3_SSL, error_proto as pop_error
+
 class POP_Connection(TCP_Connection):
   def close(self):
     self.fp.quit()
@@ -2908,8 +2968,8 @@ class POP_passd:
             trace += '%s\r\n%s\r\n' % (cmd, resp)
 
     except LineReceiver_Error as e:
+      logger.debug('LineReceiver_Error: %s' % e)
       resp = str(e)
-      logger.debug('LineReceiver_Error: %s' % resp)
       trace += '%s\r\n%s\r\n' % (cmd, resp)
 
     finally:
@@ -2922,6 +2982,7 @@ class POP_passd:
 
 # IMAP {{{
 from imaplib import IMAP4, IMAP4_SSL
+
 class IMAP_login:
   '''Brute-force IMAP4'''
 
@@ -3011,26 +3072,29 @@ class Rlogin_login(TCP_Cache):
 
     fp, _ = self.bind(host, port, timeout=int(timeout))
 
-    trace = ''
+    trace = b''
     timeout = int(timeout)
 
     with Timing() as timing:
       if self.need_handshake:
-        fp.write('\x00%s\x00%s\x00vt100/9600\x00' % (luser, user))
+        fp.write(b('\x00%s\x00%s\x00vt100/9600\x00' % (luser, user)))
         self.need_handshake = False
       else:
-        fp.write('%s\r' % user)
+        fp.write(b('%s\r' % user))
 
       _, _, resp = fp.expect([prompt_re], timeout=timeout) # expecting the Password: prompt
       trace += resp
 
       if password is not None:
-        fp.write('%s\r' % password)
+        fp.write(b('%s\r' % password))
         _, _, resp = fp.expect([prompt_re], timeout=timeout) # expecting the login: prompt
         trace += resp
 
     if persistent == '0':
       self.reset()
+
+    resp = B(resp)
+    trace = B(trace)
 
     mesg = repr(resp.strip())[1:-1]
     return self.Response(0, mesg, timing, trace)
@@ -3038,7 +3102,10 @@ class Rlogin_login(TCP_Cache):
 
 # VMauthd {{{
 from ssl import wrap_socket
-class LineReceiver_Error(Exception): pass
+
+class LineReceiver_Error(Exception):
+  pass
+
 class LineReceiver:
 
   def connect(self, host, port, timeout, ssl=False):
@@ -3054,19 +3121,19 @@ class LineReceiver:
     self.sock.close()
 
   def sendcmd(self, cmd):
-    self.sock.sendall(cmd + '\r\n')
+    self.sock.sendall(b(cmd + '\r\n'))
     return self.getresp()
 
   def getresp(self):
     resp = self.sock.recv(1024)
-    while not resp.endswith('\n'):
+    while not resp.endswith(b'\n'):
       resp += self.sock.recv(1024)
 
-    resp = resp.rstrip()
+    resp = B(resp).rstrip()
     code, _ = self.parse(resp)
 
     if not code.isdigit():
-      raise Exception('Unexpected response: %s' % resp)
+      raise Exception('Unexpected response: %r' % resp)
 
     if code[0] not in ('1', '2', '3'):
       raise LineReceiver_Error(resp)
@@ -3125,8 +3192,8 @@ class VMauthd_login(TCP_Cache):
             trace += '%s\r\n%s\r\n' % (cmd, resp)
 
     except LineReceiver_Error as e:
+      logger.debug('LineReceiver_Error: %s' % e)
       resp = str(e)
-      logger.debug('LineReceiver_Error: %s' % resp)
       trace += '%s\r\n%s\r\n' % (cmd, resp)
 
     if persistent == '0':
@@ -3141,7 +3208,7 @@ class VMauthd_login(TCP_Cache):
 try:
   import _mysql
 except ImportError:
-  notfound.append('mysql-python')
+  notfound.append('mysqlclient')
 
 class MySQL_login:
   '''Brute-force MySQL'''
@@ -3169,8 +3236,9 @@ class MySQL_login:
 
       resp = '0', fp.get_server_info()
 
-    except _mysql.Error as resp:
-      logger.debug('MysqlError: %s' % resp)
+    except _mysql.Error as e:
+      logger.debug('MysqlError: %s' % e)
+      resp = e.args
 
     code, mesg = resp
     return self.Response(code, mesg, timing)
@@ -3219,7 +3287,8 @@ try:
   from impacket import tds
   from impacket.tds import TDS_ERROR_TOKEN, TDS_LOGINACK_TOKEN
 except ImportError:
-  notfound.append('impacket')
+  notfound.append('pyopenssl')
+
 class MSSQL_login:
   '''Brute-force MSSQL'''
 
@@ -3282,8 +3351,8 @@ class Oracle_login:
   '''Brute-force Oracle'''
 
   usage_hints = (
-    """%prog host=10.0.0.1 sid=FILE0 0=sids.txt -x ignore:code=ORA-12505""",
-    """%prog host=10.0.0.1 user=SYS password=FILE0 0=passwords.txt -x ignore:code=ORA-01017""",
+    '''%prog host=10.0.0.1 sid=FILE0 0=sids.txt -x ignore:code=ORA-12505''',
+    '''%prog host=10.0.0.1 user=SYS password=FILE0 0=passwords.txt -x ignore:code=ORA-01017''',
     )
 
   available_options = (
@@ -3305,7 +3374,7 @@ class Oracle_login:
     elif service_name:
       dsn = cx_Oracle.makedsn(host=host, port=port, service_name=service_name)
     else:
-      raise ValueError("Options sid and service_name cannot be both empty")
+      raise ValueError('Options sid and service_name cannot be both empty')
 
     try:
       with Timing() as timing:
@@ -3364,6 +3433,19 @@ class Pgsql_login:
 # HTTP {{{
 try:
   import pycurl
+
+  if hasattr(pycurl, 'PRIMARY_PORT'):
+    proxytype_mapping = {
+      'http': pycurl.PROXYTYPE_HTTP,
+      #'socks4': pycurl.PROXYTYPE_SOCKS4,
+      #'socks4a': pycurl.PROXYTYPE_SOCKS4A,
+      'socks5': pycurl.PROXYTYPE_SOCKS5,
+      #'socks5_with_hostname': pycurl.PROXYTYPE_SOCKS5_HOSTNAME,
+    }
+  else:
+    # PRIMARY_PORT available since libcurl-7.21.0 and all PROXY_* since libcurl-7.18
+    # PRIMARY_PORT and all PROXY_* available since pycurl-7.19.5.1
+    notfound.append('libcurl')
 except ImportError:
   notfound.append('pycurl')
 
@@ -3396,24 +3478,74 @@ class Response_HTTP(Response_Base):
     return re.search(val, self.mesg, re.M)
 
   def str_target(self):
-    return ' '.join('%s=%s' % (k, xmlquoteattr(str(v))) for k, v in self.target.iteritems())
+    return ' '.join('%s=%s' % (k, xmlquoteattr(str(v))) for k, v in self.target.items())
 
   available_conditions = Response_Base.available_conditions
   available_conditions += (
     ('clen', 'match Content-Length header (N or N-M or N- or -N)'),
     )
 
+try:
+  from http.server import BaseHTTPRequestHandler
+except ImportError:
+  from BaseHTTPServer import BaseHTTPRequestHandler
+
+class HTTPRequestParser(BaseHTTPRequestHandler):
+  def __init__(self, fd):
+    self.rfile = fd
+    self.error = None
+    self.body = None
+    self.raw_requestline = self.rfile.readline()
+    self.parse_request()
+
+    if self.command == 'POST':
+      self.body = B(self.rfile.read(-1)).rstrip('\r\n')
+
+      if 'Content-Length' in self.headers:
+        del self.headers['Content-Length']
+
+  def send_error(self, code, message):
+    self.error = message
+
+class Controller_HTTP(Controller):
+
+  def expand_key(self, arg):
+    key, val = arg.split('=', 1)
+    if key == 'raw_request':
+
+      with open(val, 'rb') as fd:
+        r = HTTPRequestParser(fd)
+
+      if r.error:
+        raise ValueError('Failed to parse file %r as a raw HTTP request' % val, r.error)
+
+      opts = {}
+
+      if r.path.startswith('http'):
+        opts['url'] = r.path
+      else:
+        _, _, opts['path'], opts['params'], opts['query'], opts['fragment'] =  urlparse(r.path)
+        opts['host'] = r.headers['Host']
+
+      opts['header'] = str(r.headers)
+      opts['method'] = r.command
+      opts['body'] = r.body
+
+      for key, val in opts.items():
+        if val:
+          yield (key, val)
+
+    else:
+      yield (key, val)
+
 class HTTP_fuzz(TCP_Cache):
   '''Brute-force HTTP'''
 
   usage_hints = [
-    """%prog url=http://10.0.0.1/FILE0 0=paths.txt -x ignore:code=404 -x ignore,retry:code=500""",
-
-    """%prog url=http://10.0.0.1/manager/html user_pass=COMBO00:COMBO01 0=combos.txt"""
-    """ -x ignore:code=401""",
-
-    """%prog url=http://10.0.0.1/phpmyadmin/index.php method=POST"""
-    """ body='pma_username=root&pma_password=FILE0&server=1&lang=en' 0=passwords.txt follow=1"""
+    '''%prog url=http://10.0.0.1/FILE0 0=paths.txt -x ignore:code=404 -x ignore,retry:code=500''',
+    '''%prog url=http://10.0.0.1/manager/html user_pass=COMBO00:COMBO01 0=combos.txt -x ignore:code=401''',
+    '''%prog url=http://10.0.0.1/phpmyadmin/index.php method=POST'''
+    ''' body='pma_username=root&pma_password=FILE0&server=1&lang=en' 0=passwords.txt follow=1'''
     """ accept_cookie=1 -x ignore:fgrep='Cannot log in to the MySQL server'""",
     ]
 
@@ -3421,19 +3553,22 @@ class HTTP_fuzz(TCP_Cache):
     ('url', 'target url (scheme://host[:port]/path?query)'),
     #('host', 'target host'),
     #('port', 'target port'),
-    #('scheme', 'scheme [http | https]'),
     #('path', 'web path [/]'),
     #('query', 'query string'),
     ('body', 'body data'),
     ('header', 'use custom headers'),
-    ('method', 'method to use [GET | POST | HEAD | ...]'),
+    ('method', 'method to use [GET|POST|HEAD|...]'),
+    ('raw_request', 'load request from file'),
+    ('scheme', 'scheme [http|https]'),
     ('auto_urlencode', 'automatically perform URL-encoding [1|0]'),
     ('user_pass', 'username and password for HTTP authentication (user:pass)'),
     ('auth_type', 'type of HTTP authentication [basic | digest | ntlm]'),
     ('follow', 'follow any Location redirect [0|1]'),
     ('max_follow', 'redirection limit [5]'),
     ('accept_cookie', 'save received cookies to issue them in future requests [0|1]'),
-    ('http_proxy', 'HTTP proxy to use (host:port)'),
+    ('proxy', 'proxy to use (host:port)'),
+    ('proxy_type', 'proxy type [http|socks4|socks4a|socks5]'),
+    ('resolve', 'hostname to IP address resolution to use (hostname:IP)'),
     ('ssl_cert', 'client SSL certificate file (cert+key in PEM format)'),
     ('timeout_tcp', 'seconds to wait for a TCP handshake [10]'),
     ('timeout', 'seconds to wait for a HTTP response [20]'),
@@ -3459,14 +3594,30 @@ class HTTP_fuzz(TCP_Cache):
 
   def execute(self, url=None, host=None, port='', scheme='http', path='/', params='', query='', fragment='', body='',
     header='', method='GET', auto_urlencode='1', user_pass='', auth_type='basic',
-    follow='0', max_follow='5', accept_cookie='0', http_proxy='', ssl_cert='', timeout_tcp='10', timeout='20', persistent='1',
+    follow='0', max_follow='5', accept_cookie='0', proxy='', proxy_type='http', resolve='', ssl_cert='', timeout_tcp='10', timeout='20', persistent='1',
     before_urls='', before_header='', before_egrep='', after_urls='', max_mem='-1'):
 
     if url:
       scheme, host, path, params, query, fragment = urlparse(url)
+      del url
+
+    if host:
       if ':' in host:
         host, port = host.split(':')
-      del url
+
+    if resolve:
+      resolve_host, resolve_ip = resolve.split(':', 1)
+      if port:
+        resolve_port = port
+      else:
+        resolve_port = 80
+
+      resolve = '%s:%s:%s' % (resolve_host, resolve_port, resolve_ip)
+
+    if proxy_type in proxytype_mapping:
+      proxy_type = proxytype_mapping[proxy_type]
+    else:
+      raise ValueError('Invalid proxy_type %r' % proxy_type)
 
     fp, _ = self.bind(host, port, scheme)
 
@@ -3474,7 +3625,9 @@ class HTTP_fuzz(TCP_Cache):
     fp.setopt(pycurl.MAXREDIRS, int(max_follow))
     fp.setopt(pycurl.CONNECTTIMEOUT, int(timeout_tcp))
     fp.setopt(pycurl.TIMEOUT, int(timeout))
-    fp.setopt(pycurl.PROXY, http_proxy)
+    fp.setopt(pycurl.PROXY, proxy)
+    fp.setopt(pycurl.PROXYTYPE, proxy_type)
+    fp.setopt(pycurl.RESOLVE, [resolve])
 
     def noop(buf): pass
     fp.setopt(pycurl.WRITEFUNCTION, noop)
@@ -3483,8 +3636,13 @@ class HTTP_fuzz(TCP_Cache):
       if max_mem > 0 and trace.tell() > max_mem:
         return 0
 
+      s = B(s)
+
       if t in (pycurl.INFOTYPE_HEADER_OUT, pycurl.INFOTYPE_DATA_OUT):
         trace.write(s)
+
+      elif t == pycurl.INFOTYPE_TEXT and 'upload completely sent off' in s:
+        trace.write('\n\n')
 
       elif t in (pycurl.INFOTYPE_HEADER_IN, pycurl.INFOTYPE_DATA_IN):
         trace.write(s)
@@ -3505,7 +3663,7 @@ class HTTP_fuzz(TCP_Cache):
       elif auth_type == 'ntlm':
         fp.setopt(pycurl.HTTPAUTH, pycurl.HTTPAUTH_NTLM)
       else:
-        raise ValueError("Incorrect auth_type '%s'" % auth_type)
+        raise ValueError('Incorrect auth_type %r' % auth_type)
 
     if ssl_cert:
       fp.setopt(pycurl.SSLCERT, ssl_cert)
@@ -3589,6 +3747,118 @@ class HTTP_fuzz(TCP_Cache):
 
 # }}}
 
+# AJP {{{
+try:
+  from ajpy.ajp import AjpForwardRequest
+except ImportError:
+  notfound.append('ajpy')
+
+class AJP_Connection(TCP_Connection):
+  def close(self):
+    sock, stream = self.fp
+    sock.close()
+
+class Response_AJP(Response_HTTP):
+  def __init__(self, code, response, status_msg='', timing=0, trace=None, content_length=-1, target={}):
+    Response_HTTP.__init__(self, code, response, timing, trace, content_length, target)
+    self.status_msg = status_msg
+
+  def __str__(self):
+    return self.status_msg or self.mesg
+
+def prepare_ajp_forward_request(target_host, req_uri, method):
+  fr = AjpForwardRequest(AjpForwardRequest.SERVER_TO_CONTAINER)
+  fr.method = method
+  fr.protocol = 'HTTP/1.1'
+  fr.req_uri = req_uri
+  fr.remote_addr = target_host
+  fr.remote_host = None
+  fr.server_name = target_host
+  fr.server_port = 80
+  fr.request_headers = {
+    'SC_REQ_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'SC_REQ_CONNECTION': 'keep-alive',
+    'SC_REQ_CONTENT_LENGTH': '0',
+    'SC_REQ_HOST': target_host,
+    'SC_REQ_USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64; rv:46.0) Gecko/20100101 Firefox/46.0',
+    'Accept-Encoding': 'gzip, deflate, sdch',
+    'Accept-Language': 'en-US,en;q=0.5',
+    'Upgrade-Insecure-Requests': '1',
+    'Cache-Control': 'max-age=0'
+  }
+  fr.is_ssl = False
+  fr.attributes = []
+
+  return fr
+
+class AJP_fuzz(TCP_Cache):
+  '''Brute-force AJP'''
+
+  usage_hints = [
+    '''%prog url=ajp://10.0.0.1/FILE0 0=paths.txt -x ignore:code=404 -x ignore,retry:code=500''',
+    '''%prog url=ajp://10.0.0.1/manager/html user_pass=COMBO00:COMBO01 0=combos.txt -x ignore:code=401''',
+    ]
+
+  available_options = (
+    ('url', 'target url (ajp://host[:port]/path?query)'),
+    ('header', 'use custom headers'),
+    ('user_pass', 'username and password for HTTP authentication (user:pass)'),
+    )
+
+  Response = Response_AJP
+
+  def connect(self, host, port):
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    sock.connect((host, int(port)))
+    stream = sock.makefile("rb", bufsize=0)
+
+    return AJP_Connection((sock, stream))
+
+  def execute(self, url=None, host=None, port='8009', path='/', params='', query='', header='', user_pass='', persistent='1'):
+
+    if url:
+      scheme, host, path, params, query, fragment = urlparse(url)
+      if ':' in host:
+        host, port = host.split(':')
+      del url
+
+    req_uri = urlunparse(('', '', path, params, query, fragment))
+
+    fr = prepare_ajp_forward_request(host, req_uri, AjpForwardRequest.REQUEST_METHODS.get('GET'))
+    fr.request_headers['SC_REQ_AUTHORIZATION'] = "Basic " + b64encode(user_pass)
+
+    headers = [h.strip('\r') for h in header.split('\n') if h]
+    for h in headers:
+      k, _, v = h.partition(':')
+      fr.request_headers[k] = v
+
+    (sock, stream), _ = self.bind(host, port)
+
+    with Timing() as timing:
+      responses = fr.send_and_receive(sock, stream)
+
+    snd_hdrs_res = responses[0]
+    http_code = snd_hdrs_res.http_status_code
+    http_status_msg = snd_hdrs_res.http_status_msg
+    content_length = int(snd_hdrs_res.response_headers.get('Content-Length', 0))
+
+    data_res = responses[1:-1]
+    data = ''
+    for dr in data_res:
+      data += dr.data
+
+    target = {}
+    target['ip'] = host
+    target['port'] = port
+
+    if persistent == '0':
+      self.reset()
+
+    return self.Response(http_code, data, http_status_msg, timing, data, content_length, target)
+
+# }}}
+
 # {{{ RDP
 if not which('xfreerdp'):
   notfound.append('xfreerdp')
@@ -3597,7 +3867,7 @@ class RDP_login:
   '''Brute-force RDP (NLA)'''
 
   usage_hints = (
-    """%prog host=10.0.0.1 user='administrator' password=FILE0 0=passwords.txt""",
+    '''%prog host=10.0.0.1 user='administrator' password=FILE0 0=passwords.txt''',
     )
 
   available_options = (
@@ -3616,7 +3886,7 @@ class RDP_login:
 
     with Timing() as timing:
       p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-      out, err = p.communicate()
+      out, err = map(B, p.communicate())
       code = p.returncode
 
     err = err.replace('''Authentication only. Don't connect to X.
@@ -3643,45 +3913,47 @@ try:
 except ImportError:
   notfound.append('pycrypto')
 
-class VNC_Error(Exception): pass
+class VNC_Error(Exception):
+  pass
+
 class VNC:
   def connect(self, host, port, timeout):
     self.fp = socket.create_connection((host, port), timeout=timeout)
     resp = self.fp.recv(99) # banner
 
-    logger.debug('banner: %s' % repr(resp))
-    self.version = resp[:11].decode('ascii')
+    logger.debug('banner: %r' % resp)
+    self.version = B(resp[:11])
 
     if len(resp) > 12:
-      raise VNC_Error('%s %s' % (self.version, resp[12:].decode('ascii', 'ignore')))
+      raise VNC_Error('%s %r' % (self.version, B(resp[12:])))
 
     return self.version
 
   def login(self, password):
-    logger.debug('Remote version: %s' % self.version)
+    logger.debug('Remote version: %r' % self.version)
     major, minor = self.version[6], self.version[10]
 
     if (major, minor) in [('3', '8'), ('4', '1')]:
-      proto = b'RFB 003.008\n'
+      proto = 'RFB 003.008\n'
 
     elif (major, minor) == ('3', '7'):
-      proto = b'RFB 003.007\n'
+      proto = 'RFB 003.007\n'
 
     else:
-      proto = b'RFB 003.003\n'
+      proto = 'RFB 003.003\n'
 
-    logger.debug('Client version: %s' % proto[:-1])
-    self.fp.sendall(proto)
+    logger.debug('Client version: %r' % proto[:-1])
+    self.fp.sendall(b(proto))
 
     sleep(0.5)
 
     resp = self.fp.recv(99)
-    logger.debug('Security types supported: %s' % repr(resp))
+    logger.debug('Security types supported: %r' % resp)
 
     if major == '4' or (major == '3' and int(minor) >= 7):
       code = ord(resp[0:1])
       if code == 0:
-        raise VNC_Error('Session setup failed: %s' % resp.decode('ascii', 'ignore'))
+        raise VNC_Error('Session setup failed: %s' % B(resp))
 
       self.fp.sendall(b'\x02') # always use classic VNC authentication
       resp = self.fp.recv(99)
@@ -3689,30 +3961,30 @@ class VNC:
     else: # minor == '3':
       code = ord(resp[3:4])
       if code != 2:
-        raise VNC_Error('Session setup failed: %s' % resp.decode('ascii', 'ignore'))
+        raise VNC_Error('Session setup failed: %s' % B(resp))
 
       resp = resp[-16:]
 
     if len(resp) != 16:
       raise VNC_Error('Unexpected challenge size (No authentication required? Unsupported authentication type?)')
 
-    logger.debug('challenge: %s' % repr(resp))
+    logger.debug('challenge: %r' % resp)
     pw = password.ljust(8, '\x00')[:8] # make sure it is 8 chars long, zero padded
 
     key = self.gen_key(pw)
-    logger.debug('key: %s' % repr(key))
+    logger.debug('key: %r' % key)
 
     des = DES.new(key, DES.MODE_ECB)
     enc = des.encrypt(resp)
 
-    logger.debug('enc: %s' % repr(enc))
+    logger.debug('enc: %r' % enc)
     self.fp.sendall(enc)
 
     resp = self.fp.recv(99)
-    logger.debug('resp: %s' % repr(resp))
+    logger.debug('resp: %r' % resp)
 
     code = ord(resp[3:4])
-    mesg = resp[8:].decode('ascii', 'ignore')
+    mesg = B(resp[8:])
 
     if code == 1:
       return code, mesg or 'Authentication failure'
@@ -3721,7 +3993,7 @@ class VNC:
       return code, mesg or 'OK'
 
     else:
-      raise VNC_Error('Unknown response: %s (code: %s)' % (repr(resp), code))
+      raise VNC_Error('Unknown response: %r (code: %s)' % (resp, code))
 
 
   def gen_key(self, key):
@@ -3734,17 +4006,16 @@ class VNC:
           btgt = btgt | (1 << 7-i)
       newkey.append(btgt)
 
-    if sys.version_info[0] == 2:
-      return ''.join(chr(c) for c in newkey)
-    else:
+    if PY3:
       return bytes(newkey)
-
+    else:
+      return ''.join(chr(c) for c in newkey)
 
 class VNC_login:
   '''Brute-force VNC'''
 
   usage_hints = (
-    """%prog host=10.0.0.1 password=FILE0 0=passwords.txt -t 1 -x retry:fgrep!='Authentication failure' --max-retries -1 -x quit:code=0""",
+    '''%prog host=10.0.0.1 password=FILE0 0=passwords.txt -t 1 -x retry:fgrep!='Authentication failure' --max-retries -1 -x quit:code=0''',
     )
 
   available_options = (
@@ -3777,7 +4048,6 @@ class VNC_login:
 # }}}
 
 # DNS {{{
-
 try:
   import dns.rdatatype
   import dns.message
@@ -4048,13 +4318,12 @@ class Controller_DNS(Controller):
             name, data = name[:-1], data[:-1]
             self.hostmap[data].alias.add(name)
 
-
 class DNS_reverse:
   '''Reverse DNS lookup'''
 
   usage_hints = [
-    """%prog host=NET0 0=192.168.0.0/24 -x ignore:code=3""",
-    """%prog host=NET0 0=216.239.32.0-216.239.47.255,8.8.8.0/24 -x ignore:code=3 -x ignore:fgrep!=google.com -x ignore:fgrep=216-239-""",
+    '''%prog host=NET0 0=192.168.0.0/24 -x ignore:code=3''',
+    '''%prog host=NET0 0=216.239.32.0-216.239.47.255,8.8.8.0/24 -x ignore:code=3 -x ignore:fgrep!=google.com -x ignore:fgrep=216-239-''',
     ]
 
   available_options = (
@@ -4087,9 +4356,9 @@ class DNS_forward:
   '''Forward DNS lookup'''
 
   usage_hints = [
-    """%prog name=FILE0.google.com 0=names.txt -x ignore:code=3""",
-    """%prog name=google.MOD0 0=TLD -x ignore:code=3""",
-    """%prog name=MOD0.microsoft.com 0=SRV qtype=SRV -x ignore:code=3""",
+    '''%prog name=FILE0.google.com 0=names.txt -x ignore:code=3''',
+    '''%prog name=google.MOD0 0=TLD -x ignore:code=3''',
+    '''%prog name=MOD0.microsoft.com 0=SRV qtype=SRV -x ignore:code=3''',
     ]
 
   available_options = (
@@ -4133,6 +4402,11 @@ try:
 except ImportError:
   notfound.append('pysnmp')
 
+try:
+  import pyasn1
+except ImportError:
+  notfound.append('pyasn1')
+
 class SNMP_login:
   '''Brute-force SNMP v1/2/3'''
 
@@ -4170,7 +4444,7 @@ class SNMP_login:
         return self.Response('1', 'SNMPv3 requires passphrases to be at least 8 characters long')
 
     else:
-      raise ValueError("Incorrect SNMP version '%s'" % version)
+      raise ValueError('Incorrect SNMP version %r' % version)
 
     with Timing() as timing:
       errorIndication, errorStatus, errorIndex, varBinds = cmdgen.CommandGenerator().getCmd(
@@ -4208,7 +4482,7 @@ IKE_GROUP = [('1', 'modp768'), ('2', 'modp1024'), ('5', 'modp1536'),
             # '27', '28', '29', '30', # RFC6932
 
 def generate_transforms():
-  lists = map(lambda l: [i[0] for i in l], [IKE_ENC, IKE_HASH, IKE_AUTH, IKE_GROUP])
+  lists = list(map(lambda l: [i[0] for i in l], [IKE_ENC, IKE_HASH, IKE_AUTH, IKE_GROUP]))
   return map(lambda p: ','.join(p), product(*[chain(l) for l in lists])), reduce(lambda x,y: x*y, map(len, lists))
 
 class Controller_IKE(Controller):
@@ -4239,7 +4513,7 @@ class Controller_IKE(Controller):
     ike_ath = dict(IKE_AUTH)
     ike_grp = dict(IKE_GROUP)
 
-    for endpoint, transforms in self.results.iteritems():
+    for endpoint, transforms in self.results.items():
       print('\n+ %s' % endpoint)
       print('    %10s %10s %12s %10s' % ('Encryption', 'Hash', 'Auth', 'Group'))
       print('    %10s %10s %12s %10s' % ('-'*10, '-'*10, '-'*10, '-'*10))
@@ -4260,8 +4534,8 @@ class IKE_enum:
   '''Enumerate IKE transforms'''
 
   usage_hints = [
-    """%prog host=10.0.0.1 transform=MOD0 0=TRANS -x ignore:fgrep=NO-PROPOSAL""",
-    """%prog host=10.0.0.1 transform=MOD0 0=TRANS -x ignore:fgrep=NO-PROPOSAL aggressive=RANGE1 1=int:0-1""",
+    '''%prog host=10.0.0.1 transform=MOD0 0=TRANS -x ignore:fgrep=NO-PROPOSAL''',
+    '''%prog host=10.0.0.1 transform=MOD0 0=TRANS -x ignore:fgrep=NO-PROPOSAL aggressive=RANGE1 1=int:0-1''',
     ]
 
   available_options = (
@@ -4282,7 +4556,7 @@ class IKE_enum:
 
   def __init__(self):
     uid = multiprocessing.current_process().name[9:]
-    self.sport = '51%s' % uid
+    self.sport = '51%d' % int(uid)
 
   def execute(self, host, port='500', transform='5,1,1,2', aggressive='0', groupname='foo', vid=''):
 
@@ -4296,11 +4570,11 @@ class IKE_enum:
 
     with Timing() as timing:
       p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-      out, err = p.communicate()
+      out, err = map(B, p.communicate())
       code = p.returncode
 
     trace = '%s\n[out]\n%s\n[err]\n%s' % (cmd, out, err)
-    logger.debug('trace: %s' % repr(trace))
+    logger.debug('trace: %r' % trace)
 
     has_sa = 'SA=(' in out
     if has_sa:
@@ -4328,7 +4602,7 @@ class Unzip_pass:
   '''Brute-force the password of encrypted ZIP files'''
 
   usage_hints = [
-    """%prog zipfile=path/to/file.zip password=FILE0 0=passwords.txt -x ignore:code!=0""",
+    """%prog zipfile=file.zip password=FILE0 0=passwords.txt -x ignore:code!=0""",
     ]
 
   available_options = (
@@ -4346,7 +4620,7 @@ class Unzip_pass:
 
     with Timing() as timing:
       p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-      out, err = p.communicate()
+      out, err = map(B, p.communicate())
       code = p.returncode
 
     mesg = repr(out.strip())[1:-1]
@@ -4364,7 +4638,7 @@ class Keystore_pass:
   '''Brute-force the password of Java keystore files'''
 
   usage_hints = [
-    """%prog keystore=path/to/keystore.jks password=FILE0 0=passwords.txt -x ignore:fgrep='password was incorrect'""",
+    """%prog keystore=keystore.jks password=FILE0 0=passwords.txt -x ignore:fgrep='password was incorrect'""",
     ]
 
   available_options = (
@@ -4383,7 +4657,7 @@ class Keystore_pass:
 
     with Timing() as timing:
       p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-      out, err = p.communicate()
+      out, err = map(B, p.communicate())
       code = p.returncode
 
     mesg = repr(out.strip())[1:-1]
@@ -4393,13 +4667,51 @@ class Keystore_pass:
 
 # }}}
 
+# SQLCipher {{{
+try:
+  from pysqlcipher import dbapi2 as sqlcipher
+except ImportError:
+  notfound.append('pysqlcipher')
+
+class SQLCipher_pass:
+  '''Brute-force the password of SQLCipher-encrypted databases'''
+
+  usage_hints = [
+    """%prog database=db.sqlite password=FILE0 0=passwords.txt -x ignore:fgrep='file is encrypted'""",
+    ]
+
+  available_options = (
+    ('database', 'database files to test'),
+    ('password', 'passwords to test'),
+    )
+  available_actions = ()
+
+  Response = Response_Base
+
+  def execute(self, database, password):
+    with sqlcipher.connect(database) as db:
+      c = db.cursor()
+      c.execute('PRAGMA key=%r' % password)
+
+    try:
+      c.execute('PRAGMA integrity_check')
+      code, mesg = '0', 'OK'
+
+    except sqlcipher.DatabaseError as e:
+      code, mesg = '1', str(e)
+
+    return self.Response(code, mesg)
+
+# }}}
+
 # Umbraco {{{
 import hmac
+
 class Umbraco_crack:
   '''Crack Umbraco HMAC-SHA1 password hashes'''
 
   usage_hints = (
-    """%prog hashlist=@umbraco_users.pw password=FILE0 0=rockyou.txt""",
+    '''%prog hashlist=@umbraco_users.pw password=FILE0 0=passwords.txt''',
     )
 
   available_options = (
@@ -4413,7 +4725,7 @@ class Umbraco_crack:
   def execute(self, password, hashlist):
 
     p = password.encode('utf-16-le')
-    h = b64encode(hmac.new(p, p, digestmod=hashlib.sha1).digest())
+    h = B(b64encode(hmac.new(p, p, digestmod=hashlib.sha1).digest()))
 
     if h not in hashlist:
       code, mesg = 1, 'fail'
@@ -4494,7 +4806,8 @@ modules = [
   ('smtp_vrfy', (Controller, SMTP_vrfy)),
   ('smtp_rcpt', (Controller, SMTP_rcpt)),
   ('finger_lookup', (Controller_Finger, Finger_lookup)),
-  ('http_fuzz', (Controller, HTTP_fuzz)),
+  ('http_fuzz', (Controller_HTTP, HTTP_fuzz)),
+  ('ajp_fuzz', (Controller, AJP_fuzz)),
   ('pop_login', (Controller, POP_login)),
   ('pop_passd', (Controller, POP_passd)),
   ('imap_login', (Controller, IMAP_login)),
@@ -4518,6 +4831,7 @@ modules = [
 
   ('unzip_pass', (Controller, Unzip_pass)),
   ('keystore_pass', (Controller, Keystore_pass)),
+  ('sqlcipher_pass', (Controller, SQLCipher_pass)),
   ('umbraco_crack', (Controller, Umbraco_crack)),
 
   ('tcp_fuzz', (Controller, TCP_fuzz)),
@@ -4525,22 +4839,27 @@ modules = [
   ]
 
 dependencies = {
-  'paramiko': [('ssh_login',), 'http://www.lag.net/paramiko/', '1.7.7.1'],
-  'pycurl': [('http_fuzz',), 'http://pycurl.sourceforge.net/', '7.19.0'],
+  'paramiko': [('ssh_login',), 'http://www.paramiko.org/', '1.7.7.1'],
+  'pycurl': [('http_fuzz',), 'http://pycurl.io/', '7.43.0'],
+  'libcurl': [('http_fuzz',), 'https://curl.haxx.se/', '7.21.0'],
+  'ajpy': [('ajp_fuzz',), 'https://github.com/hypn0s/AJPy/', '0.0.1'],
   'openldap': [('ldap_login',), 'http://www.openldap.org/', '2.4.24'],
-  'impacket': [('smb_login','smb_lookupsid','mssql_login'), 'https://github.com/CoreSecurity/impacket', '0.9.12'],
+  'impacket': [('smb_login', 'smb_lookupsid', 'mssql_login'), 'https://github.com/CoreSecurity/impacket', '0.9.12'],
+  'pyopenssl': [('mssql_login',), 'https://pyopenssl.org/', '17.5.0'],
   'cx_Oracle': [('oracle_login',), 'http://cx-oracle.sourceforge.net/', '5.1.1'],
-  'mysql-python': [('mysql_login',), 'http://sourceforge.net/projects/mysql-python/', '1.2.3'],
+  'mysqlclient': [('mysql_login',), 'https://github.com/PyMySQL/mysqlclient-python', '1.3.12'],
   'xfreerdp': [('rdp_login',), 'https://github.com/FreeRDP/FreeRDP.git', '1.2.0-beta1'],
   'psycopg': [('pgsql_login',), 'http://initd.org/psycopg/', '2.4.5'],
-  'pycrypto': [('vnc_login',), 'http://www.dlitz.net/software/pycrypto/', '2.3'],
+  'pycrypto': [('smb_login', 'smb_lookupsid', 'mssql_login', 'vnc_login',), 'http://www.dlitz.net/software/pycrypto/', '2.6.1'],
   'dnspython': [('dns_reverse', 'dns_forward'), 'http://www.dnspython.org/', '1.10.0'],
   'IPy': [('dns_reverse', 'dns_forward'), 'https://github.com/haypo/python-ipy', '0.75'],
   'pysnmp': [('snmp_login',), 'http://pysnmp.sf.net/', '4.2.1'],
+  'pyasn1': [('smb_login', 'smb_lookupsid', 'mssql_login', 'snmp_login'), 'http://sourceforge.net/projects/pyasn1/', '0.1.2'],
   'ike-scan': [('ike_enum',), 'http://www.nta-monitor.com/tools-resources/security-tools/ike-scan', '1.9'],
   'unzip': [('unzip_pass',), 'http://www.info-zip.org/', '6.0'],
   'java': [('keystore_pass',), 'http://www.oracle.com/technetwork/java/javase/', '6'],
-  'ftp-tls': [('ftp_login',), 'TLS support unavailable before python 2.7'],
+  'pysqlcipher': [('sqlcipher_pass',), 'https://github.com/leapcode/pysqlcipher/', '2.6.10'],
+  'python': [('ftp_login',), 'Patator requires Python 2.7 or above. Some features may be unavailable otherwise, such as TLS support for FTP.'],
   }
 # }}}
 
