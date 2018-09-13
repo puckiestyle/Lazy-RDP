@@ -58,7 +58,7 @@ if [[ "$dt" = "GNOME" ]]; then
 		sudo gnome-terminal --geometry=105x24+200+200 --hide-menubar -e ./src/rdp_brute.sh 2> /dev/null
 	elif [[ "$dt" = "XFCE" ]]; then
 		sudo xfce4-terminal --geometry=105x24+200+200 --hide-menubar -e ./src/rdp_brute.sh 2> /dev/null
-	else echo "You need use GNOME or XFCE desktop"; exit;
+	else echo "You need to use GNOME or XFCE desktop"; exit;
 	
 fi
 fi 
