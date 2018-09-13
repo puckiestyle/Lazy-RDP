@@ -53,7 +53,14 @@ echo "It seems there is no internet connection "
 	 exit;
 fi
 
-sudo gnome-terminal --geometry=105x24+200+200 --hide-menubar -e ./src/rdp_brute.sh 2> /dev/null
+dt=$(echo $XDG_CURRENT_DESKTOP)
+if [[ "$dt" = "GNOME" ]]; then
+		sudo gnome-terminal --geometry=105x24+200+200 --hide-menubar -e ./src/rdp_brute.sh 2> /dev/null
+	elif [[ "$dt" = "XFCE" ]]; then
+		sudo xfce4-terminal --geometry=105x24+200+200 --hide-menubar -e ./src/rdp_brute.sh 2> /dev/null
+	else echo "You neef use GNOME or XFCE desktop"; exit;
+	
+fi
 fi 
 exit 1;
 
