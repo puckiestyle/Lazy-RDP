@@ -80,7 +80,7 @@ fi
 ######################################################################################
 CHECKDEPEND ()
 {
-depend=$(dpkg -s freerdp-x11 | grep 'Status' | awk -F':' '/Status: / {print $2}')
+depend=$(dpkg -s freerdp-x11 || dpkg -s freerdp2-x11  | grep 'Status' | awk -F':' '/Status: / {print $2}')
 	if [ "$depend" = " install ok installed" ]; then
 		clear 
 			else
