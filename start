@@ -1,5 +1,4 @@
 #!/bin/bash
-
 ver=$(cat src/rdp_brute.sh | awk -F'=' '/ver=/ {print $2}' 2> /dev/null)
 clear
 
