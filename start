@@ -62,7 +62,7 @@ if [[ "$dt" = "GNOME" ]]; then
 	else echo "You need to use GNOME or XFCE desktop"; exit;	
 fi
 fi 
-exit;
+#exit;
 
 
 
