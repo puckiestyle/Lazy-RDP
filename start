@@ -1,4 +1,5 @@
 #!/bin/bash
+
 ver=$(cat src/rdp_brute.sh | awk -F'=' '/ver=/ {print $2}' 2> /dev/null)
 clear
 
@@ -52,7 +53,8 @@ else
 echo "It seems there is no internet connection "
 	 exit;
 fi
-
+cd ../hydra && make clean && ./configure && make && make install && cd ../Lazy-RDP
+clear
 dt=$(echo $XDG_CURRENT_DESKTOP)
 if [[ "$dt" = "GNOME" ]]; then
 		sudo gnome-terminal --geometry=105x24+200+200 --hide-menubar -e ./src/rdp_brute.sh 2> /dev/null
@@ -61,7 +63,7 @@ if [[ "$dt" = "GNOME" ]]; then
 	else echo "You need to use GNOME or XFCE desktop"; exit;	
 fi
 fi 
-exit 1;
+exit;
 
 
 
