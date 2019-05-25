@@ -10,7 +10,7 @@
 - Для корректной работы скрипта требуются установленные: masscan, curl и FreeRDP. <br/>
 
 - Текущая версия 1.28. 
-- Добавлено: поддержка XFCE, поддержка Parrot Security OS, автообновление, выбор сканера (Nmap) из списка, для сканирования локальных адресов из диапазона 127.0.0.1/8, возможность указания сканируемого порта. Исправлена ошибка ложноположительных срабатываний. Исправлена ошибка вылета из скрипта при выборе некоторых стран из списка. Добавлен английский язык. <s>Исправлен баг с брутфорсом.</s> Полностью поменял инструмент для брутфорса. Добавлена Hydra 9.0 Добавлена функция автоматического определения языка ОС. Оптимизирован код скрипта. Добавил автоматическую установку и настройку зависимостей (freerdp-X11, freerdp2-x11, masscan) для работы в "SANA" и "ROLLING"  <br/>
+- Добавлено: поддержка XFCE, поддержка Parrot Security OS, автообновление, выбор сканера (Nmap) из списка, для сканирования локальных адресов из диапазона 127.0.0.1/8, возможность указания сканируемого порта. Исправлена ошибка ложноположительных срабатываний. Исправлена ошибка вылета из скрипта при выборе некоторых стран из списка. Добавлен английский язык. <s>Исправлен баг с брутфорсом.</s> Полностью поменял инструмент для брутфорса. Добавлена Hydra 9.0. Добавлена функция автоматического определения языка ОС. Оптимизирован код скрипта. Добавил автоматическую установку и настройку зависимостей (freerdp-X11, freerdp2-x11, masscan) для работы в "SANA" и "ROLLING"  <br/>
 
 ## Порядок установки
 
@@ -19,15 +19,13 @@
                
 	  git clone https://github.com/getdrive/Lazy-RDP
 	  
-	  cd Lazy-RDP && chmod +x src/rdp_brute.sh patator.py start INSTALL
+	  cd Lazy-RDP && chmod +x hydra/configure hydra/hydra src/rdp_brute.sh patator.py start INSTALL
 
 - Установка зависимостей <br/>
         
         ./INSTALL
 
 - Запуск скрипта <br/>
-  
-        chmod +x src/rdp_brute.sh patator.py start
 
         ./start
 
@@ -41,7 +39,7 @@
 - To work correctly, the script requires the establishment: masscan, curl and FreeRDP.<br/>
 
 - The current version is 1.28.
-- Added: support XFCE, support Parrot Security OS, auto-update, scanner selection (Nmap) from the list, to scan local addresses from the range of 127.0.0.1/8, the ability to specify the scanned port. Fixed bug of false positives. Fixed a crash bug when selecting a script of some countries from the list. Fixed a bug with incorrect paths. Added English. <s>Fixed a bug with brute force menu.</s> Completely changed the tool to brute force. Added Hydra 9.0 Added function to automatically detect the operating system language. Optimized script code. Added automatic installation and configuration dependencies (freerdp-X11, freerdp2-x11, masscan) to work correctly in the "SANA" and "ROLLING" <br/>
+- Added: support XFCE, support Parrot Security OS, auto-update, scanner selection (Nmap) from the list, to scan local addresses from the range of 127.0.0.1/8, the ability to specify the scanned port. Fixed bug of false positives. Fixed a crash bug when selecting a script of some countries from the list. Fixed a bug with incorrect paths. Added English. <s>Fixed a bug with brute force menu.</s> Completely changed the tool to brute force. Added Hydra 9.0. Added function to automatically detect the operating system language. Optimized script code. Added automatic installation and configuration dependencies (freerdp-X11, freerdp2-x11, masscan) to work correctly in the "SANA" and "ROLLING" <br/>
 
 ## Installation
 
@@ -49,7 +47,7 @@
          
 	  git clone https://github.com/getdrive/Lazy-RDP
 	  
-	  cd Lazy-RDP && chmod +x src/rdp_brute.sh patator.py start INSTALL
+	  cd Lazy-RDP && chmod +x hydra/configure hydra/hydra src/rdp_brute.sh patator.py start INSTALL
 
 
 - Installing dependencies <br/>
