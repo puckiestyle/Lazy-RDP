@@ -16,8 +16,8 @@
 
 
 - Установка <br/>
-
-        git clone https://github.com/getdrive/Lazy-RDP	
+               
+	  git clone https://github.com/getdrive/Lazy-RDP
 	  
 	  cd Lazy-RDP && chmod +x src/rdp_brute.sh patator.py start INSTALL
 
@@ -46,8 +46,8 @@
 ## Installation
 
 - Setting <br/>
-
-        git clone https://github.com/getdrive/Lazy-RDP 
+         
+	  git clone https://github.com/getdrive/Lazy-RDP
 	  
 	  cd Lazy-RDP && chmod +x src/rdp_brute.sh patator.py start INSTALL
 
