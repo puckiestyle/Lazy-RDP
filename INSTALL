@@ -98,7 +98,7 @@ CHECKDEPEND1
 CHECKDEPEND2
 CHECKDEPEND3
 CHECKDEPEND4
-cd hydra && make clean && ./configure && make && make install
+cd hydra && make clean | ./configure && make && make install
 clear
 echo "Now you can run start!"
 exit;
