@@ -170,7 +170,7 @@ echo -e "$grey 124.$yellow Mozambique               " "$grey 125.$yellow Myanmar
 
 echo -e "$grey 127.$yellow Nauru                    " "$grey 128.$yellow Nepal                   " "$grey 129.$yellow Netherlands"
 
-echo -e "$grey 130.$yellow Netherlands antilles     " "$grey 131.$yellow New caledonia           " "$grey 132.$yellow New zealand"
+echo -e "$grey 130.$yellow Montenegro               " "$grey 131.$yellow New caledonia           " "$grey 132.$yellow New zealand"
 
 echo -e "$grey 133.$yellow Nicaragua                " "$grey 134.$yellow Niger                   " "$grey 135.$yellow Nigeria"
 
@@ -388,7 +388,7 @@ clear
 echo -e "$aquamarine                                             Получаем список IP"
 echo ""
 if [ "$country"  = "1" ]; then
-curl http://services.ce3c.be/ciprg/?countrys=AFGANISTAN%2Cformat=peerguardian |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Afghanistan://g" > list
+curl http://services.ce3c.be/ciprg/?countrys=AFGHANISTAN|grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Afghanistan://g" > list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -448,7 +448,7 @@ clear
 echo -e "$aquamarine                                             Получаем список IP"
 echo ""
 if [ "$country"  = "2" ]; then
-curl http://ipdiapazon.16mb.com/Albania.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Albania://g">list
+curl http://services.ce3c.be/ciprg/?countrys=ALBANIA|grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Albania://g">list
 clear
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
@@ -516,7 +516,7 @@ echo ""
 
 
 if [ "$country"  = "3" ]; then
-curl http://ipdiapazon.16mb.com/Algeria.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Algeria://g">list
+curl http://services.ce3c.be/ciprg/?countrys=ALGERIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Algeria://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -587,7 +587,7 @@ echo ""
 
 
 if [ "$country"  = "4" ]; then
-curl http://ipdiapazon.16mb.com/American_samoa.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=AMERICAN+SAMOA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/American Samoa://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -655,7 +655,7 @@ echo ""
 
 
 if [ "$country"  = "5" ]; then
-curl http://ipdiapazon.16mb.com/Andorra.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=ANDORRA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Andorra://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -725,7 +725,7 @@ echo ""
 
 
 if [ "$country"  = "6" ]; then
-curl http://ipdiapazon.16mb.com/Angola.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=ANGOLA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Angola://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -794,7 +794,7 @@ echo ""
 
 
 if [ "$country"  = "7" ]; then
-curl http://ipdiapazon.16mb.com/Anguilla.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=ANGUILLA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Anguilla://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -863,7 +863,7 @@ echo ""
 
 
 if [ "$country"  = "8" ]; then
-curl http://ipdiapazon.16mb.com/Antigua.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=ANTIGUA+AND+BARBUDA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Antigua and Barbuda://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -931,7 +931,7 @@ echo ""
 
 
 if [ "$country"  = "9" ]; then
-curl http://ipdiapazon.16mb.com/Argentina.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=ARGENTINA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Argentina://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -1000,7 +1000,7 @@ echo ""
 
 
 if [ "$country"  = "10" ]; then
-curl http://ipdiapazon.16mb.com/Armenia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=ARMENIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Armenia://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -1069,7 +1069,7 @@ echo ""
 
 
 if [ "$country"  = "11" ]; then
-curl http://ipdiapazon.16mb.com/Aruba.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=ARUBA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Aruba://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -1138,7 +1138,7 @@ echo ""
 
 
 if [ "$country"  = "12" ]; then
-curl http://ipdiapazon.16mb.com/Australia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=AUSTRALIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Australia://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -1208,7 +1208,7 @@ echo ""
 
 
 if [ "$country"  = "13" ]; then
-curl http://ipdiapazon.16mb.com/Austria.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=AUSTRIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Austria://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -1278,7 +1278,7 @@ echo ""
 
 
 if [ "$country"  = "14" ]; then
-curl http://ipdiapazon.16mb.com/Azerbaijan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=AZERBAIJAN |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Azerbaijan://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -1348,7 +1348,7 @@ echo ""
 
 
 if [ "$country"  = "15" ]; then
-curl http://ipdiapazon.16mb.com/Bahamas.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=BAHAMAS |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Bahamas://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -1418,7 +1418,7 @@ echo ""
 
 
 if [ "$country"  = "16" ]; then
-curl http://ipdiapazon.16mb.com/Bahrain.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=BAHRAIN |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Bahrain://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -1488,7 +1488,7 @@ echo ""
 
 
 if [ "$country"  = "17" ]; then
-curl http://ipdiapazon.16mb.com/Bangladesh.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=BANGLADESH |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Bangladesh://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -1558,7 +1558,7 @@ echo ""
 
 
 if [ "$country"  = "18" ]; then
-curl http://ipdiapazon.16mb.com/Barbados.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=BARBADOS |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Barbados://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -1628,7 +1628,7 @@ echo ""
 
 
 if [ "$country"  = "19" ]; then
-curl http://ipdiapazon.16mb.com/Belarus.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=BELARUS |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Belarus://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -1698,7 +1698,7 @@ echo ""
 
 
 if [ "$country"  = "20" ]; then
-curl http://ipdiapazon.16mb.com/Belgium.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=BELGIUM |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Belgium://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -1768,7 +1768,7 @@ echo ""
 
 
 if [ "$country"  = "21" ]; then
-curl http://ipdiapazon.16mb.com/Belize.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=BELIZE |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Belize://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -1837,7 +1837,7 @@ echo ""
 
 
 if [ "$country"  = "22" ]; then
-curl http://ipdiapazon.16mb.com/Benin.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=BENIN |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Benin://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -1906,7 +1906,7 @@ echo ""
 
 
 if [ "$country"  = "23" ]; then
-curl http://ipdiapazon.16mb.com/Bermuda.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=BERMUDA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Bermuda://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -1975,7 +1975,7 @@ echo ""
 
 
 if [ "$country"  = "24" ]; then
-curl http://ipdiapazon.16mb.com/Bhutan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=BHUTAN |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Bhutan://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -2045,7 +2045,7 @@ echo ""
 
 
 if [ "$country"  = "25" ]; then
-curl http://ipdiapazon.16mb.com/Bolivia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=BOLIVIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Bolivia://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -2114,7 +2114,7 @@ echo ""
 
 
 if [ "$country"  = "26" ]; then
-curl http://ipdiapazon.16mb.com/Bosnia_and_herzegowina.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=BOSNIA+AND+HERZEGOWINA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Bosnia and Herzegowina://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -2184,7 +2184,7 @@ echo ""
 
 
 if [ "$country"  = "27" ]; then
-curl http://ipdiapazon.16mb.com/Botswana.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=BOTSWANA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Botswana://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -2254,7 +2254,7 @@ echo ""
 
 
 if [ "$country"  = "28" ]; then
-curl http://ipdiapazon.16mb.com/Brazil.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=BRAZIL |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Brazil://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -2324,7 +2324,7 @@ echo ""
 
 
 if [ "$country"  = "29" ]; then
-curl http://ipdiapazon.16mb.com/British_indian_ocean_territory.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=BRITISH+INDIAN+OCEAN+TERRITORY |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/British Indian Ocean Territory://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -2394,7 +2394,7 @@ echo ""
 
 
 if [ "$country"  = "30" ]; then
-curl http://ipdiapazon.16mb.com/Brunei_darussalam.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=BRUNEI+DARUSSALAM |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Brunei Darussalam://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -2464,7 +2464,7 @@ echo ""
 
 
 if [ "$country"  = "31" ]; then
-curl http://ipdiapazon.16mb.com/Bulgaria.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=BULGARIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Bulgaria://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -2534,7 +2534,7 @@ echo ""
 
 
 if [ "$country"  = "32" ]; then
-curl http://ipdiapazon.16mb.com/Burkina_faso.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=BURKINA+FASO |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Burkina Faso://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -2603,7 +2603,7 @@ echo ""
 
 
 if [ "$country"  = "33" ]; then
-curl http://ipdiapazon.16mb.com/Burundi.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=BURUNDI |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Burundi://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -2673,7 +2673,7 @@ echo ""
 
 
 if [ "$country"  = "34" ]; then
-curl http://ipdiapazon.16mb.com/Cambodia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=CAMBODIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Cambodia://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -2742,7 +2742,7 @@ echo ""
 
 
 if [ "$country"  = "35" ]; then
-curl http://ipdiapazon.16mb.com/Cameroon.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=CAMEROON |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Cameroon://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -2811,7 +2811,7 @@ echo ""
 
 
 if [ "$country"  = "36" ]; then
-curl http://ipdiapazon.16mb.com/Canada.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=CANADA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Canada://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -2879,7 +2879,7 @@ echo ""
 
 
 if [ "$country"  = "37" ]; then
-curl http://ipdiapazon.16mb.com/Cayman_islands.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=CAYMAN+ISLANDS |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Cayman Islands://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -2949,7 +2949,7 @@ echo ""
 
 
 if [ "$country"  = "38" ]; then
-curl http://ipdiapazon.16mb.com/Central_african_republic.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=CENTRAL+AFRICAN+REPUBLIC |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Central African Republic://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -3019,7 +3019,7 @@ echo ""
 
 
 if [ "$country"  = "39" ]; then
-curl http://ipdiapazon.16mb.com/Chile.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=CHILE |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Chile://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -3089,7 +3089,7 @@ echo ""
 
 
 if [ "$country"  = "40" ]; then
-curl http://ipdiapazon.16mb.com/China.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=CHINA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/China://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -3159,7 +3159,7 @@ echo ""
 
 
 if [ "$country"  = "41" ]; then
-curl http://ipdiapazon.16mb.com/Colombia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=COLOMBIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Colombia://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -3229,7 +3229,7 @@ echo ""
 
 
 if [ "$country"  = "42" ]; then
-curl http://ipdiapazon.16mb.com/Congo.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=CONGO |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Congo://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -3299,7 +3299,7 @@ echo ""
 
 
 if [ "$country"  = "43" ]; then
-curl http://ipdiapazon.16mb.com/Cook_islands.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=COOK+ISLANDS |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Cook Islands://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -3369,7 +3369,7 @@ echo ""
 
 
 if [ "$country"  = "44" ]; then
-curl http://ipdiapazon.16mb.com/Costa_rica.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=COSTA+RICA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Costa Rica://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -3439,7 +3439,7 @@ echo ""
 
 
 if [ "$country"  = "45" ]; then
-curl http://ipdiapazon.16mb.com/Cote.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=COTE+D%27IVOIRE|grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Cote D'ivoire://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -3509,7 +3509,7 @@ echo ""
 
 
 if [ "$country"  = "46" ]; then
-curl http://ipdiapazon.16mb.com/Croatia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=CROATIA+%28LOCAL+NAME%3A+HRVATSKA%29%2C |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Croatia (LOCAL Name: Hrvatska)://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -3579,7 +3579,7 @@ echo ""
 
 
 if [ "$country"  = "47" ]; then
-curl http://ipdiapazon.16mb.com/Cuba.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=CUBA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Cuba://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -3649,7 +3649,7 @@ echo ""
 
 
 if [ "$country"  = "48" ]; then
-curl http://ipdiapazon.16mb.com/Cyprus.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=CYPRUS |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Cyprus://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -3719,7 +3719,7 @@ echo ""
 
 
 if [ "$country"  = "49" ]; then
-curl http://ipdiapazon.16mb.com/Czech_republic.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=CZECH+REPUBLIC |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Czech Republic://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -3789,7 +3789,7 @@ echo ""
 
 
 if [ "$country"  = "50" ]; then
-curl http://ipdiapazon.16mb.com/Denmark.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=DENMARK |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Denmark://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -3859,7 +3859,7 @@ echo ""
 
 
 if [ "$country"  = "51" ]; then
-curl http://ipdiapazon.16mb.com/Djibouti.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=DJIBOUTI |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Djibouti://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -3929,7 +3929,7 @@ echo ""
 
 
 if [ "$country"  = "52" ]; then
-curl http://ipdiapazon.16mb.com/Dominican_republic.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=DOMINICAN+REPUBLIC |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Dominican Republic://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -3999,7 +3999,7 @@ echo ""
 
 
 if [ "$country"  = "53" ]; then
-curl http://ipdiapazon.16mb.com/Ecuador.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=ECUADOR |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Ecuador://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -4069,7 +4069,7 @@ echo ""
 
 
 if [ "$country"  = "54" ]; then
-curl http://ipdiapazon.16mb.com/Egypt.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=EGYPT |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Egypt://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -4139,7 +4139,7 @@ echo ""
 
 
 if [ "$country"  = "55" ]; then
-curl http://ipdiapazon.16mb.com/El_salvador.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=EL+SALVADOR |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/El Salvador://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -4209,7 +4209,7 @@ echo ""
 
 
 if [ "$country"  = "56" ]; then
-curl http://ipdiapazon.16mb.com/Eritrea.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=ERITREA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Eritrea://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -4279,7 +4279,7 @@ echo ""
 
 
 if [ "$country"  = "57" ]; then
-curl http://ipdiapazon.16mb.com/Estonia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=ESTONIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Estonia://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -4349,7 +4349,7 @@ echo ""
 
 
 if [ "$country"  = "58" ]; then
-curl http://ipdiapazon.16mb.com/Ethiopia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=ETHIOPIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Ethiopia://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -4419,7 +4419,7 @@ echo ""
 
 
 if [ "$country"  = "59" ]; then
-curl http://ipdiapazon.16mb.com/European_union.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=EUROPEAN+UNION |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/European Union://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -4478,7 +4478,6 @@ echo -e "$aquamarine                                    Приступаем к 
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
 
 
-
 MAINBRUTEMENURU
 
 
@@ -4489,7 +4488,7 @@ echo ""
 
 
 if [ "$country"  = "60" ]; then
-curl http://ipdiapazon.16mb.com/Faroe_islands.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=FAROE+ISLANDS |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Faroe Islands://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -4559,7 +4558,7 @@ echo ""
 
 
 if [ "$country"  = "61" ]; then
-curl http://ipdiapazon.16mb.com/Fiji.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=FIJI |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Fiji://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -4629,7 +4628,7 @@ echo ""
 
 
 if [ "$country"  = "62" ]; then
-curl http://ipdiapazon.16mb.com/Finland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=FINLAND |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Finland://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -4699,7 +4698,7 @@ echo ""
 
 
 if [ "$country"  = "63" ]; then
-curl http://ipdiapazon.16mb.com/France.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=FRANCE |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/France://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -4768,7 +4767,7 @@ echo ""
 
 
 if [ "$country"  = "64" ]; then
-curl http://ipdiapazon.16mb.com/French_guiana.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=FRENCH+GUIANA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/French Guiana://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -4838,7 +4837,7 @@ echo ""
 
 
 if [ "$country"  = "65" ]; then
-curl http://ipdiapazon.16mb.com/French_polynesia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=FRENCH+POLYNESIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/French Polynesia://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -4908,7 +4907,7 @@ echo ""
 
 
 if [ "$country"  = "66" ]; then
-curl http://ipdiapazon.16mb.com/Gabon.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=GABON |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Gabon://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -4978,7 +4977,7 @@ echo ""
 
 
 if [ "$country"  = "67" ]; then
-curl http://ipdiapazon.16mb.com/Gambia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=GAMBIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Gambia://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -5048,7 +5047,7 @@ echo ""
 
 
 if [ "$country"  = "68" ]; then
-curl http://ipdiapazon.16mb.com/Georgia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=GEORGIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Georgia://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -5118,7 +5117,7 @@ echo ""
 
 
 if [ "$country"  = "69" ]; then
-curl http://ipdiapazon.16mb.com/Germany.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=GERMANY |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Germany://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -5188,7 +5187,7 @@ echo ""
 
 
 if [ "$country"  = "70" ]; then
-curl http://ipdiapazon.16mb.com/Ghana.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=GHANA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Ghana://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -5258,7 +5257,7 @@ echo ""
 
 
 if [ "$country"  = "71" ]; then
-curl http://ipdiapazon.16mb.com/Gibraltar.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=GIBRALTAR |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Gibraltar://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -5328,7 +5327,7 @@ echo ""
 
 
 if [ "$country"  = "72" ]; then
-curl http://ipdiapazon.16mb.com/Greece.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=GREECE |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Greece://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -5398,7 +5397,7 @@ echo ""
 
 
 if [ "$country"  = "73" ]; then
-curl http://ipdiapazon.16mb.com/Greenland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=GREENLAND |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Greenland://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -5468,7 +5467,7 @@ echo ""
 
 
 if [ "$country"  = "74" ]; then
-curl http://ipdiapazon.16mb.com/Grenada.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=GRENADA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Grenada://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -5538,7 +5537,7 @@ echo ""
 
 
 if [ "$country"  = "75" ]; then
-curl http://ipdiapazon.16mb.com/Guam.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=GUAM |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Guam://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -5608,7 +5607,7 @@ echo ""
 
 
 if [ "$country"  = "76" ]; then
-curl http://ipdiapazon.16mb.com/Guatemala.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=GUATEMALA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Guatemala://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -5678,7 +5677,7 @@ echo ""
 
 
 if [ "$country"  = "77" ]; then
-curl http://ipdiapazon.16mb.com/Guinea-bissau.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=GUINEA-BISSAU |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Guinea-bissau://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -5748,7 +5747,7 @@ echo ""
 
 
 if [ "$country"  = "78" ]; then
-curl http://ipdiapazon.16mb.com/Haiti.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=HAITI |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Haiti://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -5818,7 +5817,7 @@ echo ""
 
 
 if [ "$country"  = "79" ]; then
-curl http://ipdiapazon.16mb.com/Holy_see.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=HOLY+SEE+%28VATICAN+CITY+STATE |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Holy See (VATICAN City State)://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -5888,7 +5887,7 @@ echo ""
 
 
 if [ "$country"  = "80" ]; then
-curl http://ipdiapazon.16mb.com/Honduras.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=HONDURAS |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Honduras://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -5957,7 +5956,7 @@ echo ""
 
 
 if [ "$country"  = "81" ]; then
-curl http://ipdiapazon.16mb.com/Hong_kong.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=HONG+KONG |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Hong Kong://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -6026,7 +6025,7 @@ echo ""
 
 
 if [ "$country"  = "82" ]; then
-curl http://ipdiapazon.16mb.com/Hungary.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=HUNGARY |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Hungary://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -6096,7 +6095,7 @@ echo ""
 
 
 if [ "$country"  = "83" ]; then
-curl http://ipdiapazon.16mb.com/Iceland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=ICELAND |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Iceland://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -6166,7 +6165,7 @@ echo ""
 
 
 if [ "$country"  = "84" ]; then
-curl http://ipdiapazon.16mb.com/India.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=INDIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/India://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -6236,7 +6235,7 @@ echo ""
 
 
 if [ "$country"  = "85" ]; then
-curl http://ipdiapazon.16mb.com/Indonesia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=INDONESIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Indonesia://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -6306,7 +6305,7 @@ echo ""
 
 
 if [ "$country"  = "86" ]; then
-curl http://ipdiapazon.16mb.com/Iran.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=IRAN+%28ISLAMIC+REPUBLIC+OF%29%2C |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Iran (ISLAMIC Republic Of)://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -6376,7 +6375,7 @@ echo ""
 
 
 if [ "$country"  = "87" ]; then
-curl http://ipdiapazon.16mb.com/Iraq.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=IRAQ |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Iraq://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -6446,7 +6445,7 @@ echo ""
 
 
 if [ "$country"  = "88" ]; then
-curl http://ipdiapazon.16mb.com/Ireland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=IRELAND |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Ireland://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -6516,7 +6515,7 @@ echo ""
 
 
 if [ "$country"  = "89" ]; then
-curl http://ipdiapazon.16mb.com/Israel.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=ISRAEL |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Israel://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -6586,7 +6585,7 @@ echo ""
 
 
 if [ "$country"  = "90" ]; then
-curl http://ipdiapazon.16mb.com/Italy.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=ITALY |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Italy://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -6656,7 +6655,7 @@ echo ""
 
 
 if [ "$country"  = "91" ]; then
-curl http://ipdiapazon.16mb.com/Jamaica.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=JAMAICA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Jamaica://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -6726,7 +6725,7 @@ echo ""
 
 
 if [ "$country"  = "92" ]; then
-curl http://ipdiapazon.16mb.com/Japan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=JAPAN |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Japan://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -6795,7 +6794,7 @@ echo ""
 
 
 if [ "$country"  = "93" ]; then
-curl http://ipdiapazon.16mb.com/Jordan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=JORDAN |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Jordan://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -6864,7 +6863,7 @@ echo ""
 
 
 if [ "$country"  = "94" ]; then
-curl http://ipdiapazon.16mb.com/Kazakhstan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=KAZAKHSTAN |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Kazakhstan://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -6934,7 +6933,7 @@ echo ""
 
 
 if [ "$country"  = "95" ]; then
-curl http://ipdiapazon.16mb.com/Kenya.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=KENYA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Kenya://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -7004,7 +7003,7 @@ echo ""
 
 
 if [ "$country"  = "96" ]; then
-curl http://ipdiapazon.16mb.com/Kiribati.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=KIRIBATI |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Kiribati://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -7074,7 +7073,7 @@ echo ""
 
 
 if [ "$country"  = "97" ]; then
-curl http://ipdiapazon.16mb.com/Korea.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=KOREA+DEMOCRATIC+PEOPLE%27S+REPUBLIC+OF%2C |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Korea Democratic People's Republic of://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -7144,7 +7143,7 @@ echo ""
 
 
 if [ "$country"  = "98" ]; then
-curl http://ipdiapazon.16mb.com/Kuwait.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=KUWAIT |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Kuwait://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -7214,7 +7213,7 @@ echo ""
 
 
 if [ "$country"  = "99" ]; then
-curl http://ipdiapazon.16mb.com/Kyrgyzstan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=KYRGYZSTAN |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Kyrgyzstan://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -7284,7 +7283,7 @@ echo ""
 
 
 if [ "$country"  = "100" ]; then
-curl http://ipdiapazon.16mb.com/Lao.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=LAO+PEOPLE%27S+DEMOCRATIC+REPUBLIC%2C |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Lao People's Democratic Republic://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -7354,7 +7353,7 @@ echo ""
 
 
 if [ "$country"  = "101" ]; then
-curl http://ipdiapazon.16mb.com/Latvia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=LATVIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Latvia://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -7424,7 +7423,7 @@ echo ""
 
 
 if [ "$country"  = "102" ]; then
-curl http://ipdiapazon.16mb.com/Lebanon.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=LEBANON |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Lebanon://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -7494,7 +7493,7 @@ echo ""
 
 
 if [ "$country"  = "103" ]; then
-curl http://ipdiapazon.16mb.com/Lesotho.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=LESOTHO |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Lesotho://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -7564,7 +7563,7 @@ echo ""
 
 
 if [ "$country"  = "104" ]; then
-curl http://ipdiapazon.16mb.com/Libyan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=LIBYAN+ARAB+JAMAHIRIYA%2C |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Libyan Arab Jamahiriya://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -7634,7 +7633,7 @@ echo ""
 
 
 if [ "$country"  = "105" ]; then
-curl http://ipdiapazon.16mb.com/Liechtenstein.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=LIECHTENSTEIN |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Liechtenstein://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -7704,7 +7703,7 @@ echo ""
 
 
 if [ "$country"  = "106" ]; then
-curl http://ipdiapazon.16mb.com/Lithuania.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=LITHUANIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Lithuania://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -7774,7 +7773,7 @@ echo ""
 
 
 if [ "$country"  = "107" ]; then
-curl http://ipdiapazon.16mb.com/Luxembourg.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=LUXEMBOURG |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Luxembourg://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -7844,7 +7843,7 @@ echo ""
 
 
 if [ "$country"  = "108" ]; then
-curl http://ipdiapazon.16mb.com/Macau.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=MACAU |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Macau://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -7914,7 +7913,7 @@ echo ""
 
 
 if [ "$country"  = "109" ]; then
-curl http://ipdiapazon.16mb.com/Macedonia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=MACEDONIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Macedonia://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -7984,7 +7983,7 @@ echo ""
 
 
 if [ "$country"  = "110" ]; then
-curl http://ipdiapazon.16mb.com/Madagascar.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=MADAGASCAR |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Madagascar://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -8053,7 +8052,7 @@ echo ""
 
 
 if [ "$country"  = "111" ]; then
-curl http://ipdiapazon.16mb.com/Malawi.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=MALAWI |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Malawi://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -8123,7 +8122,7 @@ echo ""
 
 
 if [ "$country"  = "112" ]; then
-curl http://ipdiapazon.16mb.com/Malaysia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=MALAYSIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Malaysia://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -8193,7 +8192,7 @@ echo ""
 
 
 if [ "$country"  = "113" ]; then
-curl http://ipdiapazon.16mb.com/Maldives.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=MALDIVES |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Maldives://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -8263,7 +8262,7 @@ echo ""
 
 
 if [ "$country"  = "114" ]; then
-curl http://ipdiapazon.16mb.com/Mali.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=MALI |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Mali://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -8333,7 +8332,7 @@ echo ""
 
 
 if [ "$country"  = "115" ]; then
-curl http://ipdiapazon.16mb.com/Malta.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=MALTA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Malta://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -8403,7 +8402,7 @@ echo ""
 
 
 if [ "$country"  = "116" ]; then
-curl http://ipdiapazon.16mb.com/Mauritania.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=MAURITANIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Mauritania://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -8473,7 +8472,7 @@ echo ""
 
 
 if [ "$country"  = "117" ]; then
-curl http://ipdiapazon.16mb.com/Mauritius.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=MAURITIUS |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Mauritius://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -8542,7 +8541,7 @@ echo ""
 
 
 if [ "$country"  = "118" ]; then
-curl http://ipdiapazon.16mb.com/Mexico.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=MEXICO |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Mexico://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -8612,7 +8611,7 @@ echo ""
 
 
 if [ "$country"  = "119" ]; then
-curl http://ipdiapazon.16mb.com/Micronesia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=MICRONESIA+FEDERATED+STATES+OF |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Micronesia Federated States of://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -8682,7 +8681,7 @@ echo ""
 
 
 if [ "$country"  = "120" ]; then
-curl http://ipdiapazon.16mb.com/Moldova.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=MOLDOVA+REPUBLIC+OF |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Moldova Republic of://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -8752,7 +8751,7 @@ echo ""
 
 
 if [ "$country"  = "121" ]; then
-curl http://ipdiapazon.16mb.com/Monaco.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=MONACO |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Monaco://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -8822,7 +8821,7 @@ echo ""
 
 
 if [ "$country"  = "122" ]; then
-curl http://ipdiapazon.16mb.com/Mongolia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=MONGOLIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Mongolia://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -8892,7 +8891,7 @@ echo ""
 
 
 if [ "$country"  = "123" ]; then
-curl http://ipdiapazon.16mb.com/Morocco.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=MOROCCO |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Morocco://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -8962,7 +8961,7 @@ echo ""
 
 
 if [ "$country"  = "124" ]; then
-curl http://ipdiapazon.16mb.com/Mozambique.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=MOZAMBIQUE |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Mozambique://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -9032,7 +9031,7 @@ echo ""
 
 
 if [ "$country"  = "125" ]; then
-curl http://ipdiapazon.16mb.com/Myanmar.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=MYANMAR |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Myanmar://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -9101,7 +9100,7 @@ echo ""
 
 
 if [ "$country"  = "126" ]; then
-curl http://ipdiapazon.16mb.com/Namibia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=NAMIBIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Namibia://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -9171,7 +9170,7 @@ echo ""
 
 
 if [ "$country"  = "127" ]; then
-curl http://ipdiapazon.16mb.com/Nauru.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=NAURU |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Nauru://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -9241,7 +9240,7 @@ echo ""
 
 
 if [ "$country"  = "128" ]; then
-curl http://ipdiapazon.16mb.com/Nepal.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=NEPAL |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Nepal://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -9311,7 +9310,7 @@ echo ""
 
 
 if [ "$country"  = "129" ]; then
-curl http://ipdiapazon.16mb.com/Netherlands.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=NETHERLANDS |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Netherlands://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -9381,7 +9380,7 @@ echo ""
 
 
 if [ "$country"  = "130" ]; then
-curl http://ipdiapazon.16mb.com/Netherlands_antilles.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=MONTENEGRO |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Montenegro://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -9451,7 +9450,7 @@ echo ""
 
 
 if [ "$country"  = "131" ]; then
-curl http://ipdiapazon.16mb.com/New_caledonia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=NEW+CALEDONIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/New Caledonia://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -9521,7 +9520,7 @@ echo ""
 
 
 if [ "$country"  = "132" ]; then
-curl http://ipdiapazon.16mb.com/New_zealand.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=NEW+ZEALAND |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/New Zealand://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -9591,7 +9590,7 @@ echo ""
 
 
 if [ "$country"  = "133" ]; then
-curl http://ipdiapazon.16mb.com/Nicaragua.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=NICARAGUA|grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Nicaragua://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -9661,7 +9660,7 @@ echo ""
 
 
 if [ "$country"  = "134" ]; then
-curl http://ipdiapazon.16mb.com/Niger.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=NIGER |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Niger://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -9731,7 +9730,7 @@ echo ""
 
 
 if [ "$country"  = "135" ]; then
-curl http://ipdiapazon.16mb.com/Nigeria.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=NIGERIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Nigeria://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -9801,7 +9800,7 @@ echo ""
 
 
 if [ "$country"  = "136" ]; then
-curl http://ipdiapazon.16mb.com/Niue.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=NIUE |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Niue://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -9871,7 +9870,7 @@ echo ""
 
 
 if [ "$country"  = "137" ]; then
-curl http://ipdiapazon.16mb.com/Non-spec.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=NON-SPEC+ASIA+PAS+LOCATION |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Non-spec Asia Pas Location://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -9941,7 +9940,7 @@ echo ""
 
 
 if [ "$country"  = "138" ]; then
-curl http://ipdiapazon.16mb.com/Norfolk.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=NORFOLK+ISLAND|grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Norfolk Island://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -10011,7 +10010,7 @@ echo ""
 
 
 if [ "$country"  = "139" ]; then
-curl http://ipdiapazon.16mb.com/Northern.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=NORTHERN+MARIANA+ISLANDS|grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Northern Mariana Islands://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -10081,7 +10080,7 @@ echo ""
 
 
 if [ "$country"  = "140" ]; then
-curl http://ipdiapazon.16mb.com/Norway.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=NORWAY |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Norway://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -10151,7 +10150,7 @@ echo ""
 
 
 if [ "$country"  = "141" ]; then
-curl http://ipdiapazon.16mb.com/Oman.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=OMAN |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/OMAN://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -10219,7 +10218,7 @@ echo ""
 
 
 if [ "$country"  = "142" ]; then
-curl http://ipdiapazon.16mb.com/Pakistan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=PAKISTAN |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Pakistan://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -10289,7 +10288,7 @@ echo ""
 
 
 if [ "$country"  = "143" ]; then
-curl http://ipdiapazon.16mb.com/Palau.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=PALAU |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Palau://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -10358,7 +10357,7 @@ echo ""
 
 
 if [ "$country"  = "144" ]; then
-curl http://ipdiapazon.16mb.com/Palestinian.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=PALESTINIAN+TERRITORY+OCCUPIED|grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Palestinian Territory Occupied://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -10428,7 +10427,7 @@ echo ""
 
 
 if [ "$country"  = "145" ]; then
-curl http://ipdiapazon.16mb.com/Panama.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=PANAMA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Panama://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -10498,7 +10497,7 @@ echo ""
 
 
 if [ "$country"  = "146" ]; then
-curl http://ipdiapazon.16mb.com/Papua_new_guinea.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=PAPUA+NEW+GUINEA|grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Papua New Guinea://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -10568,7 +10567,7 @@ echo ""
 
 
 if [ "$country"  = "147" ]; then
-curl http://ipdiapazon.16mb.com/Paraguay.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=PARAGUAY |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Paraguay://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -10638,7 +10637,7 @@ echo ""
 
 
 if [ "$country"  = "148" ]; then
-curl http://ipdiapazon.16mb.com/Peru.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=PERU |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Peru://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -10708,7 +10707,7 @@ echo ""
 
 
 if [ "$country"  = "149" ]; then
-curl http://ipdiapazon.16mb.com/Philippines.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=PHILIPPINES |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Philippines://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -10778,7 +10777,7 @@ echo ""
 
 
 if [ "$country"  = "150" ]; then
-curl http://ipdiapazon.16mb.com/Poland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=POLAND |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Poland://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -10848,7 +10847,7 @@ echo ""
 
 
 if [ "$country"  = "151" ]; then
-curl http://ipdiapazon.16mb.com/Portugal.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=PORTUGAL |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Portugal://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -10918,7 +10917,7 @@ echo ""
 
 
 if [ "$country"  = "152" ]; then
-curl http://ipdiapazon.16mb.com/Puerto_rico.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=PUERTO+RICO |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Puerto Rico://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -10988,7 +10987,7 @@ echo ""
 
 
 if [ "$country"  = "153" ]; then
-curl http://ipdiapazon.16mb.com/Qatar.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=QATAR |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Qatar://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -11058,7 +11057,7 @@ echo ""
 
 
 if [ "$country"  = "154" ]; then
-curl http://ipdiapazon.16mb.com/Romania.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=ROMANIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Romania://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -11128,7 +11127,7 @@ echo ""
 
 
 if [ "$country"  = "155" ]; then
-curl http://ipdiapazon.16mb.com/Russia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g" |sed '$d'>list
+curl http://services.ce3c.be/ciprg/?countrys=RUSSIAN+FEDERATION |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Russian Federation://g" |sed '$d'>list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -11198,7 +11197,7 @@ echo ""
 
 
 if [ "$country"  = "156" ]; then
-curl http://ipdiapazon.16mb.com/Rwanda.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=RWANDA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Rwanda://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -11268,7 +11267,7 @@ echo ""
 
 
 if [ "$country"  = "157" ]; then
-curl http://ipdiapazon.16mb.com/Saint.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=SAINT+KITTS+AND+NEVIS |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Saint Kitts and Nevis://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -11338,7 +11337,7 @@ echo ""
 
 
 if [ "$country"  = "158" ]; then
-curl http://ipdiapazon.16mb.com/Saint_lucia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=SAINT+LUCIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Saint Lucia://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -11408,7 +11407,7 @@ echo ""
 
 
 if [ "$country"  = "159" ]; then
-curl http://ipdiapazon.16mb.com/Samoa.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=SAMOA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Samoa://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -11478,7 +11477,7 @@ echo ""
 
 
 if [ "$country"  = "160" ]; then
-curl http://ipdiapazon.16mb.com/San_marino.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=SAN+MARINO |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/San Marino://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -11548,7 +11547,7 @@ echo ""
 
 
 if [ "$country"  = "161" ]; then
-curl http://ipdiapazon.16mb.com/Saudi_arabia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=SAUDI+ARABIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Saudi Arabia://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -11618,7 +11617,7 @@ echo ""
 
 
 if [ "$country"  = "162" ]; then
-curl http://ipdiapazon.16mb.com/Senegal.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=SENEGAL |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Senegal://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -11688,7 +11687,7 @@ echo ""
 
 
 if [ "$country"  = "163" ]; then
-curl http://ipdiapazon.16mb.com/Serbia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=SERBIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Serbia://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -11758,7 +11757,7 @@ echo ""
 
 
 if [ "$country"  = "164" ]; then
-curl http://ipdiapazon.16mb.com/Seychelles.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=SEYCHELLES |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Seychelles://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -11828,7 +11827,7 @@ echo ""
 
 
 if [ "$country"  = "165" ]; then
-curl http://ipdiapazon.16mb.com/Sierra_leone.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=SIERRA+LEONE |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Sierra Leone://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -11898,7 +11897,7 @@ echo ""
 
 
 if [ "$country"  = "166" ]; then
-curl http://ipdiapazon.16mb.com/Singapore.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=SINGAPORE |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Singapore://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -11968,7 +11967,7 @@ echo ""
 
 
 if [ "$country"  = "167" ]; then
-curl http://ipdiapazon.16mb.com/Slovakia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=SLOVAKIA+%28SLOVAK+REPUBLIC%29 |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Slovakia (SLOVAK Republic)://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -12036,7 +12035,7 @@ echo ""
 
 
 if [ "$country"  = "168" ]; then
-curl http://ipdiapazon.16mb.com/Slovenia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=SLOVENIA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Slovenia://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -12105,7 +12104,7 @@ echo ""
 
 
 if [ "$country"  = "169" ]; then
-curl http://ipdiapazon.16mb.com/Solomon_islands.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=SOLOMON+ISLANDS |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Solomon Islands://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -12174,7 +12173,7 @@ echo ""
 
 
 if [ "$country"  = "170" ]; then
-curl http://ipdiapazon.16mb.com/South_africa.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=SOUTH+AFRICA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/South Africa://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -12243,7 +12242,7 @@ echo ""
 
 
 if [ "$country"  = "171" ]; then
-curl http://ipdiapazon.16mb.com/Spain.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=SPAIN |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Spain://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -12312,7 +12311,7 @@ echo ""
 
 
 if [ "$country"  = "172" ]; then
-curl http://ipdiapazon.16mb.com/Sri_lanka.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=SRI+LANKA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Sri Lanka://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -12381,7 +12380,7 @@ echo ""
 
 
 if [ "$country"  = "173" ]; then
-curl http://ipdiapazon.16mb.com/Sudan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=SOUTH+SUDAN |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/South Sudan://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -12450,7 +12449,7 @@ echo ""
 
 
 if [ "$country"  = "174" ]; then
-curl http://ipdiapazon.16mb.com/Suriname.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=SURINAME.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Suriname://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -12519,7 +12518,7 @@ echo ""
 
 
 if [ "$country"  = "175" ]; then
-curl http://ipdiapazon.16mb.com/Swaziland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=SWAZILAND |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Swaziland://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -12589,7 +12588,7 @@ echo ""
 
 
 if [ "$country"  = "176" ]; then
-curl http://ipdiapazon.16mb.com/Sweden.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=SWEDEN |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Sweden://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -12659,7 +12658,7 @@ echo ""
 
 
 if [ "$country"  = "177" ]; then
-curl http://ipdiapazon.16mb.com/Switzerland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=SWITZERLAND |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Switzerland://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -12728,7 +12727,7 @@ echo ""
 
 
 if [ "$country"  = "178" ]; then
-curl http://ipdiapazon.16mb.com/Syrian.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=SYRIAN+ARAB+REPUBLIC |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Syrian Arab Republic://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -12797,7 +12796,7 @@ echo ""
 
 
 if [ "$country"  = "179" ]; then
-curl http://ipdiapazon.16mb.com/Taiwan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=TAIWAN%3B+REPUBLIC+OF+CHINA+%28ROC%29 |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Taiwan; Republic of China (ROC)://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -12866,7 +12865,7 @@ echo ""
 
 
 if [ "$country"  = "180" ]; then
-curl http://ipdiapazon.16mb.com/Tajikistan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=TAJIKISTAN |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Tajikistan://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -12936,7 +12935,7 @@ echo ""
 
 
 if [ "$country"  = "181" ]; then
-curl http://ipdiapazon.16mb.com/Tanzania.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=TANZANIA+UNITED+REPUBLIC+OF |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Tanzania United Republic of://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -13005,7 +13004,7 @@ echo ""
 
 
 if [ "$country"  = "182" ]; then
-curl http://ipdiapazon.16mb.com/Thailand.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=THAILAND |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Thailand://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -13075,7 +13074,7 @@ echo ""
 
 
 if [ "$country"  = "183" ]; then
-curl http://ipdiapazon.16mb.com/Togo.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=TOGO |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Togo://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -13145,7 +13144,7 @@ echo ""
 
 
 if [ "$country"  = "184" ]; then
-curl http://ipdiapazon.16mb.com/Tonga.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=TONGA |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Tonga://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -13214,7 +13213,7 @@ echo ""
 
 
 if [ "$country"  = "185" ]; then
-curl http://ipdiapazon.16mb.com/Trinidad.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=TRINIDAD+AND+TOBAGO |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/Trinidad and Tobago://g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -13284,7 +13283,7 @@ echo ""
 
 
 if [ "$country"  = "186" ]; then
-curl http://ipdiapazon.16mb.com/Tunisia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Tunisia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -13354,7 +13353,7 @@ echo ""
 
 
 if [ "$country"  = "187" ]; then
-curl http://ipdiapazon.16mb.com/Turkey.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Turkey.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -13424,7 +13423,7 @@ echo ""
 
 
 if [ "$country"  = "188" ]; then
-curl http://ipdiapazon.16mb.com/Turkmenistan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Turkmenistan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -13494,7 +13493,7 @@ echo ""
 
 
 if [ "$country"  = "189" ]; then
-curl http://ipdiapazon.16mb.com/Tuvalu.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Tuvalu.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -13564,7 +13563,7 @@ echo ""
 
 
 if [ "$country"  = "190" ]; then
-curl http://ipdiapazon.16mb.com/Uganda.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Uganda.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -13634,7 +13633,7 @@ echo ""
 
 
 if [ "$country"  = "191" ]; then
-curl http://ipdiapazon.16mb.com/Ukraine.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Ukraine.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -13703,7 +13702,7 @@ echo ""
 
 
 if [ "$country"  = "192" ]; then
-curl http://ipdiapazon.16mb.com/United.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=United.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -13772,7 +13771,7 @@ echo ""
 
 
 if [ "$country"  = "193" ]; then
-curl http://ipdiapazon.16mb.com/United_kingdom.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=United_kingdom.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -13842,7 +13841,7 @@ echo ""
 
 
 if [ "$country"  = "194" ]; then
-curl http://ipdiapazon.16mb.com/United_states.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=United_states.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -13911,7 +13910,7 @@ echo ""
 
 
 if [ "$country"  = "195" ]; then
-curl http://ipdiapazon.16mb.com/Uruguay.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Uruguay.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -13980,7 +13979,7 @@ echo ""
 
 
 if [ "$country"  = "196" ]; then
-curl http://ipdiapazon.16mb.com/Uzbekistan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Uzbekistan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -14049,7 +14048,7 @@ echo ""
 
 
 if [ "$country"  = "197" ]; then
-curl http://ipdiapazon.16mb.com/Vanuatu.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Vanuatu.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -14118,7 +14117,7 @@ echo ""
 
 
 if [ "$country"  = "198" ]; then
-curl http://ipdiapazon.16mb.com/Venezuela.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Venezuela.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -14187,7 +14186,7 @@ echo ""
 
 
 if [ "$country"  = "199" ]; then
-curl http://ipdiapazon.16mb.com/Viet_nam.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Viet_nam.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -14257,7 +14256,7 @@ echo ""
 
 
 if [ "$country"  = "200" ]; then
-curl http://ipdiapazon.16mb.com/Virgin_islands.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Virgin_islands.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -14326,7 +14325,7 @@ echo ""
 
 
 if [ "$country"  = "201" ]; then
-curl http://ipdiapazon.16mb.com/Virgin_islands_u.s.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Virgin_islands_u.s.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -14396,7 +14395,7 @@ echo ""
 
 
 if [ "$country"  = "202" ]; then
-curl http://ipdiapazon.16mb.com/Yemen.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g" > list
+curl http://services.ce3c.be/ciprg/?countrys=Yemen.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g" > list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -14466,7 +14465,7 @@ echo ""
 
 
 if [ "$country"  = "203" ]; then
-curl http://ipdiapazon.16mb.com/Zambia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Zambia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -14535,7 +14534,7 @@ echo ""
 
 
 if [ "$country"  = "204" ]; then
-curl http://ipdiapazon.16mb.com/Zimbabwe.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Zimbabwe.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -14958,7 +14957,7 @@ clear
 echo -e "$aquamarine                                            Get a list of IP"
 echo ""
 if [ "$country"  = "1" ]; then
-curl http://ipdiapazon.16mb.com/Afghanistan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Afghanistan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -15021,7 +15020,7 @@ clear
 echo -e "$aquamarine                                             Get a list of IP"
 echo ""
 if [ "$country"  = "2" ]; then
-curl http://ipdiapazon.16mb.com/Albania.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Albania.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 clear
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
@@ -15086,7 +15085,7 @@ echo ""
 
 
 if [ "$country"  = "3" ]; then
-curl http://ipdiapazon.16mb.com/Algeria.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Algeria.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -15154,7 +15153,7 @@ echo ""
 
 
 if [ "$country"  = "4" ]; then
-curl http://ipdiapazon.16mb.com/American_samoa.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=American_samoa.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -15220,7 +15219,7 @@ echo ""
 
 
 if [ "$country"  = "5" ]; then
-curl http://ipdiapazon.16mb.com/Andorra.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Andorra.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -15287,7 +15286,7 @@ echo ""
 
 
 if [ "$country"  = "6" ]; then
-curl http://ipdiapazon.16mb.com/Angola.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Angola.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -15353,7 +15352,7 @@ echo ""
 
 
 if [ "$country"  = "7" ]; then
-curl http://ipdiapazon.16mb.com/Anguilla.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Anguilla.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -15419,7 +15418,7 @@ echo ""
 
 
 if [ "$country"  = "8" ]; then
-curl http://ipdiapazon.16mb.com/Antigua.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Antigua.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -15484,7 +15483,7 @@ echo ""
 
 
 if [ "$country"  = "9" ]; then
-curl http://ipdiapazon.16mb.com/Argentina.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Argentina.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -15550,7 +15549,7 @@ echo ""
 
 
 if [ "$country"  = "10" ]; then
-curl http://ipdiapazon.16mb.com/Armenia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Armenia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -15616,7 +15615,7 @@ echo ""
 
 
 if [ "$country"  = "11" ]; then
-curl http://ipdiapazon.16mb.com/Aruba.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Aruba.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -15682,7 +15681,7 @@ echo ""
 
 
 if [ "$country"  = "12" ]; then
-curl http://ipdiapazon.16mb.com/Australia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Australia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -15749,7 +15748,7 @@ echo ""
 
 
 if [ "$country"  = "13" ]; then
-curl http://ipdiapazon.16mb.com/Austria.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Austria.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -15816,7 +15815,7 @@ echo ""
 
 
 if [ "$country"  = "14" ]; then
-curl http://ipdiapazon.16mb.com/Azerbaijan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Azerbaijan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -15883,7 +15882,7 @@ echo ""
 
 
 if [ "$country"  = "15" ]; then
-curl http://ipdiapazon.16mb.com/Bahamas.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Bahamas.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -15950,7 +15949,7 @@ echo ""
 
 
 if [ "$country"  = "16" ]; then
-curl http://ipdiapazon.16mb.com/Bahrain.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Bahrain.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -16017,7 +16016,7 @@ echo ""
 
 
 if [ "$country"  = "17" ]; then
-curl http://ipdiapazon.16mb.com/Bangladesh.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Bangladesh.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -16084,7 +16083,7 @@ echo ""
 
 
 if [ "$country"  = "18" ]; then
-curl http://ipdiapazon.16mb.com/Barbados.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Barbados.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -16151,7 +16150,7 @@ echo ""
 
 
 if [ "$country"  = "19" ]; then
-curl http://ipdiapazon.16mb.com/Belarus.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Belarus.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -16218,7 +16217,7 @@ echo ""
 
 
 if [ "$country"  = "20" ]; then
-curl http://ipdiapazon.16mb.com/Belgium.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Belgium.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -16285,7 +16284,7 @@ echo ""
 
 
 if [ "$country"  = "21" ]; then
-curl http://ipdiapazon.16mb.com/Belize.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Belize.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -16351,7 +16350,7 @@ echo ""
 
 
 if [ "$country"  = "22" ]; then
-curl http://ipdiapazon.16mb.com/Benin.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Benin.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -16417,7 +16416,7 @@ echo ""
 
 
 if [ "$country"  = "23" ]; then
-curl http://ipdiapazon.16mb.com/Bermuda.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Bermuda.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -16483,7 +16482,7 @@ echo ""
 
 
 if [ "$country"  = "24" ]; then
-curl http://ipdiapazon.16mb.com/Bhutan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Bhutan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -16550,7 +16549,7 @@ echo ""
 
 
 if [ "$country"  = "25" ]; then
-curl http://ipdiapazon.16mb.com/Bolivia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Bolivia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -16616,7 +16615,7 @@ echo ""
 
 
 if [ "$country"  = "26" ]; then
-curl http://ipdiapazon.16mb.com/Bosnia_and_herzegowina.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Bosnia_and_herzegowina.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -16683,7 +16682,7 @@ echo ""
 
 
 if [ "$country"  = "27" ]; then
-curl http://ipdiapazon.16mb.com/Botswana.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Botswana.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -16750,7 +16749,7 @@ echo ""
 
 
 if [ "$country"  = "28" ]; then
-curl http://ipdiapazon.16mb.com/Brazil.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Brazil.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -16817,7 +16816,7 @@ echo ""
 
 
 if [ "$country"  = "29" ]; then
-curl http://ipdiapazon.16mb.com/British_indian_ocean_territory.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=British_indian_ocean_territory.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -16884,7 +16883,7 @@ echo ""
 
 
 if [ "$country"  = "30" ]; then
-curl http://ipdiapazon.16mb.com/Brunei_darussalam.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Brunei_darussalam.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -16951,7 +16950,7 @@ echo ""
 
 
 if [ "$country"  = "31" ]; then
-curl http://ipdiapazon.16mb.com/Bulgaria.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Bulgaria.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -17018,7 +17017,7 @@ echo ""
 
 
 if [ "$country"  = "32" ]; then
-curl http://ipdiapazon.16mb.com/Burkina_faso.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Burkina_faso.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -17084,7 +17083,7 @@ echo ""
 
 
 if [ "$country"  = "33" ]; then
-curl http://ipdiapazon.16mb.com/Burundi.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Burundi.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -17151,7 +17150,7 @@ echo ""
 
 
 if [ "$country"  = "34" ]; then
-curl http://ipdiapazon.16mb.com/Cambodia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Cambodia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -17217,7 +17216,7 @@ echo ""
 
 
 if [ "$country"  = "35" ]; then
-curl http://ipdiapazon.16mb.com/Cameroon.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Cameroon.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -17283,7 +17282,7 @@ echo ""
 
 
 if [ "$country"  = "36" ]; then
-curl http://ipdiapazon.16mb.com/Canada.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Canada.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -17348,7 +17347,7 @@ echo ""
 
 
 if [ "$country"  = "37" ]; then
-curl http://ipdiapazon.16mb.com/Cayman_islands.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Cayman_islands.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -17415,7 +17414,7 @@ echo ""
 
 
 if [ "$country"  = "38" ]; then
-curl http://ipdiapazon.16mb.com/Central_african_republic.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Central_african_republic.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -17482,7 +17481,7 @@ echo ""
 
 
 if [ "$country"  = "39" ]; then
-curl http://ipdiapazon.16mb.com/Chile.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Chile.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -17549,7 +17548,7 @@ echo ""
 
 
 if [ "$country"  = "40" ]; then
-curl http://ipdiapazon.16mb.com/China.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=China.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -17616,7 +17615,7 @@ echo ""
 
 
 if [ "$country"  = "41" ]; then
-curl http://ipdiapazon.16mb.com/Colombia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Colombia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -17683,7 +17682,7 @@ echo ""
 
 
 if [ "$country"  = "42" ]; then
-curl http://ipdiapazon.16mb.com/Congo.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Congo.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -17750,7 +17749,7 @@ echo ""
 
 
 if [ "$country"  = "43" ]; then
-curl http://ipdiapazon.16mb.com/Cook_islands.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Cook_islands.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -17817,7 +17816,7 @@ echo ""
 
 
 if [ "$country"  = "44" ]; then
-curl http://ipdiapazon.16mb.com/Costa_rica.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Costa_rica.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -17884,7 +17883,7 @@ echo ""
 
 
 if [ "$country"  = "45" ]; then
-curl http://ipdiapazon.16mb.com/Cote.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Cote.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -17951,7 +17950,7 @@ echo ""
 
 
 if [ "$country"  = "46" ]; then
-curl http://ipdiapazon.16mb.com/Croatia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Croatia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -18018,7 +18017,7 @@ echo ""
 
 
 if [ "$country"  = "47" ]; then
-curl http://ipdiapazon.16mb.com/Cuba.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Cuba.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -18085,7 +18084,7 @@ echo ""
 
 
 if [ "$country"  = "48" ]; then
-curl http://ipdiapazon.16mb.com/Cyprus.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Cyprus.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -18152,7 +18151,7 @@ echo ""
 
 
 if [ "$country"  = "49" ]; then
-curl http://ipdiapazon.16mb.com/Czech_republic.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Czech_republic.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -18219,7 +18218,7 @@ echo ""
 
 
 if [ "$country"  = "50" ]; then
-curl http://ipdiapazon.16mb.com/Denmark.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Denmark.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -18286,7 +18285,7 @@ echo ""
 
 
 if [ "$country"  = "51" ]; then
-curl http://ipdiapazon.16mb.com/Djibouti.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Djibouti.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -18353,7 +18352,7 @@ echo ""
 
 
 if [ "$country"  = "52" ]; then
-curl http://ipdiapazon.16mb.com/Dominican_republic.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Dominican_republic.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -18420,7 +18419,7 @@ echo ""
 
 
 if [ "$country"  = "53" ]; then
-curl http://ipdiapazon.16mb.com/Ecuador.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Ecuador.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -18487,7 +18486,7 @@ echo ""
 
 
 if [ "$country"  = "54" ]; then
-curl http://ipdiapazon.16mb.com/Egypt.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Egypt.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -18554,7 +18553,7 @@ echo ""
 
 
 if [ "$country"  = "55" ]; then
-curl http://ipdiapazon.16mb.com/El_salvador.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=El_salvador.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -18621,7 +18620,7 @@ echo ""
 
 
 if [ "$country"  = "56" ]; then
-curl http://ipdiapazon.16mb.com/Eritrea.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Eritrea.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -18688,7 +18687,7 @@ echo ""
 
 
 if [ "$country"  = "57" ]; then
-curl http://ipdiapazon.16mb.com/Estonia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Estonia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -18755,7 +18754,7 @@ echo ""
 
 
 if [ "$country"  = "58" ]; then
-curl http://ipdiapazon.16mb.com/Ethiopia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Ethiopia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -18822,7 +18821,7 @@ echo ""
 
 
 if [ "$country"  = "59" ]; then
-curl http://ipdiapazon.16mb.com/European_union.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=European_union.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -18889,7 +18888,7 @@ echo ""
 
 
 if [ "$country"  = "60" ]; then
-curl http://ipdiapazon.16mb.com/Faroe_islands.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Faroe_islands.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -18956,7 +18955,7 @@ echo ""
 
 
 if [ "$country"  = "61" ]; then
-curl http://ipdiapazon.16mb.com/Fiji.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Fiji.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -19023,7 +19022,7 @@ echo ""
 
 
 if [ "$country"  = "62" ]; then
-curl http://ipdiapazon.16mb.com/Finland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Finland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -19090,7 +19089,7 @@ echo ""
 
 
 if [ "$country"  = "63" ]; then
-curl http://ipdiapazon.16mb.com/France.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=France.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -19156,7 +19155,7 @@ echo ""
 
 
 if [ "$country"  = "64" ]; then
-curl http://ipdiapazon.16mb.com/French_guiana.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=French_guiana.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -19223,7 +19222,7 @@ echo ""
 
 
 if [ "$country"  = "65" ]; then
-curl http://ipdiapazon.16mb.com/French_polynesia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=French_polynesia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -19290,7 +19289,7 @@ echo ""
 
 
 if [ "$country"  = "66" ]; then
-curl http://ipdiapazon.16mb.com/Gabon.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Gabon.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -19357,7 +19356,7 @@ echo ""
 
 
 if [ "$country"  = "67" ]; then
-curl http://ipdiapazon.16mb.com/Gambia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Gambia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -19424,7 +19423,7 @@ echo ""
 
 
 if [ "$country"  = "68" ]; then
-curl http://ipdiapazon.16mb.com/Georgia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Georgia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -19491,7 +19490,7 @@ echo ""
 
 
 if [ "$country"  = "69" ]; then
-curl http://ipdiapazon.16mb.com/Germany.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Germany.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -19558,7 +19557,7 @@ echo ""
 
 
 if [ "$country"  = "70" ]; then
-curl http://ipdiapazon.16mb.com/Ghana.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Ghana.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -19625,7 +19624,7 @@ echo ""
 
 
 if [ "$country"  = "71" ]; then
-curl http://ipdiapazon.16mb.com/Gibraltar.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Gibraltar.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -19692,7 +19691,7 @@ echo ""
 
 
 if [ "$country"  = "72" ]; then
-curl http://ipdiapazon.16mb.com/Greece.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Greece.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -19759,7 +19758,7 @@ echo ""
 
 
 if [ "$country"  = "73" ]; then
-curl http://ipdiapazon.16mb.com/Greenland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Greenland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -19826,7 +19825,7 @@ echo ""
 
 
 if [ "$country"  = "74" ]; then
-curl http://ipdiapazon.16mb.com/Grenada.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Grenada.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -19893,7 +19892,7 @@ echo ""
 
 
 if [ "$country"  = "75" ]; then
-curl http://ipdiapazon.16mb.com/Guam.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Guam.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -19960,7 +19959,7 @@ echo ""
 
 
 if [ "$country"  = "76" ]; then
-curl http://ipdiapazon.16mb.com/Guatemala.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Guatemala.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -20027,7 +20026,7 @@ echo ""
 
 
 if [ "$country"  = "77" ]; then
-curl http://ipdiapazon.16mb.com/Guinea-bissau.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Guinea-bissau.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -20094,7 +20093,7 @@ echo ""
 
 
 if [ "$country"  = "78" ]; then
-curl http://ipdiapazon.16mb.com/Haiti.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Haiti.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -20161,7 +20160,7 @@ echo ""
 
 
 if [ "$country"  = "79" ]; then
-curl http://ipdiapazon.16mb.com/Holy_see.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Holy_see.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -20228,7 +20227,7 @@ echo ""
 
 
 if [ "$country"  = "80" ]; then
-curl http://ipdiapazon.16mb.com/Honduras.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Honduras.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -20294,7 +20293,7 @@ echo ""
 
 
 if [ "$country"  = "81" ]; then
-curl http://ipdiapazon.16mb.com/Hong_kong.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Hong_kong.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -20360,7 +20359,7 @@ echo ""
 
 
 if [ "$country"  = "82" ]; then
-curl http://ipdiapazon.16mb.com/Hungary.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Hungary.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -20427,7 +20426,7 @@ echo ""
 
 
 if [ "$country"  = "83" ]; then
-curl http://ipdiapazon.16mb.com/Iceland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Iceland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -20494,7 +20493,7 @@ echo ""
 
 
 if [ "$country"  = "84" ]; then
-curl http://ipdiapazon.16mb.com/India.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=India.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -20561,7 +20560,7 @@ echo ""
 
 
 if [ "$country"  = "85" ]; then
-curl http://ipdiapazon.16mb.com/Indonesia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Indonesia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -20628,7 +20627,7 @@ echo ""
 
 
 if [ "$country"  = "86" ]; then
-curl http://ipdiapazon.16mb.com/Iran.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Iran.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -20695,7 +20694,7 @@ echo ""
 
 
 if [ "$country"  = "87" ]; then
-curl http://ipdiapazon.16mb.com/Iraq.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Iraq.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -20762,7 +20761,7 @@ echo ""
 
 
 if [ "$country"  = "88" ]; then
-curl http://ipdiapazon.16mb.com/Ireland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Ireland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -20829,7 +20828,7 @@ echo ""
 
 
 if [ "$country"  = "89" ]; then
-curl http://ipdiapazon.16mb.com/Israel.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Israel.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -20896,7 +20895,7 @@ echo ""
 
 
 if [ "$country"  = "90" ]; then
-curl http://ipdiapazon.16mb.com/Italy.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Italy.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -20963,7 +20962,7 @@ echo ""
 
 
 if [ "$country"  = "91" ]; then
-curl http://ipdiapazon.16mb.com/Jamaica.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Jamaica.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -21030,7 +21029,7 @@ echo ""
 
 
 if [ "$country"  = "92" ]; then
-curl http://ipdiapazon.16mb.com/Japan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Japan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -21096,7 +21095,7 @@ echo ""
 
 
 if [ "$country"  = "93" ]; then
-curl http://ipdiapazon.16mb.com/Jordan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Jordan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -21162,7 +21161,7 @@ echo ""
 
 
 if [ "$country"  = "94" ]; then
-curl http://ipdiapazon.16mb.com/Kazakhstan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Kazakhstan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -21229,7 +21228,7 @@ echo ""
 
 
 if [ "$country"  = "95" ]; then
-curl http://ipdiapazon.16mb.com/Kenya.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Kenya.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -21296,7 +21295,7 @@ echo ""
 
 
 if [ "$country"  = "96" ]; then
-curl http://ipdiapazon.16mb.com/Kiribati.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Kiribati.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -21363,7 +21362,7 @@ echo ""
 
 
 if [ "$country"  = "97" ]; then
-curl http://ipdiapazon.16mb.com/Korea.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Korea.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -21430,7 +21429,7 @@ echo ""
 
 
 if [ "$country"  = "98" ]; then
-curl http://ipdiapazon.16mb.com/Kuwait.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Kuwait.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -21497,7 +21496,7 @@ echo ""
 
 
 if [ "$country"  = "99" ]; then
-curl http://ipdiapazon.16mb.com/Kyrgyzstan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Kyrgyzstan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -21564,7 +21563,7 @@ echo ""
 
 
 if [ "$country"  = "100" ]; then
-curl http://ipdiapazon.16mb.com/Lao.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Lao.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -21631,7 +21630,7 @@ echo ""
 
 
 if [ "$country"  = "101" ]; then
-curl http://ipdiapazon.16mb.com/Latvia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Latvia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -21698,7 +21697,7 @@ echo ""
 
 
 if [ "$country"  = "102" ]; then
-curl http://ipdiapazon.16mb.com/Lebanon.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Lebanon.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -21765,7 +21764,7 @@ echo ""
 
 
 if [ "$country"  = "103" ]; then
-curl http://ipdiapazon.16mb.com/Lesotho.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Lesotho.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -21832,7 +21831,7 @@ echo ""
 
 
 if [ "$country"  = "104" ]; then
-curl http://ipdiapazon.16mb.com/Libyan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Libyan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -21899,7 +21898,7 @@ echo ""
 
 
 if [ "$country"  = "105" ]; then
-curl http://ipdiapazon.16mb.com/Liechtenstein.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Liechtenstein.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -21966,7 +21965,7 @@ echo ""
 
 
 if [ "$country"  = "106" ]; then
-curl http://ipdiapazon.16mb.com/Lithuania.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Lithuania.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -22033,7 +22032,7 @@ echo ""
 
 
 if [ "$country"  = "107" ]; then
-curl http://ipdiapazon.16mb.com/Luxembourg.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Luxembourg.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -22100,7 +22099,7 @@ echo ""
 
 
 if [ "$country"  = "108" ]; then
-curl http://ipdiapazon.16mb.com/Macau.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Macau.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -22167,7 +22166,7 @@ echo ""
 
 
 if [ "$country"  = "109" ]; then
-curl http://ipdiapazon.16mb.com/Macedonia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Macedonia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -22234,7 +22233,7 @@ echo ""
 
 
 if [ "$country"  = "110" ]; then
-curl http://ipdiapazon.16mb.com/Madagascar.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Madagascar.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -22300,7 +22299,7 @@ echo ""
 
 
 if [ "$country"  = "111" ]; then
-curl http://ipdiapazon.16mb.com/Malawi.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Malawi.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -22367,7 +22366,7 @@ echo ""
 
 
 if [ "$country"  = "112" ]; then
-curl http://ipdiapazon.16mb.com/Malaysia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Malaysia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -22434,7 +22433,7 @@ echo ""
 
 
 if [ "$country"  = "113" ]; then
-curl http://ipdiapazon.16mb.com/Maldives.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Maldives.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -22501,7 +22500,7 @@ echo ""
 
 
 if [ "$country"  = "114" ]; then
-curl http://ipdiapazon.16mb.com/Mali.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Mali.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -22568,7 +22567,7 @@ echo ""
 
 
 if [ "$country"  = "115" ]; then
-curl http://ipdiapazon.16mb.com/Malta.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Malta.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -22635,7 +22634,7 @@ echo ""
 
 
 if [ "$country"  = "116" ]; then
-curl http://ipdiapazon.16mb.com/Mauritania.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Mauritania.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -22702,7 +22701,7 @@ echo ""
 
 
 if [ "$country"  = "117" ]; then
-curl http://ipdiapazon.16mb.com/Mauritius.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Mauritius.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -22768,7 +22767,7 @@ echo ""
 
 
 if [ "$country"  = "118" ]; then
-curl http://ipdiapazon.16mb.com/Mexico.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Mexico.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -22835,7 +22834,7 @@ echo ""
 
 
 if [ "$country"  = "119" ]; then
-curl http://ipdiapazon.16mb.com/Micronesia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Micronesia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -22902,7 +22901,7 @@ echo ""
 
 
 if [ "$country"  = "120" ]; then
-curl http://ipdiapazon.16mb.com/Moldova.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Moldova.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -22969,7 +22968,7 @@ echo ""
 
 
 if [ "$country"  = "121" ]; then
-curl http://ipdiapazon.16mb.com/Monaco.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Monaco.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -23036,7 +23035,7 @@ echo ""
 
 
 if [ "$country"  = "122" ]; then
-curl http://ipdiapazon.16mb.com/Mongolia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Mongolia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -23103,7 +23102,7 @@ echo ""
 
 
 if [ "$country"  = "123" ]; then
-curl http://ipdiapazon.16mb.com/Morocco.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Morocco.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -23170,7 +23169,7 @@ echo ""
 
 
 if [ "$country"  = "124" ]; then
-curl http://ipdiapazon.16mb.com/Mozambique.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Mozambique.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -23237,7 +23236,7 @@ echo ""
 
 
 if [ "$country"  = "125" ]; then
-curl http://ipdiapazon.16mb.com/Myanmar.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Myanmar.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -23303,7 +23302,7 @@ echo ""
 
 
 if [ "$country"  = "126" ]; then
-curl http://ipdiapazon.16mb.com/Namibia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Namibia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -23370,7 +23369,7 @@ echo ""
 
 
 if [ "$country"  = "127" ]; then
-curl http://ipdiapazon.16mb.com/Nauru.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Nauru.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -23437,7 +23436,7 @@ echo ""
 
 
 if [ "$country"  = "128" ]; then
-curl http://ipdiapazon.16mb.com/Nepal.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Nepal.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -23504,7 +23503,7 @@ echo ""
 
 
 if [ "$country"  = "129" ]; then
-curl http://ipdiapazon.16mb.com/Netherlands.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Netherlands.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -23571,7 +23570,7 @@ echo ""
 
 
 if [ "$country"  = "130" ]; then
-curl http://ipdiapazon.16mb.com/Netherlands_antilles.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Netherlands_antilles.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -23638,7 +23637,7 @@ echo ""
 
 
 if [ "$country"  = "131" ]; then
-curl http://ipdiapazon.16mb.com/New_caledonia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=New_caledonia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -23705,7 +23704,7 @@ echo ""
 
 
 if [ "$country"  = "132" ]; then
-curl http://ipdiapazon.16mb.com/New_zealand.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=New_zealand.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -23772,7 +23771,7 @@ echo ""
 
 
 if [ "$country"  = "133" ]; then
-curl http://ipdiapazon.16mb.com/Nicaragua.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Nicaragua.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -23839,7 +23838,7 @@ echo ""
 
 
 if [ "$country"  = "134" ]; then
-curl http://ipdiapazon.16mb.com/Niger.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Niger.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -23906,7 +23905,7 @@ echo ""
 
 
 if [ "$country"  = "135" ]; then
-curl http://ipdiapazon.16mb.com/Nigeria.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Nigeria.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -23973,7 +23972,7 @@ echo ""
 
 
 if [ "$country"  = "136" ]; then
-curl http://ipdiapazon.16mb.com/Niue.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Niue.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -24040,7 +24039,7 @@ echo ""
 
 
 if [ "$country"  = "137" ]; then
-curl http://ipdiapazon.16mb.com/Non-spec.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Non-spec.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -24107,7 +24106,7 @@ echo ""
 
 
 if [ "$country"  = "138" ]; then
-curl http://ipdiapazon.16mb.com/Norfolk.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Norfolk.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -24174,7 +24173,7 @@ echo ""
 
 
 if [ "$country"  = "139" ]; then
-curl http://ipdiapazon.16mb.com/Northern.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Northern.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -24241,7 +24240,7 @@ echo ""
 
 
 if [ "$country"  = "140" ]; then
-curl http://ipdiapazon.16mb.com/Norway.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Norway.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -24308,7 +24307,7 @@ echo ""
 
 
 if [ "$country"  = "141" ]; then
-curl http://ipdiapazon.16mb.com/Oman.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Oman.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -24373,7 +24372,7 @@ echo ""
 
 
 if [ "$country"  = "142" ]; then
-curl http://ipdiapazon.16mb.com/Pakistan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Pakistan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -24440,7 +24439,7 @@ echo ""
 
 
 if [ "$country"  = "143" ]; then
-curl http://ipdiapazon.16mb.com/Palau.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Palau.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -24506,7 +24505,7 @@ echo ""
 
 
 if [ "$country"  = "144" ]; then
-curl http://ipdiapazon.16mb.com/Palestinian.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Palestinian.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -24573,7 +24572,7 @@ echo ""
 
 
 if [ "$country"  = "145" ]; then
-curl http://ipdiapazon.16mb.com/Panama.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Panama.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -24640,7 +24639,7 @@ echo ""
 
 
 if [ "$country"  = "146" ]; then
-curl http://ipdiapazon.16mb.com/Papua_new_guinea.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Papua_new_guinea.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -24707,7 +24706,7 @@ echo ""
 
 
 if [ "$country"  = "147" ]; then
-curl http://ipdiapazon.16mb.com/Paraguay.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Paraguay.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -24774,7 +24773,7 @@ echo ""
 
 
 if [ "$country"  = "148" ]; then
-curl http://ipdiapazon.16mb.com/Peru.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Peru.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -24841,7 +24840,7 @@ echo ""
 
 
 if [ "$country"  = "149" ]; then
-curl http://ipdiapazon.16mb.com/Philippines.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Philippines.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -24908,7 +24907,7 @@ echo ""
 
 
 if [ "$country"  = "150" ]; then
-curl http://ipdiapazon.16mb.com/Poland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Poland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -24975,7 +24974,7 @@ echo ""
 
 
 if [ "$country"  = "151" ]; then
-curl http://ipdiapazon.16mb.com/Portugal.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Portugal.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -25042,7 +25041,7 @@ echo ""
 
 
 if [ "$country"  = "152" ]; then
-curl http://ipdiapazon.16mb.com/Puerto_rico.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Puerto_rico.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -25109,7 +25108,7 @@ echo ""
 
 
 if [ "$country"  = "153" ]; then
-curl http://ipdiapazon.16mb.com/Qatar.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Qatar.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -25176,7 +25175,7 @@ echo ""
 
 
 if [ "$country"  = "154" ]; then
-curl http://ipdiapazon.16mb.com/Romania.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Romania.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -25243,7 +25242,7 @@ echo ""
 
 
 if [ "$country"  = "155" ]; then
-curl http://ipdiapazon.16mb.com/Russia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g" |sed '$d'>list
+curl http://services.ce3c.be/ciprg/?countrys=Russia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g" |sed '$d'>list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -25310,7 +25309,7 @@ echo ""
 
 
 if [ "$country"  = "156" ]; then
-curl http://ipdiapazon.16mb.com/Rwanda.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Rwanda.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -25377,7 +25376,7 @@ echo ""
 
 
 if [ "$country"  = "157" ]; then
-curl http://ipdiapazon.16mb.com/Saint.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Saint.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -25444,7 +25443,7 @@ echo ""
 
 
 if [ "$country"  = "158" ]; then
-curl http://ipdiapazon.16mb.com/Saint_lucia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Saint_lucia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -25511,7 +25510,7 @@ echo ""
 
 
 if [ "$country"  = "159" ]; then
-curl http://ipdiapazon.16mb.com/Samoa.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Samoa.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -25578,7 +25577,7 @@ echo ""
 
 
 if [ "$country"  = "160" ]; then
-curl http://ipdiapazon.16mb.com/San_marino.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=San_marino.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -25645,7 +25644,7 @@ echo ""
 
 
 if [ "$country"  = "161" ]; then
-curl http://ipdiapazon.16mb.com/Saudi_arabia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Saudi_arabia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -25712,7 +25711,7 @@ echo ""
 
 
 if [ "$country"  = "162" ]; then
-curl http://ipdiapazon.16mb.com/Senegal.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Senegal.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -25779,7 +25778,7 @@ echo ""
 
 
 if [ "$country"  = "163" ]; then
-curl http://ipdiapazon.16mb.com/Serbia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Serbia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -25846,7 +25845,7 @@ echo ""
 
 
 if [ "$country"  = "164" ]; then
-curl http://ipdiapazon.16mb.com/Seychelles.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Seychelles.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -25913,7 +25912,7 @@ echo ""
 
 
 if [ "$country"  = "165" ]; then
-curl http://ipdiapazon.16mb.com/Sierra_leone.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Sierra_leone.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -25980,7 +25979,7 @@ echo ""
 
 
 if [ "$country"  = "166" ]; then
-curl http://ipdiapazon.16mb.com/Singapore.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Singapore.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -26047,7 +26046,7 @@ echo ""
 
 
 if [ "$country"  = "167" ]; then
-curl http://ipdiapazon.16mb.com/Slovakia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Slovakia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -26112,7 +26111,7 @@ echo ""
 
 
 if [ "$country"  = "168" ]; then
-curl http://ipdiapazon.16mb.com/Slovenia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Slovenia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -26178,7 +26177,7 @@ echo ""
 
 
 if [ "$country"  = "169" ]; then
-curl http://ipdiapazon.16mb.com/Solomon_islands.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Solomon_islands.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -26244,7 +26243,7 @@ echo ""
 
 
 if [ "$country"  = "170" ]; then
-curl http://ipdiapazon.16mb.com/South_africa.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=South_africa.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -26310,7 +26309,7 @@ echo ""
 
 
 if [ "$country"  = "171" ]; then
-curl http://ipdiapazon.16mb.com/Spain.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Spain.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -26376,7 +26375,7 @@ echo ""
 
 
 if [ "$country"  = "172" ]; then
-curl http://ipdiapazon.16mb.com/Sri_lanka.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Sri_lanka.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -26442,7 +26441,7 @@ echo ""
 
 
 if [ "$country"  = "173" ]; then
-curl http://ipdiapazon.16mb.com/Sudan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Sudan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -26508,7 +26507,7 @@ echo ""
 
 
 if [ "$country"  = "174" ]; then
-curl http://ipdiapazon.16mb.com/Suriname.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Suriname.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -26574,7 +26573,7 @@ echo ""
 
 
 if [ "$country"  = "175" ]; then
-curl http://ipdiapazon.16mb.com/Swaziland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Swaziland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -26641,7 +26640,7 @@ echo ""
 
 
 if [ "$country"  = "176" ]; then
-curl http://ipdiapazon.16mb.com/Sweden.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Sweden.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -26708,7 +26707,7 @@ echo ""
 
 
 if [ "$country"  = "177" ]; then
-curl http://ipdiapazon.16mb.com/Switzerland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Switzerland.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -26774,7 +26773,7 @@ echo ""
 
 
 if [ "$country"  = "178" ]; then
-curl http://ipdiapazon.16mb.com/Syrian.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Syrian.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -26840,7 +26839,7 @@ echo ""
 
 
 if [ "$country"  = "179" ]; then
-curl http://ipdiapazon.16mb.com/Taiwan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Taiwan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -26906,7 +26905,7 @@ echo ""
 
 
 if [ "$country"  = "180" ]; then
-curl http://ipdiapazon.16mb.com/Tajikistan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Tajikistan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -26973,7 +26972,7 @@ echo ""
 
 
 if [ "$country"  = "181" ]; then
-curl http://ipdiapazon.16mb.com/Tanzania.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Tanzania.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -27039,7 +27038,7 @@ echo ""
 
 
 if [ "$country"  = "182" ]; then
-curl http://ipdiapazon.16mb.com/Thailand.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Thailand.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -27106,7 +27105,7 @@ echo ""
 
 
 if [ "$country"  = "183" ]; then
-curl http://ipdiapazon.16mb.com/Togo.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Togo.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -27173,7 +27172,7 @@ echo ""
 
 
 if [ "$country"  = "184" ]; then
-curl http://ipdiapazon.16mb.com/Tonga.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Tonga.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -27239,7 +27238,7 @@ echo ""
 
 
 if [ "$country"  = "185" ]; then
-curl http://ipdiapazon.16mb.com/Trinidad.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Trinidad.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -27306,7 +27305,7 @@ echo ""
 
 
 if [ "$country"  = "186" ]; then
-curl http://ipdiapazon.16mb.com/Tunisia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Tunisia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -27373,7 +27372,7 @@ echo ""
 
 
 if [ "$country"  = "187" ]; then
-curl http://ipdiapazon.16mb.com/Turkey.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Turkey.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -27440,7 +27439,7 @@ echo ""
 
 
 if [ "$country"  = "188" ]; then
-curl http://ipdiapazon.16mb.com/Turkmenistan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Turkmenistan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -27507,7 +27506,7 @@ echo ""
 
 
 if [ "$country"  = "189" ]; then
-curl http://ipdiapazon.16mb.com/Tuvalu.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Tuvalu.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -27574,7 +27573,7 @@ echo ""
 
 
 if [ "$country"  = "190" ]; then
-curl http://ipdiapazon.16mb.com/Uganda.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Uganda.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -27641,7 +27640,7 @@ echo ""
 
 
 if [ "$country"  = "191" ]; then
-curl http://ipdiapazon.16mb.com/Ukraine.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Ukraine.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -27707,7 +27706,7 @@ echo ""
 
 
 if [ "$country"  = "192" ]; then
-curl http://ipdiapazon.16mb.com/United.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=United.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -27773,7 +27772,7 @@ echo ""
 
 
 if [ "$country"  = "193" ]; then
-curl http://ipdiapazon.16mb.com/United_kingdom.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=United_kingdom.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -27840,7 +27839,7 @@ echo ""
 
 
 if [ "$country"  = "194" ]; then
-curl http://ipdiapazon.16mb.com/United_states.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=United_states.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -27906,7 +27905,7 @@ echo ""
 
 
 if [ "$country"  = "195" ]; then
-curl http://ipdiapazon.16mb.com/Uruguay.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Uruguay.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -27972,7 +27971,7 @@ echo ""
 
 
 if [ "$country"  = "196" ]; then
-curl http://ipdiapazon.16mb.com/Uzbekistan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Uzbekistan.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -28038,7 +28037,7 @@ echo ""
 
 
 if [ "$country"  = "197" ]; then
-curl http://ipdiapazon.16mb.com/Vanuatu.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Vanuatu.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -28104,7 +28103,7 @@ echo ""
 
 
 if [ "$country"  = "198" ]; then
-curl http://ipdiapazon.16mb.com/Venezuela.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Venezuela.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -28170,7 +28169,7 @@ echo ""
 
 
 if [ "$country"  = "199" ]; then
-curl http://ipdiapazon.16mb.com/Viet_nam.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Viet_nam.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -28237,7 +28236,7 @@ echo ""
 
 
 if [ "$country"  = "200" ]; then
-curl http://ipdiapazon.16mb.com/Virgin_islands.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Virgin_islands.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -28303,7 +28302,7 @@ echo ""
 
 
 if [ "$country"  = "201" ]; then
-curl http://ipdiapazon.16mb.com/Virgin_islands_u.s.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Virgin_islands_u.s.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -28370,7 +28369,7 @@ echo ""
 
 
 if [ "$country"  = "202" ]; then
-curl http://ipdiapazon.16mb.com/Yemen.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Yemen.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -28437,7 +28436,7 @@ echo ""
 
 
 if [ "$country"  = "203" ]; then
-curl http://ipdiapazon.16mb.com/Zambia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Zambia.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
@@ -28503,7 +28502,7 @@ echo ""
 
 
 if [ "$country"  = "204" ]; then
-curl http://ipdiapazon.16mb.com/Zimbabwe.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
+curl http://services.ce3c.be/ciprg/?countrys=Zimbabwe.html |grep -E  "([0-9]{1,3}[\.]){3}[0-9]{1,3}" |sed "s/ //g">list
 echo -e "$red---------------------------------------------------------------------------------------------------------$green"
 cat list
 echo -e "$red---------------------------------------------------------------------------------------------------------$colorbase"
