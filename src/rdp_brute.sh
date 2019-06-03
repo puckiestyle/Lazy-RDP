@@ -233,7 +233,7 @@ echo -e "               +-------------------------------------------------------
 echo -e "               |$grey 1.$yellow Сканировать диапазон на наличие открытого RDP порта (ввод вручную)$colorbase | ";
 echo -e "               |$grey 2.$yellow Сканировать диапазон на наличие открытого RDP порта (из файла)$colorbase     | ";
 echo -e "               |$grey 3.$yellow Брутфорс Логин/Пароль (последнее сканирование)$colorbase                     | ";
-echo -e "               |$grey 4.$yellow Выбор диапазона IP по стране($redвременно не работает$yellow)$colorbase                 | ";
+echo -e "               |$grey 4.$yellow Выбор диапазона IP по стране$colorbase                                       | ";
 echo -e "               |$grey 5.$yellow Выход ($red[ENTER]$yellow) $colorbase                                                   | ";
 echo -e "               +-----------------------------------------------------------------------+"
 echo " "
@@ -14812,7 +14812,7 @@ echo -e "               +-------------------------------------------------------
 echo -e "               |        $grey 1.$yellow Scan range to find an open RDP port (manual entry)$colorbase         | ";
 echo -e "               |        $grey 2.$yellow Scan range to find an open RDP port (from a file)$colorbase          | ";
 echo -e "               |        $grey 3.$yellow Bruteforce Username/Password (last scan)$colorbase                   | ";
-echo -e "               |        $grey 4.$yellow Range of IP for the country$red(temporarily out of service)$colorbase    | ";
+echo -e "               |        $grey 4.$yellow Range of IP for the country$colorbase                                | ";
 echo -e "               |        $grey 5.$yellow Exit ($red[ENTER]$yellow) $colorbase                                            | ";
 echo -e "               +-----------------------------------------------------------------------+"
 read -p "                                          Сhoose from a menu : " menuoption
