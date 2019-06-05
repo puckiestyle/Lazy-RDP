@@ -22,7 +22,7 @@ rm -rf Results/ paused.conf list all_results result 2> /dev/null
 ######################################################################################
 CLEARALL
 
-cat /etc/apt/sources.list_lazybak>/etc/apt/sources.list
+#cat /etc/apt/sources.list_lazybak>/etc/apt/sources.list
 rm -rf /etc/apt/sources.list_lazybak 2> /dev/null
 clear
 
