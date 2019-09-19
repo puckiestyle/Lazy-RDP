@@ -1,6 +1,6 @@
 #!/bin/bash
 # NOTE: YOU ARE FREE TO COPY,MODIFY,REUSE THE SOURCE CODE FOR EDUCATIONAL PURPOSE ONLY.
-ver=1.29
+ver=1.30
 clear
 ##########################################COLOR######################################
 colorbase="\E[0m"
@@ -30,7 +30,7 @@ clear
 echo -e       "$grey                                 +--------------------------------------+" 
 echo -e       "$grey                                 |             Auto  Script             |"
 echo -e "$aquamarine                                 |     by GetDrive & hackers Union      |" 
-echo -e        "$red                                 |             Version 1.29             |"
+echo -e        "$red                                 |             Version 1.30             |"
 #echo -e        "$red                                 |$colorbase https://github.com/getdrive/Lazy-RDP$red |"
 echo -e        "$red                                 +--------------------------------------+ $colorbase"
 #####################################CHECKLANGUAGE####################################
