@@ -87,7 +87,6 @@ depend=$(dpkg -s freerdp2-x11| grep 'Status' | awk -F':' '/Status: / {print $2}'
                  apt update -y && apt dist-upgrade -y && apt install freerdp2-x11 freerdp2-dev -y
 		
 fi
-
 }
 #########################################################################################
 CHECKDEPEND4 (){
