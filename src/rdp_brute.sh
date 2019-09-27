@@ -1,6 +1,6 @@
 #!/bin/bash
 # NOTE: YOU ARE FREE TO COPY,MODIFY,REUSE THE SOURCE CODE FOR EDUCATIONAL PURPOSE ONLY.
-ver=1.30
+ver=1.31
 clear
 ##########################################COLOR######################################
 colorbase="\E[0m"
@@ -30,7 +30,7 @@ clear
 echo -e       "$grey                                 +--------------------------------------+" 
 echo -e       "$grey                                 |             Auto  Script             |"
 echo -e "$aquamarine                                 |     by GetDrive & hackers Union      |" 
-echo -e        "$red                                 |             Version 1.30             |"
+echo -e        "$red                                 |             Version 1.31             |"
 #echo -e        "$red                                 |$colorbase https://github.com/getdrive/Lazy-RDP$red |"
 echo -e        "$red                                 +--------------------------------------+ $colorbase"
 #####################################CHECKLANGUAGE####################################
@@ -28959,10 +28959,10 @@ fi
 if [ "$brutmenu" = "4" ]; then
 clear
 echo -e " $colorbase              +-----------------------------------------------------------------------+"   
-echo -e "               |   $grey                1.$yellow Hydra  9.0           $colorbase                           |";
-echo -e "               |   $grey                2.$yellow Patator0.7$colorbase                                      |";
+echo -e "               |   $grey                          1.$yellow Hydra  9.0           $colorbase                  |";
+echo -e "               |   $grey                          2.$yellow Patator0.7$colorbase                             |";
 echo -e "               +-----------------------------------------------------------------------+"
-read -p "                                        Выберите брутфорсер : " btool
+read -p "                                          Выберите брутфорсер : " btool
 echo -e "$red-------------------------------------------------------------------------------"
 if [ "$btool" = "1" ]; then
 	clear
