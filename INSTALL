@@ -18,6 +18,9 @@ distrp=$(cat /etc/*-release | awk -F'=' '/DISTRIB_ID=/ {print $2}')
 	if [ "$distr" = "sana" ]; then
 	cat /etc/apt/sources.list > /etc/apt/sources.list_lazybak
 		echo "deb http://old.kali.org/kali sana main non-free contrib" > /etc/apt/sources.list
+	elif [ "$distr" = "kali-rolling" ]; then
+		cat /etc/apt/sources.list > /etc/apt/sources.list_lazybak
+		echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list
 	elif [ "$distr" = "\"kali-rolling\"" ]; then
 	cat /etc/apt/sources.list > /etc/apt/sources.list_lazybak
 		echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list
@@ -107,6 +110,21 @@ echo    "Требующийся пакет FreeRDP2 не установлен. I
 		
 fi
 }
+######################################################################################
+CHECKDEPEND3.1 ()
+{
+depend=$(dpkg -s freerdp2-dev| grep 'Status' | awk -F':' '/Status: / {print $2}')
+	if [ "$depend" = " install ok installed" ]; then
+		clear 
+			else
+			echo -e "$aquamarine"
+clear		
+echo    "Требующийся пакет FreeRDP2-dev не установлен. I'll try to fix it)"
+                 apt update -y; apt install freerdp2-dev -y
+		
+fi
+}
+
 #########################################################################################
 CHECKDEPEND4 (){
 depend=$(dpkg -s curl  | grep 'Status' | awk -F':' '/Status: / {print $2}')
@@ -129,6 +147,7 @@ CHECKDEPEND1
 CHECKDEPEND2
 CHECKDEPEND2.1
 CHECKDEPEND3
+CHECKDEPEND3.1
 CHECKDEPEND4
 cd hydra && make clean | ./configure && make && make install
 clear
