@@ -36,18 +36,42 @@ else
 echo "It seems there is no internet connection "
 	 exit;
 fi
-#bash INSTALL
 clear
+##################################USUAL_start_COMMENT_THIS_IF_YOU_NEED_X11_OVER_SSH######################################
+usual_start()
+{
 dt=$(echo $XDG_CURRENT_DESKTOP)
-if [[ "$dt" = "GNOME" ]]; then
-		sudo gnome-terminal --geometry=105x24+380+180 --hide-menubar -e ./src/rdp_brute.sh 2> /dev/null
-	elif [[ "$dt" = "XFCE" ]]; then
+	if [[ "$dt" = "GNOME" ]]; then	
+	sudo gnome-terminal --geometry=105x24+380+180 --hide-menubar -e ./src/rdp_brute.sh 2> /dev/null
+		elif [[ "$dt" = "XFCE" ]]; then
 		sudo xfce4-terminal --geometry=105x24+380+180 --hide-menubar -e ./src/rdp_brute.sh 2> /dev/null
-	else echo "You need to use GNOME or XFCE desktop"; exit;	
+else echo "You need to use GNOME or XFCE desktop"; exit;
 fi
+}
+##################################X11_over_ssh_UNCOMMENT_THIS_IF_YOU_NEED#############################################
+x11_over_ssh()
+{
+clear
+echo -e "1. gnome-terminal"; 
+echo -e "2. xfce-terminal";
+read -p "Choose your terminal: " term
+if [[ "$term" = "1" ]]; then
+	sudo gnome-terminal --geometry=105x24+380+180 --hide-menubar -e ./src/rdp_brute.sh 2> /dev/null  
+			elif [[ "$term" = "2" ]]; then
+			sudo xfce4-terminal --geometry=105x24+380+180 --hide-menubar -e ./src/rdp_brute.sh 2> /dev/null
+	else echo "You need to use GNOME or XFCE desktop"; exit;
 fi
+}
+########################################################################################################################
+fi
+echo "Want to use X11_OVER_SSH?"
+while true; do
+		read -p "[Y][N]" yn
+			case $yn in
+			[Yy]* )x11_over_ssh; clear; break;;
+			[Nn]* )usual_start; clear;break;;
+			* ) echo "Enter answer [Y] or [N] ";;
+		esac
+	done
 
-#exit;
-
-
-
+#

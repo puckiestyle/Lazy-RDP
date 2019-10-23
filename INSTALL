@@ -13,12 +13,12 @@ fi
 
 CHECKDISTR ()
 {
-distr=$(cat /etc/*-release | awk -F'=' '/DISTRIB_CODENAME=/ {print $2}')
+distr=$(cat /etc/*-release | awk -F'=' '/VERSION_CODENAME=/ {print $2}')
 distrp=$(cat /etc/*-release | awk -F'=' '/DISTRIB_ID=/ {print $2}')
 	if [ "$distr" = "sana" ]; then
 	cat /etc/apt/sources.list > /etc/apt/sources.list_lazybak
 		echo "deb http://old.kali.org/kali sana main non-free contrib" > /etc/apt/sources.list
-	elif [ "$distr" = "kali-rolling" ]; then
+	elif [ "$distr" = "\"kali-rolling\"" ]; then
 	cat /etc/apt/sources.list > /etc/apt/sources.list_lazybak
 		echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list
 	elif [ "$distrp" = "Parrot" ]; then
@@ -65,18 +65,34 @@ fi
 ######################################################################################
 CHECKDEPEND2 ()
 {
-depend=$(dpkg -s freerdp-x11| grep 'Status' | awk -F':' '/Status: / {print $2}')
+depend=$(dpkg -s xfce4-terminal| grep 'Status' | awk -F':' '/Status: / {print $2}')
 	if [ "$depend" = " install ok installed" ]; then
 		clear 
 			else
 			echo -e "$aquamarine"
 clear	
-	echo    "Требующийся пакет FreeRDP не установлен. I'll try to fix it)"
+	echo    "Требующийся пакет xfce4-terminal не установлен. I'll try to fix it)"
                 
-		apt update -y; apt install freerdp-x11 libfreerdp-plugins-standard remmina -y
+		apt update -y; apt install xfce4-terminal -y
 fi
 
 }
+######################################################################################
+CHECKDEPEND2.1 ()
+{
+depend=$(dpkg -s gnome-terminal| grep 'Status' | awk -F':' '/Status: / {print $2}')
+	if [ "$depend" = " install ok installed" ]; then
+		clear 
+			else
+			echo -e "$aquamarine"
+clear	
+	echo    "Требующийся пакет gnome-terminal не установлен. I'll try to fix it)"
+                
+		apt update -y; apt install gnome-terminal -y
+fi
+
+}
+
 ######################################################################################
 CHECKDEPEND3 ()
 {
@@ -110,7 +126,8 @@ CHECKROOT
 CHECKDISTR
 CHECKDEPEND0
 CHECKDEPEND1
-#CHECKDEPEND2
+CHECKDEPEND2
+CHECKDEPEND2.1
 CHECKDEPEND3
 CHECKDEPEND4
 cd hydra && make clean | ./configure && make && make install
