@@ -24,7 +24,7 @@ echo "Checking for updates..."
 			echo  "New version: $updated"
 
 while true; do
-		read -p "Update? [Y][N]" yn
+		read -p "Update? [Y][N]: " yn
 			case $yn in
 			[Yy]* ) wget -O src/rdp_brute.sh https://raw.githubusercontent.com/getdrive/Lazy-RDP/master/src/rdp_brute.sh && wget -O start https://raw.githubusercontent.com/getdrive/Lazy-RDP/master/start && clear; break;;
 			[Nn]* ) clear;break;;
