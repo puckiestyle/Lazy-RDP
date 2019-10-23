@@ -2,6 +2,8 @@
 
 ## Demo Video:
 [![Lazy-RDP Demo](https://i.ytimg.com/vi/Kpl8l6YQq48/hqdefault.jpg)](https://youtu.be/Kpl8l6YQq48)
+## Lazy-RDP over SSH:
+[![Lazy-RDP over SSH](https://i.ytimg.com/vi/VXScp23WbZw/hqdefault.jpg)](https://youtu.be/VXScp23WbZw)
 
 - Скрипт для автоматического сканирования списка адресов на наличие открытых RDP-портов, с последующим выбором метода и запуском перебора пары логин/пароль. <br/>
 
