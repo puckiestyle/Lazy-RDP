@@ -37,7 +37,7 @@ echo "It seems there is no internet connection "
 	 exit;
 fi
 clear
-##################################USUAL_start_COMMENT_THIS_IF_YOU_NEED_X11_OVER_SSH######################################
+####################################################usual_start#######################################################
 usual_start()
 {
 dt=$(echo $XDG_CURRENT_DESKTOP)
@@ -48,7 +48,7 @@ dt=$(echo $XDG_CURRENT_DESKTOP)
 else echo "You need to use GNOME or XFCE desktop"; exit;
 fi
 }
-##################################X11_over_ssh_UNCOMMENT_THIS_IF_YOU_NEED#############################################
+####################################################X11_over_ssh######################################################
 x11_over_ssh()
 {
 clear
@@ -64,6 +64,7 @@ fi
 }
 ########################################################################################################################
 fi
+echo ""
 echo "Want to use X11_OVER_SSH?"
 while true; do
 		read -p "[Y][N]: " yn
