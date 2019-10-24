@@ -65,9 +65,8 @@ fi
 ########################################################################################################################
 fi
 echo ""
-echo "Want to use X11_OVER_SSH?"
 while true; do
-		read -p "[Y][N]: " yn
+		read -p "Want to use X11_OVER_SSH? [Y][N]: " yn
 			case $yn in
 			[Yy]* )x11_over_ssh; clear; break;;
 			[Nn]* )usual_start; clear;break;;
