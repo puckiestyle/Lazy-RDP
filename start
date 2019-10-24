@@ -52,8 +52,10 @@ fi
 x11_over_ssh()
 {
 clear
+echo "";
 echo -e "1. gnome-terminal"; 
 echo -e "2. xfce-terminal";
+echo "";
 read -p "Choose your terminal: " term
 if [[ "$term" = "1" ]]; then
 	sudo gnome-terminal --geometry=105x24+380+180 --hide-menubar -e ./src/rdp_brute.sh 2> /dev/null  
